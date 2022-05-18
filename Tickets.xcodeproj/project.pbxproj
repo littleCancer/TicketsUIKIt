@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		EA3DC43128352EA200F6FD19 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43028352EA200F6FD19 /* Tests_iOS.swift */; };
 		EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43228352EA200F6FD19 /* Tests_iOSLaunchTests.swift */; };
-		EA3DC43D28352EA200F6FD19 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43C28352EA200F6FD19 /* Tests_macOS.swift */; };
-		EA3DC43F28352EA200F6FD19 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43E28352EA200F6FD19 /* Tests_macOSLaunchTests.swift */; };
 		EA3DC44028352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */; };
-		EA3DC44128352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */; };
 		EA3DC44228352EA200F6FD19 /* TicketsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41728352EA100F6FD19 /* TicketsApp.swift */; };
-		EA3DC44328352EA200F6FD19 /* TicketsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41728352EA100F6FD19 /* TicketsApp.swift */; };
 		EA3DC44428352EA200F6FD19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41828352EA100F6FD19 /* ContentView.swift */; };
-		EA3DC44528352EA200F6FD19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41828352EA100F6FD19 /* ContentView.swift */; };
 		EA3DC44628352EA200F6FD19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41928352EA100F6FD19 /* Persistence.swift */; };
-		EA3DC44728352EA200F6FD19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41928352EA100F6FD19 /* Persistence.swift */; };
 		EA3DC44828352EA200F6FD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC41A28352EA200F6FD19 /* Assets.xcassets */; };
-		EA3DC44928352EA200F6FD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC41A28352EA200F6FD19 /* Assets.xcassets */; };
+		EA3DC45B283532F900F6FD19 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC45A283532F900F6FD19 /* SplashView.swift */; };
+		EA3DC45F2835361D00F6FD19 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC45E2835361D00F6FD19 /* Montserrat-Regular.ttf */; };
+		EA3DC4622835388C00F6FD19 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC4612835388C00F6FD19 /* FontUtils.swift */; };
+		EA3DC464283539E300F6FD19 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC463283539E300F6FD19 /* Montserrat-Bold.ttf */; };
+		EA3DC4672835442400F6FD19 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC4662835442400F6FD19 /* Concerts.json */; };
+		EA3DC4682835442400F6FD19 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC4662835442400F6FD19 /* Concerts.json */; };
+		EA3DC47028354D3C00F6FD19 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC46F28354D3C00F6FD19 /* Type.swift */; };
+		EA3DC47128354D3C00F6FD19 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC46F28354D3C00F6FD19 /* Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,6 @@
 			remoteGlobalIDString = EA3DC41E28352EA200F6FD19;
 			remoteInfo = "Tickets (iOS)";
 		};
-		EA3DC43928352EA200F6FD19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA3DC41028352EA100F6FD19 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA3DC42428352EA200F6FD19;
-			remoteInfo = "Tickets (macOS)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,25 +41,20 @@
 		EA3DC41928352EA100F6FD19 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EA3DC41A28352EA200F6FD19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3DC41F28352EA200F6FD19 /* Tickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tickets.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA3DC42528352EA200F6FD19 /* Tickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tickets.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA3DC42728352EA200F6FD19 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		EA3DC42C28352EA200F6FD19 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3DC43028352EA200F6FD19 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		EA3DC43228352EA200F6FD19 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		EA3DC43828352EA200F6FD19 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA3DC43C28352EA200F6FD19 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		EA3DC43E28352EA200F6FD19 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		EA3DC45A283532F900F6FD19 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		EA3DC45E2835361D00F6FD19 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		EA3DC460283536F800F6FD19 /* Tickets--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Tickets--iOS--Info.plist"; sourceTree = "<group>"; };
+		EA3DC4612835388C00F6FD19 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
+		EA3DC463283539E300F6FD19 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		EA3DC4662835442400F6FD19 /* Concerts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Concerts.json; sourceTree = "<group>"; };
+		EA3DC46F28354D3C00F6FD19 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EA3DC41C28352EA200F6FD19 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA3DC42228352EA200F6FD19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,56 +68,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA3DC43528352EA200F6FD19 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		EA3DC40F28352EA100F6FD19 = {
 			isa = PBXGroup;
 			children = (
-				EA3DC41428352EA100F6FD19 /* Shared */,
-				EA3DC42628352EA200F6FD19 /* macOS */,
+				EA3DC460283536F800F6FD19 /* Tickets--iOS--Info.plist */,
+				EA3DC41428352EA100F6FD19 /* Tickets */,
 				EA3DC42F28352EA200F6FD19 /* Tests iOS */,
-				EA3DC43B28352EA200F6FD19 /* Tests macOS */,
 				EA3DC42028352EA200F6FD19 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EA3DC41428352EA100F6FD19 /* Shared */ = {
+		EA3DC41428352EA100F6FD19 /* Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				EA3DC469283548C700F6FD19 /* Core */,
+				EA3DC4652835438C00F6FD19 /* Preview Content */,
+				EA3DC45C2835354900F6FD19 /* Fonts */,
+				EA3DC458283532C800F6FD19 /* Splash */,
 				EA3DC41728352EA100F6FD19 /* TicketsApp.swift */,
 				EA3DC41828352EA100F6FD19 /* ContentView.swift */,
-				EA3DC41928352EA100F6FD19 /* Persistence.swift */,
 				EA3DC41A28352EA200F6FD19 /* Assets.xcassets */,
-				EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */,
 			);
-			path = Shared;
+			path = Tickets;
 			sourceTree = "<group>";
 		};
 		EA3DC42028352EA200F6FD19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				EA3DC41F28352EA200F6FD19 /* Tickets.app */,
-				EA3DC42528352EA200F6FD19 /* Tickets.app */,
 				EA3DC42C28352EA200F6FD19 /* Tests iOS.xctest */,
-				EA3DC43828352EA200F6FD19 /* Tests macOS.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EA3DC42628352EA200F6FD19 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				EA3DC42728352EA200F6FD19 /* macOS.entitlements */,
-			);
-			path = macOS;
 			sourceTree = "<group>";
 		};
 		EA3DC42F28352EA200F6FD19 /* Tests iOS */ = {
@@ -140,13 +113,96 @@
 			path = "Tests iOS";
 			sourceTree = "<group>";
 		};
-		EA3DC43B28352EA200F6FD19 /* Tests macOS */ = {
+		EA3DC458283532C800F6FD19 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				EA3DC43C28352EA200F6FD19 /* Tests_macOS.swift */,
-				EA3DC43E28352EA200F6FD19 /* Tests_macOSLaunchTests.swift */,
+				EA3DC459283532DB00F6FD19 /* Views */,
 			);
-			path = "Tests macOS";
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		EA3DC459283532DB00F6FD19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC45A283532F900F6FD19 /* SplashView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA3DC45C2835354900F6FD19 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC45D2835360500F6FD19 /* Montserrat */,
+				EA3DC4612835388C00F6FD19 /* FontUtils.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EA3DC45D2835360500F6FD19 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC463283539E300F6FD19 /* Montserrat-Bold.ttf */,
+				EA3DC45E2835361D00F6FD19 /* Montserrat-Regular.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		EA3DC4652835438C00F6FD19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC4662835442400F6FD19 /* Concerts.json */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA3DC469283548C700F6FD19 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC46D28354CE500F6FD19 /* Domain */,
+				EA3DC46A283548D600F6FD19 /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA3DC46A283548D600F6FD19 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC46C2835490300F6FD19 /* CoreData */,
+				EA3DC46B283548F200F6FD19 /* api */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EA3DC46B283548F200F6FD19 /* api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		EA3DC46C2835490300F6FD19 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC41928352EA100F6FD19 /* Persistence.swift */,
+				EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EA3DC46D28354CE500F6FD19 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC46E28354D0400F6FD19 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA3DC46E28354D0400F6FD19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC46F28354D3C00F6FD19 /* Type.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,23 +225,6 @@
 			productReference = EA3DC41F28352EA200F6FD19 /* Tickets.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA3DC42428352EA200F6FD19 /* Tickets (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA3DC44F28352EA200F6FD19 /* Build configuration list for PBXNativeTarget "Tickets (macOS)" */;
-			buildPhases = (
-				EA3DC42128352EA200F6FD19 /* Sources */,
-				EA3DC42228352EA200F6FD19 /* Frameworks */,
-				EA3DC42328352EA200F6FD19 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Tickets (macOS)";
-			productName = "Tickets (macOS)";
-			productReference = EA3DC42528352EA200F6FD19 /* Tickets.app */;
-			productType = "com.apple.product-type.application";
-		};
 		EA3DC42B28352EA200F6FD19 /* Tests iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA3DC45228352EA200F6FD19 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
@@ -204,24 +243,6 @@
 			productReference = EA3DC42C28352EA200F6FD19 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		EA3DC43728352EA200F6FD19 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA3DC45528352EA200F6FD19 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				EA3DC43428352EA200F6FD19 /* Sources */,
-				EA3DC43528352EA200F6FD19 /* Frameworks */,
-				EA3DC43628352EA200F6FD19 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA3DC43A28352EA200F6FD19 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = EA3DC43828352EA200F6FD19 /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,16 +256,9 @@
 					EA3DC41E28352EA200F6FD19 = {
 						CreatedOnToolsVersion = 13.4;
 					};
-					EA3DC42428352EA200F6FD19 = {
-						CreatedOnToolsVersion = 13.4;
-					};
 					EA3DC42B28352EA200F6FD19 = {
 						CreatedOnToolsVersion = 13.4;
 						TestTargetID = EA3DC41E28352EA200F6FD19;
-					};
-					EA3DC43728352EA200F6FD19 = {
-						CreatedOnToolsVersion = 13.4;
-						TestTargetID = EA3DC42428352EA200F6FD19;
 					};
 				};
 			};
@@ -262,9 +276,7 @@
 			projectRoot = "";
 			targets = (
 				EA3DC41E28352EA200F6FD19 /* Tickets (iOS) */,
-				EA3DC42428352EA200F6FD19 /* Tickets (macOS) */,
 				EA3DC42B28352EA200F6FD19 /* Tests iOS */,
-				EA3DC43728352EA200F6FD19 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -274,15 +286,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3DC45F2835361D00F6FD19 /* Montserrat-Regular.ttf in Resources */,
 				EA3DC44828352EA200F6FD19 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA3DC42328352EA200F6FD19 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA3DC44928352EA200F6FD19 /* Assets.xcassets in Resources */,
+				EA3DC4672835442400F6FD19 /* Concerts.json in Resources */,
+				EA3DC464283539E300F6FD19 /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,13 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA3DC43628352EA200F6FD19 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EA3DC4682835442400F6FD19 /* Concerts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,19 +310,11 @@
 			files = (
 				EA3DC44028352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */,
 				EA3DC44628352EA200F6FD19 /* Persistence.swift in Sources */,
+				EA3DC45B283532F900F6FD19 /* SplashView.swift in Sources */,
 				EA3DC44228352EA200F6FD19 /* TicketsApp.swift in Sources */,
+				EA3DC47028354D3C00F6FD19 /* Type.swift in Sources */,
+				EA3DC4622835388C00F6FD19 /* FontUtils.swift in Sources */,
 				EA3DC44428352EA200F6FD19 /* ContentView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA3DC42128352EA200F6FD19 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA3DC44128352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */,
-				EA3DC44728352EA200F6FD19 /* Persistence.swift in Sources */,
-				EA3DC44328352EA200F6FD19 /* TicketsApp.swift in Sources */,
-				EA3DC44528352EA200F6FD19 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,15 +324,7 @@
 			files = (
 				EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */,
 				EA3DC43128352EA200F6FD19 /* Tests_iOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA3DC43428352EA200F6FD19 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA3DC43F28352EA200F6FD19 /* Tests_macOSLaunchTests.swift in Sources */,
-				EA3DC43D28352EA200F6FD19 /* Tests_macOS.swift in Sources */,
+				EA3DC47128354D3C00F6FD19 /* Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,11 +335,6 @@
 			isa = PBXTargetDependency;
 			target = EA3DC41E28352EA200F6FD19 /* Tickets (iOS) */;
 			targetProxy = EA3DC42D28352EA200F6FD19 /* PBXContainerItemProxy */;
-		};
-		EA3DC43A28352EA200F6FD19 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA3DC42428352EA200F6FD19 /* Tickets (macOS) */;
-			targetProxy = EA3DC43928352EA200F6FD19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,6 +458,7 @@
 				DEVELOPMENT_TEAM = X3YQMW7J98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tickets--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -508,6 +489,7 @@
 				DEVELOPMENT_TEAM = X3YQMW7J98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tickets--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -526,62 +508,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		EA3DC45028352EA200F6FD19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X3YQMW7J98;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rs.alienlabs.Tickets;
-				PRODUCT_NAME = Tickets;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		EA3DC45128352EA200F6FD19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X3YQMW7J98;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rs.alienlabs.Tickets;
-				PRODUCT_NAME = Tickets;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -626,44 +552,6 @@
 			};
 			name = Release;
 		};
-		EA3DC45628352EA200F6FD19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X3YQMW7J98;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "rs.alienlabs.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Tickets (macOS)";
-			};
-			name = Debug;
-		};
-		EA3DC45728352EA200F6FD19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X3YQMW7J98;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "rs.alienlabs.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Tickets (macOS)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -685,29 +573,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA3DC44F28352EA200F6FD19 /* Build configuration list for PBXNativeTarget "Tickets (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA3DC45028352EA200F6FD19 /* Debug */,
-				EA3DC45128352EA200F6FD19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		EA3DC45228352EA200F6FD19 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA3DC45328352EA200F6FD19 /* Debug */,
 				EA3DC45428352EA200F6FD19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA3DC45528352EA200F6FD19 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA3DC45628352EA200F6FD19 /* Debug */,
-				EA3DC45728352EA200F6FD19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

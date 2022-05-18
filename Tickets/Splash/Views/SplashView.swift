@@ -9,8 +9,26 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Concert tickets")
+                .font(FontUtils.appBoldFontOfSize(size: 30))
+            Image(systemName: "hourglass")
+                .resizable()
+                .frame(width: 25, height: 30)
+                .foregroundColor(.indigo)
+            
+        }
+        .ignoresSafeArea()
+        .frame(
+            minWidth: 0,
+            maxWidth: .infinity,
+            minHeight: 0,
+            maxHeight: .infinity,
+            alignment: .center
+          )
+        .background(Color("AppGray"))
     }
+    
 }
 
 struct SplashView_Previews: PreviewProvider {

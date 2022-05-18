@@ -34,7 +34,19 @@ struct ContentView: View {
                 }
             }
             Text("Select an item")
+                .onAppear {
+                    getCustomFontNames()
+                }
         }
+    }
+    
+    func getCustomFontNames() {
+      // get each of the font families
+      for family in UIFont.familyNames.sorted() {
+        let names = UIFont.fontNames(forFamilyName: family)
+        // print array of names
+        print("Family: \(family) Font names: \(names)")
+      }
     }
 
     private func addItem() {
