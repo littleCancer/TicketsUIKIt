@@ -22,6 +22,39 @@
 		EA3DC4682835442400F6FD19 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC4662835442400F6FD19 /* Concerts.json */; };
 		EA3DC47028354D3C00F6FD19 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC46F28354D3C00F6FD19 /* Type.swift */; };
 		EA3DC47128354D3C00F6FD19 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC46F28354D3C00F6FD19 /* Type.swift */; };
+		EA3DC474283557B500F6FD19 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC473283557B500F6FD19 /* Payload.swift */; };
+		EA3DC475283557B500F6FD19 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC473283557B500F6FD19 /* Payload.swift */; };
+		EA3DC478283558D500F6FD19 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = EA3DC477283558D500F6FD19 /* ObjectMapper */; };
+		EA3DC47B2835592500F6FD19 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EA3DC47A2835592500F6FD19 /* Alamofire */; };
+		EA3DC47D28355B6900F6FD19 /* EventContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC47C28355B6900F6FD19 /* EventContainer.swift */; };
+		EA3DC47E28355B6900F6FD19 /* EventContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC47C28355B6900F6FD19 /* EventContainer.swift */; };
+		EA3DC48428356DEC00F6FD19 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48328356DEC00F6FD19 /* RequestType.swift */; };
+		EA3DC48528356DEC00F6FD19 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48328356DEC00F6FD19 /* RequestType.swift */; };
+		EA3DC48728356E4500F6FD19 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48628356E4500F6FD19 /* RequestProtocol.swift */; };
+		EA3DC48828356E4500F6FD19 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48628356E4500F6FD19 /* RequestProtocol.swift */; };
+		EA3DC48A28356ED300F6FD19 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48928356ED300F6FD19 /* ApiConstants.swift */; };
+		EA3DC48C2835781E00F6FD19 /* EventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48B2835781E00F6FD19 /* EventsRequest.swift */; };
+		EA3DC48F2835794500F6FD19 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48E2835794500F6FD19 /* DataParser.swift */; };
+		EA3DC49228357BC300F6FD19 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC49128357BC300F6FD19 /* NetworkError.swift */; };
+		EA3DC49328357BD200F6FD19 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC49128357BC300F6FD19 /* NetworkError.swift */; };
+		EA3DC49528357CCE00F6FD19 /* ApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC49428357CCE00F6FD19 /* ApiManagerProtocol.swift */; };
+		EA3DC497283580A700F6FD19 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC496283580A700F6FD19 /* RequestManager.swift */; };
+		EA4B30C028363E4A0042540F /* Entity+ValueInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30BF28363E4A0042540F /* Entity+ValueInit.swift */; };
+		EA4B30C128363E4A0042540F /* Entity+ValueInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30BF28363E4A0042540F /* Entity+ValueInit.swift */; };
+		EA4B30C62836435E0042540F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30C52836435E0042540F /* HomeViewModel.swift */; };
+		EA4B30C72836435E0042540F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30C52836435E0042540F /* HomeViewModel.swift */; };
+		EA4B30CA2836487F0042540F /* FetchEventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30C92836487F0042540F /* FetchEventsService.swift */; };
+		EA4B30CC28364A180042540F /* EventsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30CB28364A180042540F /* EventsStoreService.swift */; };
+		EA4B30CD28364A180042540F /* EventsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30CB28364A180042540F /* EventsStoreService.swift */; };
+		EA4B30CF28364FBE0042540F /* MockEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30CE28364FBE0042540F /* MockEvents.swift */; };
+		EA4B30D028364FBE0042540F /* MockEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30CE28364FBE0042540F /* MockEvents.swift */; };
+		EA4B30D2283667540042540F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D1283667540042540F /* HomeView.swift */; };
+		EA4B30D4283668620042540F /* EventsFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D3283668620042540F /* EventsFetcherMock.swift */; };
+		EA4B30D5283668620042540F /* EventsFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D3283668620042540F /* EventsFetcherMock.swift */; };
+		EA4B30D7283687300042540F /* DiscountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D6283687300042540F /* DiscountCard.swift */; };
+		EA4B30D92836880D0042540F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D82836880D0042540F /* CoreDataHelper.swift */; };
+		EA4B30DA2836880D0042540F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D82836880D0042540F /* CoreDataHelper.swift */; };
+		EA4B30DD28368F200042540F /* RoundedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30DC28368F200042540F /* RoundedTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +84,26 @@
 		EA3DC463283539E300F6FD19 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EA3DC4662835442400F6FD19 /* Concerts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Concerts.json; sourceTree = "<group>"; };
 		EA3DC46F28354D3C00F6FD19 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		EA3DC473283557B500F6FD19 /* Payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
+		EA3DC47C28355B6900F6FD19 /* EventContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventContainer.swift; sourceTree = "<group>"; };
+		EA3DC48328356DEC00F6FD19 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		EA3DC48628356E4500F6FD19 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		EA3DC48928356ED300F6FD19 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		EA3DC48B2835781E00F6FD19 /* EventsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRequest.swift; sourceTree = "<group>"; };
+		EA3DC48E2835794500F6FD19 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		EA3DC49128357BC300F6FD19 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		EA3DC49428357CCE00F6FD19 /* ApiManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerProtocol.swift; sourceTree = "<group>"; };
+		EA3DC496283580A700F6FD19 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		EA4B30BF28363E4A0042540F /* Entity+ValueInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ValueInit.swift"; sourceTree = "<group>"; };
+		EA4B30C52836435E0042540F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EA4B30C92836487F0042540F /* FetchEventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEventsService.swift; sourceTree = "<group>"; };
+		EA4B30CB28364A180042540F /* EventsStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStoreService.swift; sourceTree = "<group>"; };
+		EA4B30CE28364FBE0042540F /* MockEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEvents.swift; sourceTree = "<group>"; };
+		EA4B30D1283667540042540F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EA4B30D3283668620042540F /* EventsFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFetcherMock.swift; sourceTree = "<group>"; };
+		EA4B30D6283687300042540F /* DiscountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCard.swift; sourceTree = "<group>"; };
+		EA4B30D82836880D0042540F /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		EA4B30DC28368F200042540F /* RoundedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3DC478283558D500F6FD19 /* ObjectMapper in Frameworks */,
+				EA3DC47B2835592500F6FD19 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +139,7 @@
 		EA3DC41428352EA100F6FD19 /* Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				EA4B30C2283642C40042540F /* Home */,
 				EA3DC469283548C700F6FD19 /* Core */,
 				EA3DC4652835438C00F6FD19 /* Preview Content */,
 				EA3DC45C2835354900F6FD19 /* Fonts */,
@@ -158,6 +214,7 @@
 		EA3DC469283548C700F6FD19 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA4B30DB28368E950042540F /* Views */,
 				EA3DC46D28354CE500F6FD19 /* Domain */,
 				EA3DC46A283548D600F6FD19 /* Data */,
 			);
@@ -168,16 +225,20 @@
 			isa = PBXGroup;
 			children = (
 				EA3DC46C2835490300F6FD19 /* CoreData */,
-				EA3DC46B283548F200F6FD19 /* api */,
+				EA3DC46B283548F200F6FD19 /* Api */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		EA3DC46B283548F200F6FD19 /* api */ = {
+		EA3DC46B283548F200F6FD19 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				EA3DC49028357BAB00F6FD19 /* Network */,
+				EA3DC48D2835791B00F6FD19 /* Parser */,
+				EA3DC48228355CF500F6FD19 /* Request */,
+				EA3DC48928356ED300F6FD19 /* ApiConstants.swift */,
 			);
-			path = api;
+			path = Api;
 			sourceTree = "<group>";
 		};
 		EA3DC46C2835490300F6FD19 /* CoreData */ = {
@@ -185,6 +246,8 @@
 			children = (
 				EA3DC41928352EA100F6FD19 /* Persistence.swift */,
 				EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */,
+				EA4B30BF28363E4A0042540F /* Entity+ValueInit.swift */,
+				EA4B30D82836880D0042540F /* CoreDataHelper.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -201,8 +264,84 @@
 			isa = PBXGroup;
 			children = (
 				EA3DC46F28354D3C00F6FD19 /* Type.swift */,
+				EA3DC473283557B500F6FD19 /* Payload.swift */,
+				EA3DC47C28355B6900F6FD19 /* EventContainer.swift */,
+				EA4B30CE28364FBE0042540F /* MockEvents.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EA3DC48228355CF500F6FD19 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC48328356DEC00F6FD19 /* RequestType.swift */,
+				EA3DC48628356E4500F6FD19 /* RequestProtocol.swift */,
+				EA3DC48B2835781E00F6FD19 /* EventsRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EA3DC48D2835791B00F6FD19 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC48E2835794500F6FD19 /* DataParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		EA3DC49028357BAB00F6FD19 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DC49128357BC300F6FD19 /* NetworkError.swift */,
+				EA3DC49428357CCE00F6FD19 /* ApiManagerProtocol.swift */,
+				EA3DC496283580A700F6FD19 /* RequestManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EA4B30C2283642C40042540F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B30C8283647320042540F /* Services */,
+				EA4B30C4283643180042540F /* Views */,
+				EA4B30C32836430F0042540F /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EA4B30C32836430F0042540F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B30C52836435E0042540F /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EA4B30C4283643180042540F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B30D1283667540042540F /* HomeView.swift */,
+				EA4B30D6283687300042540F /* DiscountCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA4B30C8283647320042540F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B30C92836487F0042540F /* FetchEventsService.swift */,
+				EA4B30CB28364A180042540F /* EventsStoreService.swift */,
+				EA4B30D3283668620042540F /* EventsFetcherMock.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EA4B30DB28368E950042540F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B30DC28368F200042540F /* RoundedTextView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +360,10 @@
 			dependencies = (
 			);
 			name = "Tickets (iOS)";
+			packageProductDependencies = (
+				EA3DC477283558D500F6FD19 /* ObjectMapper */,
+				EA3DC47A2835592500F6FD19 /* Alamofire */,
+			);
 			productName = "Tickets (iOS)";
 			productReference = EA3DC41F28352EA200F6FD19 /* Tickets.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +414,10 @@
 				Base,
 			);
 			mainGroup = EA3DC40F28352EA100F6FD19;
+			packageReferences = (
+				EA3DC476283558D500F6FD19 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				EA3DC4792835592500F6FD19 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = EA3DC42028352EA200F6FD19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,13 +455,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4B30C62836435E0042540F /* HomeViewModel.swift in Sources */,
+				EA3DC497283580A700F6FD19 /* RequestManager.swift in Sources */,
 				EA3DC44028352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */,
 				EA3DC44628352EA200F6FD19 /* Persistence.swift in Sources */,
+				EA4B30CC28364A180042540F /* EventsStoreService.swift in Sources */,
+				EA3DC474283557B500F6FD19 /* Payload.swift in Sources */,
 				EA3DC45B283532F900F6FD19 /* SplashView.swift in Sources */,
+				EA4B30DD28368F200042540F /* RoundedTextView.swift in Sources */,
 				EA3DC44228352EA200F6FD19 /* TicketsApp.swift in Sources */,
+				EA4B30D92836880D0042540F /* CoreDataHelper.swift in Sources */,
+				EA4B30CA2836487F0042540F /* FetchEventsService.swift in Sources */,
 				EA3DC47028354D3C00F6FD19 /* Type.swift in Sources */,
+				EA3DC48728356E4500F6FD19 /* RequestProtocol.swift in Sources */,
+				EA3DC47D28355B6900F6FD19 /* EventContainer.swift in Sources */,
+				EA3DC48A28356ED300F6FD19 /* ApiConstants.swift in Sources */,
+				EA3DC49228357BC300F6FD19 /* NetworkError.swift in Sources */,
+				EA4B30D7283687300042540F /* DiscountCard.swift in Sources */,
+				EA3DC49528357CCE00F6FD19 /* ApiManagerProtocol.swift in Sources */,
+				EA4B30C028363E4A0042540F /* Entity+ValueInit.swift in Sources */,
+				EA4B30CF28364FBE0042540F /* MockEvents.swift in Sources */,
 				EA3DC4622835388C00F6FD19 /* FontUtils.swift in Sources */,
+				EA4B30D4283668620042540F /* EventsFetcherMock.swift in Sources */,
 				EA3DC44428352EA200F6FD19 /* ContentView.swift in Sources */,
+				EA3DC48428356DEC00F6FD19 /* RequestType.swift in Sources */,
+				EA3DC48F2835794500F6FD19 /* DataParser.swift in Sources */,
+				EA4B30D2283667540042540F /* HomeView.swift in Sources */,
+				EA3DC48C2835781E00F6FD19 /* EventsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +490,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */,
+				EA3DC49328357BD200F6FD19 /* NetworkError.swift in Sources */,
+				EA4B30D028364FBE0042540F /* MockEvents.swift in Sources */,
 				EA3DC43128352EA200F6FD19 /* Tests_iOS.swift in Sources */,
+				EA4B30C72836435E0042540F /* HomeViewModel.swift in Sources */,
+				EA4B30C128363E4A0042540F /* Entity+ValueInit.swift in Sources */,
+				EA3DC475283557B500F6FD19 /* Payload.swift in Sources */,
 				EA3DC47128354D3C00F6FD19 /* Type.swift in Sources */,
+				EA4B30CD28364A180042540F /* EventsStoreService.swift in Sources */,
+				EA3DC47E28355B6900F6FD19 /* EventContainer.swift in Sources */,
+				EA4B30DA2836880D0042540F /* CoreDataHelper.swift in Sources */,
+				EA4B30D5283668620042540F /* EventsFetcherMock.swift in Sources */,
+				EA3DC48528356DEC00F6FD19 /* RequestType.swift in Sources */,
+				EA3DC48828356E4500F6FD19 /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +761,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA3DC476283558D500F6FD19 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		EA3DC4792835592500F6FD19 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA3DC477283558D500F6FD19 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3DC476283558D500F6FD19 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		EA3DC47A2835592500F6FD19 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3DC4792835592500F6FD19 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */ = {

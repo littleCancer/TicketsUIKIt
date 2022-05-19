@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State var showSplash = true
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -17,38 +18,34 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        
+        
+        
+        ZStack {
+            if (showSplash) {
+                SplashView()
+                    .transition(.asymmetric(insertion: .identity, removal: .move(edge: .bottom)))
+                    .task {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            withAnimation(.easeIn(duration: 0.2)) {
+                                showSplash.toggle()
+                            }
+                        }
                     }
+            } else {
+                NavigationView {
+                    HomeView(viewModel: HomeViewModel(eventsFetcher: FetchEventsService(requestManager: RequestManager()), eventsStore: EventsStoreService(context: PersistenceController.shared.container.newBackgroundContext())))
+        //            HomeView(
+        //                viewModel: HomeViewModel(
+        //                    eventsFetcher: EventsFetcherMock(),
+        //                    eventsStore: EventsStoreService(context: PersistenceController.preview.container.viewContext)))
                 }
-                .onDelete(perform: deleteItems)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-            }
-            Text("Select an item")
-                .onAppear {
-                    getCustomFontNames()
-                }
         }
+        
+        
     }
     
-    func getCustomFontNames() {
-      // get each of the font families
-      for family in UIFont.familyNames.sorted() {
-        let names = UIFont.fontNames(forFamilyName: family)
-        // print array of names
-        print("Family: \(family) Font names: \(names)")
-      }
-    }
-
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)

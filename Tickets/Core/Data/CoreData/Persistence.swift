@@ -13,9 +13,22 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        
+        let events:[EventContainer] = MockEvents.events
+        for eventContainer in events {
+            if let payload = eventContainer.payload {
+                switch eventContainer.type {
+                    case .Event:
+                        let event = EventEntity.init(context: viewContext)
+                        event.setValues(valueObject: payload)
+                    case .Discount:
+                        let discount = DiscountEntity.init(context: viewContext)
+                        discount.setValues(valueObject: payload)
+                    default: break
+                }
+
+            }
+            
         }
         do {
             try viewContext.save()

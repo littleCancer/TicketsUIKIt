@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SplashView: View {
+    
+    private let requestManager = RequestManager()
+    
     var body: some View {
         VStack {
             Text("Concert tickets")

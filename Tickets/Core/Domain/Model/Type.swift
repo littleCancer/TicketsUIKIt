@@ -7,6 +7,9 @@
 
 import Foundation
 
-enum Type {
+enum Type : String {
+    
+    case Discount = "DISCOUNT"
+    case Event = "EVENT"
     
 }
