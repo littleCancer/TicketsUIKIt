@@ -34,6 +34,7 @@ extension DiscountEntity {
         self.setValue(valueObject.quantity, forKey: "quantity")
         self.setValue(valueObject.discount, forKey: "discount")
         self.setValue(valueObject.date, forKey: "date")
+        self.setValue()
     }
     
 }

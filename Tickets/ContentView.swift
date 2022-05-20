@@ -26,7 +26,7 @@ struct ContentView: View {
                 SplashView()
                     .transition(.asymmetric(insertion: .identity, removal: .move(edge: .bottom)))
                     .task {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             withAnimation(.easeIn(duration: 0.2)) {
                                 showSplash.toggle()
                             }

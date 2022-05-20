@@ -23,13 +23,29 @@ struct HomeView: View {
     private var discounts: FetchedResults<DiscountEntity>
     
     var body: some View {
-        NavigationView {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .task {
-                    if (!viewModel.hasDataInStorage) {
-                        await viewModel.fetchEvents()
+        VStack {
+            Divider()
+                .frame(width: 300, height: 4).background(Color.appDividerGray())
+            ScrollView(.vertical, showsIndicators: false) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(spacing: 20) {
+                        ForEach(discounts) { discount in
+                            Text(discount.name!)
+                        }
                     }
                 }
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Concert tickets").font(Font.appBoldFontOfSize(size: 20))
+            }
+        }
+        .task {
+            if (!viewModel.hasDataInStorage) {
+                await viewModel.fetchEvents()
+            }
         }
     }
 }

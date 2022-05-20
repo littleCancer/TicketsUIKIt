@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA3B080F28377B89005C2B85 /* DiscountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B080E28377B89005C2B85 /* DiscountItem.swift */; };
+		EA3B0811283793BF005C2B85 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0810283793BF005C2B85 /* ColorUtils.swift */; };
 		EA3DC43128352EA200F6FD19 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43028352EA200F6FD19 /* Tests_iOS.swift */; };
 		EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43228352EA200F6FD19 /* Tests_iOSLaunchTests.swift */; };
 		EA3DC44028352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */; };
@@ -55,6 +57,10 @@
 		EA4B30D92836880D0042540F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D82836880D0042540F /* CoreDataHelper.swift */; };
 		EA4B30DA2836880D0042540F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30D82836880D0042540F /* CoreDataHelper.swift */; };
 		EA4B30DD28368F200042540F /* RoundedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30DC28368F200042540F /* RoundedTextView.swift */; };
+		EA4B30E028369E5A0042540F /* ApiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30DF28369E5A0042540F /* ApiUtils.swift */; };
+		EA4B30E62836CAFB0042540F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA4B30E52836CAFB0042540F /* SDWebImageSwiftUI */; };
+		EA4B30E82836CF0D0042540F /* FormatUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30E72836CF0D0042540F /* FormatUtils.swift */; };
+		EA4B30E92836CF0D0042540F /* FormatUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30E72836CF0D0042540F /* FormatUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA3B080E28377B89005C2B85 /* DiscountItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountItem.swift; sourceTree = "<group>"; };
+		EA3B0810283793BF005C2B85 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		EA3DC41628352EA100F6FD19 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		EA3DC41728352EA100F6FD19 /* TicketsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsApp.swift; sourceTree = "<group>"; };
 		EA3DC41828352EA100F6FD19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 		EA4B30D6283687300042540F /* DiscountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCard.swift; sourceTree = "<group>"; };
 		EA4B30D82836880D0042540F /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		EA4B30DC28368F200042540F /* RoundedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextView.swift; sourceTree = "<group>"; };
+		EA4B30DF28369E5A0042540F /* ApiUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUtils.swift; sourceTree = "<group>"; };
+		EA4B30E72836CF0D0042540F /* FormatUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4B30E62836CAFB0042540F /* SDWebImageSwiftUI in Frameworks */,
 				EA3DC478283558D500F6FD19 /* ObjectMapper in Frameworks */,
 				EA3DC47B2835592500F6FD19 /* Alamofire in Frameworks */,
 			);
@@ -214,6 +225,7 @@
 		EA3DC469283548C700F6FD19 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA4B30DE28369E490042540F /* Utils */,
 				EA4B30DB28368E950042540F /* Views */,
 				EA3DC46D28354CE500F6FD19 /* Domain */,
 				EA3DC46A283548D600F6FD19 /* Data */,
@@ -322,6 +334,7 @@
 			children = (
 				EA4B30D1283667540042540F /* HomeView.swift */,
 				EA4B30D6283687300042540F /* DiscountCard.swift */,
+				EA3B080E28377B89005C2B85 /* DiscountItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +357,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EA4B30DE28369E490042540F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B30DF28369E5A0042540F /* ApiUtils.swift */,
+				EA4B30E72836CF0D0042540F /* FormatUtils.swift */,
+				EA3B0810283793BF005C2B85 /* ColorUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,6 +386,7 @@
 			packageProductDependencies = (
 				EA3DC477283558D500F6FD19 /* ObjectMapper */,
 				EA3DC47A2835592500F6FD19 /* Alamofire */,
+				EA4B30E52836CAFB0042540F /* SDWebImageSwiftUI */,
 			);
 			productName = "Tickets (iOS)";
 			productReference = EA3DC41F28352EA200F6FD19 /* Tickets.app */;
@@ -417,6 +441,7 @@
 			packageReferences = (
 				EA3DC476283558D500F6FD19 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				EA3DC4792835592500F6FD19 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EA4B30E42836CAFB0042540F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = EA3DC42028352EA200F6FD19 /* Products */;
 			projectDirPath = "";
@@ -470,13 +495,17 @@
 				EA3DC48728356E4500F6FD19 /* RequestProtocol.swift in Sources */,
 				EA3DC47D28355B6900F6FD19 /* EventContainer.swift in Sources */,
 				EA3DC48A28356ED300F6FD19 /* ApiConstants.swift in Sources */,
+				EA4B30E82836CF0D0042540F /* FormatUtils.swift in Sources */,
 				EA3DC49228357BC300F6FD19 /* NetworkError.swift in Sources */,
 				EA4B30D7283687300042540F /* DiscountCard.swift in Sources */,
 				EA3DC49528357CCE00F6FD19 /* ApiManagerProtocol.swift in Sources */,
 				EA4B30C028363E4A0042540F /* Entity+ValueInit.swift in Sources */,
 				EA4B30CF28364FBE0042540F /* MockEvents.swift in Sources */,
+				EA3B080F28377B89005C2B85 /* DiscountItem.swift in Sources */,
+				EA4B30E028369E5A0042540F /* ApiUtils.swift in Sources */,
 				EA3DC4622835388C00F6FD19 /* FontUtils.swift in Sources */,
 				EA4B30D4283668620042540F /* EventsFetcherMock.swift in Sources */,
+				EA3B0811283793BF005C2B85 /* ColorUtils.swift in Sources */,
 				EA3DC44428352EA200F6FD19 /* ContentView.swift in Sources */,
 				EA3DC48428356DEC00F6FD19 /* RequestType.swift in Sources */,
 				EA3DC48F2835794500F6FD19 /* DataParser.swift in Sources */,
@@ -489,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4B30E92836CF0D0042540F /* FormatUtils.swift in Sources */,
 				EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */,
 				EA3DC49328357BD200F6FD19 /* NetworkError.swift in Sources */,
 				EA4B30D028364FBE0042540F /* MockEvents.swift in Sources */,
@@ -779,6 +809,14 @@
 				minimumVersion = 5.5.0;
 			};
 		};
+		EA4B30E42836CAFB0042540F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -791,6 +829,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA3DC4792835592500F6FD19 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		EA4B30E52836CAFB0042540F /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4B30E42836CAFB0042540F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

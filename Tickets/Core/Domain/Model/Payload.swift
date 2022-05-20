@@ -25,6 +25,11 @@ struct Payload : Mappable {
     }
     
     mutating func mapping(map: Map) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        
         id              <- map["id"]
         name            <- map["name"]
         place           <- map["place"]
@@ -33,7 +38,7 @@ struct Payload : Mappable {
         price           <- map["price"]
         quantity        <- map["quantity"]
         discount        <- map["discount"]
-        date            <- (map["date"], DateTransform())
+        date            <- (map["date"], DateFormatterTransform(dateFormatter: dateFormatter))
     }
     
 }

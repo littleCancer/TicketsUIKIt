@@ -10,4 +10,5 @@ import Foundation
 
 enum APIConstants {
     static let host = "oobleecdn.s3.eu-central-1.amazonaws.com"
+    static let appPath = "content/concert-tickets"
 }

@@ -27,9 +27,9 @@ struct RoundedTextView: View {
 struct ElipseTextView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            RoundedTextView(text: "153 e", font: FontUtils.appFontOfSize(size: 30))
+            RoundedTextView(text: "153 e", font: Font.appFontOfSize(size: 30))
                 .frame(width: 100, height: 100)
-            RoundedTextView(text: "-40 %", font: FontUtils.appFontOfSize(size: 40))
+            RoundedTextView(text: "-40 %", font: Font.appFontOfSize(size: 40))
                 .frame(width: 200, height: 160)
         }
         .ignoresSafeArea()

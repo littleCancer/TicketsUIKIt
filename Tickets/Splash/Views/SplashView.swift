@@ -14,7 +14,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             Text("Concert tickets")
-                .font(FontUtils.appBoldFontOfSize(size: 30))
+                .font(Font.appBoldFontOfSize(size: 30))
             Image(systemName: "hourglass")
                 .resizable()
                 .frame(width: 25, height: 30)

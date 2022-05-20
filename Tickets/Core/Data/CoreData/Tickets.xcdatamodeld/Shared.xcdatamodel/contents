@@ -27,8 +27,8 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="EventEntity" positionX="-63" positionY="-9" width="128" height="164"/>
         <element name="DiscountEntity" positionX="-54" positionY="54" width="128" height="179"/>
+        <element name="EventEntity" positionX="-63" positionY="-9" width="128" height="164"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
     </elements>
 </model>

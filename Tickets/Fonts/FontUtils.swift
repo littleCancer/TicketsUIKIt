@@ -8,22 +8,21 @@
 import Foundation
 import SwiftUI
 
-struct FontUtils {
+enum AppFonts {
+    case Montserrat
+    case MontserratBold
     
-    enum AppFonts {
-        case Montserrat
-        case MontserratBold
-        
-        func name() -> String {
-            switch self {
-            case .Montserrat:
-                 return "Montserrat-Regular"
-            case .MontserratBold:
-                return "Montserrat-Bold"
-            }
+    func name() -> String {
+        switch self {
+        case .Montserrat:
+             return "Montserrat-Regular"
+        case .MontserratBold:
+            return "Montserrat-Bold"
         }
     }
-    
+}
+
+extension Font {
     static func appFontOfSize(size: CGFloat) -> Font {
         return Font.custom(AppFonts.Montserrat.name(), size: size)
     }
@@ -31,6 +30,4 @@ struct FontUtils {
     static func appBoldFontOfSize(size: CGFloat) -> Font {
         return Font.custom(AppFonts.MontserratBold.name(), size: size)
     }
-    
-    
 }
