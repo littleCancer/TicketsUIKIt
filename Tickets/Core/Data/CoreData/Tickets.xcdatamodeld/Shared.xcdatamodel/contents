@@ -4,7 +4,6 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="discount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="eventDescription" optional="YES" attributeType="String"/>
-        <attribute name="eventId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="photo" optional="YES" attributeType="String"/>
@@ -27,7 +26,7 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="DiscountEntity" positionX="-54" positionY="54" width="128" height="179"/>
+        <element name="DiscountEntity" positionX="-54" positionY="54" width="128" height="164"/>
         <element name="EventEntity" positionX="-63" positionY="-9" width="128" height="164"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
     </elements>

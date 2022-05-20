@@ -35,11 +35,8 @@ struct ContentView: View {
             } else {
                 NavigationView {
                     HomeView(viewModel: HomeViewModel(eventsFetcher: FetchEventsService(requestManager: RequestManager()), eventsStore: EventsStoreService(context: PersistenceController.shared.container.newBackgroundContext())))
-        //            HomeView(
-        //                viewModel: HomeViewModel(
-        //                    eventsFetcher: EventsFetcherMock(),
-        //                    eventsStore: EventsStoreService(context: PersistenceController.preview.container.viewContext)))
                 }
+                .accentColor(.black)
             }
         }
         

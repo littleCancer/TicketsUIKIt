@@ -19,22 +19,22 @@ struct DiscountCard: View {
                 WebImage(url: URL(string: discount.imageUrl))
                     .resizable()
                     .placeholder(content: {
-                        Color("AppGray")
+                        Color.appGray
                     })
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: geometry.size.height)
-                    .clipShape(RoundedRectangle(cornerRadius: 45))
+                    .clipShape(RoundedRectangle(cornerRadius: 35))
                     .transition(.fade(duration: 0.3))
                 
                 VStack {
-                    RoundedTextView(text: FormatUtils.formatDiscount(discount: discount.discount), font: Font.appBoldFontOfSize(size: 30))
+                    RoundedTextView(text: FormatUtils.formatDiscount(discount: discount.discount), font: Font.appFontOfSize(size: 30))
                         .frame(width: 100, height: 85)
                         .padding(.top, 20)
                     Spacer()
                     BottomInfoView(location: discount.place, date: discount.date, message: FormatUtils.formatAvailabilityMessage(amount: discount.price, quantity: discount.quantity))
                         .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 45))
+                .clipShape(RoundedRectangle(cornerRadius: 35))
             }
         }
 
@@ -44,12 +44,6 @@ struct DiscountCard: View {
 
 struct BottomInfoView: View {
     
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        return formatter
-    }()
-    
     var location: String?
     var date: Date?
     var message: String
@@ -58,7 +52,7 @@ struct BottomInfoView: View {
         ZStack {
             Rectangle()
                 .fill(.black.opacity(0.7))
-                .clipShape(RoundedRectangle(cornerRadius: 45))
+                .clipShape(RoundedRectangle(cornerRadius: 35))
             VStack {
                 Label {
                     Text(location ?? "")
@@ -71,7 +65,7 @@ struct BottomInfoView: View {
                 }
                 .padding(0)
         
-                Text("\(date!, formatter: dateFormatter)")
+                Text(FormatUtils.formatDate(date: date!))
                     .font(Font.appBoldFontOfSize(size: 20))
                     .foregroundColor(.white)
                     .padding(.top, 1)

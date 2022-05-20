@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		EA3B080F28377B89005C2B85 /* DiscountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B080E28377B89005C2B85 /* DiscountItem.swift */; };
 		EA3B0811283793BF005C2B85 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0810283793BF005C2B85 /* ColorUtils.swift */; };
+		EA3B08132837AADD005C2B85 /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B08122837AADD005C2B85 /* DiscountView.swift */; };
+		EA3B08152837BBED005C2B85 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B08142837BBEC005C2B85 /* EventView.swift */; };
+		EA3B08172837DE5E005C2B85 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B08162837DE5E005C2B85 /* UpcomingView.swift */; };
+		EA3B08192837F7A5005C2B85 /* ExpiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B08182837F7A5005C2B85 /* ExpiredView.swift */; };
+		EA3B081B2837F8A3005C2B85 /* ExpiredCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B081A2837F8A3005C2B85 /* ExpiredCard.swift */; };
+		EA3B081F28381A5F005C2B85 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B081E28381A5F005C2B85 /* DetailsView.swift */; };
+		EA3B082128381F69005C2B85 /* TextWithHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B082028381F69005C2B85 /* TextWithHeading.swift */; };
 		EA3DC43128352EA200F6FD19 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43028352EA200F6FD19 /* Tests_iOS.swift */; };
 		EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC43228352EA200F6FD19 /* Tests_iOSLaunchTests.swift */; };
 		EA3DC44028352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */; };
@@ -76,6 +83,13 @@
 /* Begin PBXFileReference section */
 		EA3B080E28377B89005C2B85 /* DiscountItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountItem.swift; sourceTree = "<group>"; };
 		EA3B0810283793BF005C2B85 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		EA3B08122837AADD005C2B85 /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
+		EA3B08142837BBEC005C2B85 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		EA3B08162837DE5E005C2B85 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		EA3B08182837F7A5005C2B85 /* ExpiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiredView.swift; sourceTree = "<group>"; };
+		EA3B081A2837F8A3005C2B85 /* ExpiredCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiredCard.swift; sourceTree = "<group>"; };
+		EA3B081E28381A5F005C2B85 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		EA3B082028381F69005C2B85 /* TextWithHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithHeading.swift; sourceTree = "<group>"; };
 		EA3DC41628352EA100F6FD19 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		EA3DC41728352EA100F6FD19 /* TicketsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsApp.swift; sourceTree = "<group>"; };
 		EA3DC41828352EA100F6FD19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +151,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA3B081C28381A1C005C2B85 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B081D28381A28005C2B85 /* Views */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		EA3B081D28381A28005C2B85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B081E28381A5F005C2B85 /* DetailsView.swift */,
+				EA3B082028381F69005C2B85 /* TextWithHeading.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EA3DC40F28352EA100F6FD19 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +181,7 @@
 		EA3DC41428352EA100F6FD19 /* Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				EA3B081C28381A1C005C2B85 /* Details */,
 				EA4B30C2283642C40042540F /* Home */,
 				EA3DC469283548C700F6FD19 /* Core */,
 				EA3DC4652835438C00F6FD19 /* Preview Content */,
@@ -335,6 +367,10 @@
 				EA4B30D1283667540042540F /* HomeView.swift */,
 				EA4B30D6283687300042540F /* DiscountCard.swift */,
 				EA3B080E28377B89005C2B85 /* DiscountItem.swift */,
+				EA3B08122837AADD005C2B85 /* DiscountView.swift */,
+				EA3B08162837DE5E005C2B85 /* UpcomingView.swift */,
+				EA3B08182837F7A5005C2B85 /* ExpiredView.swift */,
+				EA3B081A2837F8A3005C2B85 /* ExpiredCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				EA4B30DC28368F200042540F /* RoundedTextView.swift */,
+				EA3B08142837BBEC005C2B85 /* EventView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -486,9 +523,11 @@
 				EA3DC44628352EA200F6FD19 /* Persistence.swift in Sources */,
 				EA4B30CC28364A180042540F /* EventsStoreService.swift in Sources */,
 				EA3DC474283557B500F6FD19 /* Payload.swift in Sources */,
+				EA3B08172837DE5E005C2B85 /* UpcomingView.swift in Sources */,
 				EA3DC45B283532F900F6FD19 /* SplashView.swift in Sources */,
 				EA4B30DD28368F200042540F /* RoundedTextView.swift in Sources */,
 				EA3DC44228352EA200F6FD19 /* TicketsApp.swift in Sources */,
+				EA3B081F28381A5F005C2B85 /* DetailsView.swift in Sources */,
 				EA4B30D92836880D0042540F /* CoreDataHelper.swift in Sources */,
 				EA4B30CA2836487F0042540F /* FetchEventsService.swift in Sources */,
 				EA3DC47028354D3C00F6FD19 /* Type.swift in Sources */,
@@ -497,14 +536,19 @@
 				EA3DC48A28356ED300F6FD19 /* ApiConstants.swift in Sources */,
 				EA4B30E82836CF0D0042540F /* FormatUtils.swift in Sources */,
 				EA3DC49228357BC300F6FD19 /* NetworkError.swift in Sources */,
+				EA3B08132837AADD005C2B85 /* DiscountView.swift in Sources */,
+				EA3B081B2837F8A3005C2B85 /* ExpiredCard.swift in Sources */,
 				EA4B30D7283687300042540F /* DiscountCard.swift in Sources */,
 				EA3DC49528357CCE00F6FD19 /* ApiManagerProtocol.swift in Sources */,
 				EA4B30C028363E4A0042540F /* Entity+ValueInit.swift in Sources */,
 				EA4B30CF28364FBE0042540F /* MockEvents.swift in Sources */,
 				EA3B080F28377B89005C2B85 /* DiscountItem.swift in Sources */,
 				EA4B30E028369E5A0042540F /* ApiUtils.swift in Sources */,
+				EA3B08152837BBED005C2B85 /* EventView.swift in Sources */,
 				EA3DC4622835388C00F6FD19 /* FontUtils.swift in Sources */,
+				EA3B08192837F7A5005C2B85 /* ExpiredView.swift in Sources */,
 				EA4B30D4283668620042540F /* EventsFetcherMock.swift in Sources */,
+				EA3B082128381F69005C2B85 /* TextWithHeading.swift in Sources */,
 				EA3B0811283793BF005C2B85 /* ColorUtils.swift in Sources */,
 				EA3DC44428352EA200F6FD19 /* ContentView.swift in Sources */,
 				EA3DC48428356DEC00F6FD19 /* RequestType.swift in Sources */,
@@ -670,6 +714,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -683,7 +728,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -701,6 +746,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -714,7 +760,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

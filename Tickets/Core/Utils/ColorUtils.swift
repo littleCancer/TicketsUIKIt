@@ -10,8 +10,8 @@ import SwiftUI
 
 extension Color {
     
-    static func appDividerGray() -> Color {
-        return Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1)
-    }
+    static var appDividerGray: Color = Color(red: 0.8, green: 0.8, blue: 0.8, opacity: 1)
+    
+    static var appGray: Color = Color("AppGray")
     
 }

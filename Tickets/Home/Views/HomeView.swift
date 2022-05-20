@@ -18,28 +18,81 @@ struct HomeView: View {
         sortDescriptors: [
             NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: true)
         ],
+        predicate: NSPredicate(format: "date > %@", argumentArray: [NSDate.now]),
         animation: .default
     )
     private var discounts: FetchedResults<DiscountEntity>
     
+    @FetchRequest(
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: true)
+        ],
+        predicate: NSPredicate(format: "date < %@", argumentArray: [NSDate.now]),
+        animation: .default
+    )
+    private var expired: FetchedResults<DiscountEntity>
+    
+    @FetchRequest(
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \EventEntity.date, ascending: true)
+        ],
+        predicate: NSPredicate(format: "date > %@", argumentArray: [NSDate.now]),
+        animation: .default
+    )
+    private var upcoming: FetchedResults<EventEntity>
+    
     var body: some View {
         VStack {
-            Divider()
-                .frame(width: 300, height: 4).background(Color.appDividerGray())
+            Rectangle().fill(Color.appDividerGray).frame(width: 300, height: 3)
+                .padding(.top, 5)
             ScrollView(.vertical, showsIndicators: false) {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(spacing: 20) {
-                        ForEach(discounts) { discount in
-                            Text(discount.name!)
+                VStack {
+                    HStack {
+                        Text("For you")
+                            .modifier(SectioTextModifier())
+                        Spacer()
+                    }
+                    DiscountView(discounts: discounts)
+                    
+                    HStack {
+                        Text("Upcoming")
+                            .modifier(SectioTextModifier())
+                        Spacer()
+                    }
+                    .padding(.top, 20)
+                    
+                    UpcomingView(events: upcoming)
+                    
+                    HStack {
+                        Text("Expired")
+                            .modifier(SectioTextModifier())
+                        Spacer()
+                    }
+                    .padding(.top, 20)
+                    ExpiredView(discounts: expired)
+                    
+                    HStack {
+                        Spacer()
+                        NavigationLink {
+                            Text("Baraba")
+                        } label: {
+                            Image(systemName: "pencil.circle.fill")
+                                .resizable()
+                                .foregroundColor(.blue)
+                                .frame(width: 40, height: 40)
                         }
+                        .padding(.trailing, 30)
+
                     }
                 }
+                
             }
         }
+        .background(Color.appGray)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Concert tickets").font(Font.appBoldFontOfSize(size: 20))
+                Text("Concert tickets").font(Font.appBoldFontOfSize(size: 25))
             }
         }
         .task {
@@ -48,6 +101,20 @@ struct HomeView: View {
             }
         }
     }
+    
+}
+
+struct SectioTextModifier: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .font(Font.appBoldFontOfSize(size: 30))
+            .foregroundColor(.black)
+            .padding(.bottom, 20)
+            .padding(.leading, 40)
+            .padding(.top, 20)
+      }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {

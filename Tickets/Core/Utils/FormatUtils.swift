@@ -10,6 +10,11 @@ import Foundation
 
 enum FormatUtils {
     
+    static let fullDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter
+    }()
     
     static func formatDiscount(discount: NSDecimalNumber?) -> String {
         if let discount = discount {
@@ -25,6 +30,45 @@ enum FormatUtils {
         
         return "Only \(quantity) tickets for \(amount)€"
 
+    }
+    
+    static func formatTicketsLeftMessage(quantity: Int16?) -> String {
+        guard let quantity = quantity else {
+            return ""
+        }
+        
+        return "\(quantity) tickets more"
+
+    }
+    
+    static func formatPrice(price: NSDecimalNumber?) -> String {
+        guard let price = price else {
+            return ""
+        }
+        
+        return "\(price)e"
+    }
+    
+    static func monthFromDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "LLLL"
+        return dateFormatter.string(from: date).uppercased()
+    }
+    
+    static func yearFromDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        return dateFormatter.string(from: date)
+    }
+    
+    static func dayOfTheMonthFromDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        return dateFormatter.string(from: date)
+    }
+    
+    static func formatDate(date: Date) -> String {
+        return fullDateFormatter.string(from: date)
     }
     
 }

@@ -29,7 +29,7 @@ struct SplashView: View {
             maxHeight: .infinity,
             alignment: .center
           )
-        .background(Color("AppGray"))
+        .background(Color.appGray)
     }
     
 }

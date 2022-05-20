@@ -11,7 +11,7 @@ import CoreData
 extension EventEntity {
     
     func setValues(valueObject: Payload) {
-        self.setValue(valueObject.id, forKey: "eventId")
+        self.setValue(valueObject.id, forKey: "id")
         self.setValue(valueObject.name, forKey: "name")
         self.setValue(valueObject.place, forKey: "place")
         self.setValue(valueObject.photo, forKey: "photo")
@@ -25,7 +25,7 @@ extension EventEntity {
 extension DiscountEntity {
     
     func setValues(valueObject: Payload) {
-        self.setValue(valueObject.id, forKey: "eventId")
+        self.setValue(valueObject.id, forKey: "id")
         self.setValue(valueObject.name, forKey: "name")
         self.setValue(valueObject.place, forKey: "place")
         self.setValue(valueObject.photo, forKey: "photo")
@@ -34,7 +34,6 @@ extension DiscountEntity {
         self.setValue(valueObject.quantity, forKey: "quantity")
         self.setValue(valueObject.discount, forKey: "discount")
         self.setValue(valueObject.date, forKey: "date")
-        self.setValue()
     }
     
 }
