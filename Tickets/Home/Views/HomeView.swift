@@ -12,80 +12,67 @@ struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel
     
-    @State var showSplash = true
+    @State private var scrollViewID = UUID()
     
-    @FetchRequest(
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: true)
-        ],
-        predicate: NSPredicate(format: "date > %@", argumentArray: [NSDate.now]),
-        animation: .default
-    )
-    private var discounts: FetchedResults<DiscountEntity>
-    
-    @FetchRequest(
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: true)
-        ],
-        predicate: NSPredicate(format: "date < %@", argumentArray: [NSDate.now]),
-        animation: .default
-    )
-    private var expired: FetchedResults<DiscountEntity>
-    
-    @FetchRequest(
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \EventEntity.date, ascending: true)
-        ],
-        predicate: NSPredicate(format: "date > %@", argumentArray: [NSDate.now]),
-        animation: .default
-    )
-    private var upcoming: FetchedResults<EventEntity>
-    
+//    @FetchRequest(
+//        sortDescriptors: [
+//            NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: true)
+//        ],
+//        predicate: NSPredicate(format: "date < %@", argumentArray: [NSDate.now]),
+//        animation: .default
+//    )
+//    private var expired: FetchedResults<DiscountEntity>
+
     var body: some View {
         VStack {
-            Rectangle().fill(Color.appDividerGray).frame(width: 300, height: 3)
-                .padding(.top, 5)
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    HStack {
-                        Text("For you")
-                            .modifier(SectioTextModifier())
-                        Spacer()
-                    }
-                    DiscountView(discounts: discounts)
-                    
-                    HStack {
-                        Text("Upcoming")
-                            .modifier(SectioTextModifier())
-                        Spacer()
-                    }
-                    .padding(.top, 20)
-                    
-                    UpcomingView(events: upcoming)
-                    
-                    HStack {
-                        Text("Expired")
-                            .modifier(SectioTextModifier())
-                        Spacer()
-                    }
-                    .padding(.top, 20)
-                    ExpiredView(discounts: expired)
-                    
-                    HStack {
-                        Spacer()
-                        NavigationLink {
-                            Text("Baraba")
-                        } label: {
-                            Image(systemName: "pencil.circle.fill")
-                                .resizable()
-                                .foregroundColor(.blue)
-                                .frame(width: 40, height: 40)
+            if (viewModel.isLoading) {
+                ProgressView()
+            } else {
+                Rectangle().fill(Color.appDividerGray).frame(width: 300, height: 3)
+                    .padding(.top, 5)
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        HStack {
+                            Text("For you")
+                                .modifier(SectioTextModifier())
+                            Spacer()
                         }
-                        .padding(.trailing, 30)
+                        DiscountView(discounts: viewModel.discounts)
+                        
+                        HStack {
+                            Text("Upcoming")
+                                .modifier(SectioTextModifier())
+                            Spacer()
+                        }
+                        .padding(.top, 20)
+                        
+                        UpcomingView(events: viewModel.upcoming)
+                        
+                        HStack {
+                            Text("Expired")
+                                .modifier(SectioTextModifier())
+                            Spacer()
+                        }
+                        .padding(.top, 20)
+                        ExpiredView(discounts: viewModel.expired)
+                        
+                        HStack {
+                            Spacer()
+                            NavigationLink {
+                                AdminView(viewModel: AdminViewModel(context: PersistenceController.shared.container.viewContext))
+                            } label: {
+                                Image(systemName: "pencil.circle.fill")
+                                    .resizable()
+                                    .foregroundColor(.blue)
+                                    .frame(width: 40, height: 40)
+                            }
+                            .padding(.trailing, 30)
 
+                        }
                     }
+                    
                 }
-                
+                .id(self.scrollViewID)
             }
         }
         .background(Color.appGray)
@@ -96,9 +83,13 @@ struct HomeView: View {
             }
         }
         .task {
-            if (!viewModel.hasDataInStorage) {
+            if (!UserDefaults.standard.bool(forKey:"hasDataStored")) {
+                await CoreDataHelper.clearDatabase()
                 await viewModel.fetchEvents()
+            } else {
+                viewModel.isLoading = false
             }
+            viewModel.loadModel()
         }
     }
     

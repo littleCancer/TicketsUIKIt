@@ -31,7 +31,7 @@ struct DiscountCard: View {
                         .frame(width: 100, height: 85)
                         .padding(.top, 20)
                     Spacer()
-                    BottomInfoView(location: discount.place, date: discount.date, message: FormatUtils.formatAvailabilityMessage(amount: discount.price, quantity: discount.quantity))
+                    BottomInfoView(location: discount.place, date: discount.date, message: FormatUtils.formatAvailabilityMessage(amount: FormatUtils.caclulatePriceWithDiscount(price: discount.price ?? 0, discount: discount.discount ?? 0), quantity: discount.quantity))
                         .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 35))
@@ -65,10 +65,12 @@ struct BottomInfoView: View {
                 }
                 .padding(0)
         
-                Text(FormatUtils.formatDate(date: date!))
-                    .font(Font.appBoldFontOfSize(size: 20))
-                    .foregroundColor(.white)
-                    .padding(.top, 1)
+                if let date = date {
+                    Text(FormatUtils.formatDate(date: date))
+                        .font(Font.appBoldFontOfSize(size: 20))
+                        .foregroundColor(.white)
+                        .padding(.top, 1)
+                }
                 
                 Text(message)
                     .font(Font.appFontOfSize(size: 15))

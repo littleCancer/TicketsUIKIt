@@ -16,7 +16,7 @@ struct DiscountItem: View {
             DiscountCard(discount: discount)
                 .background(EmptyView())
                 .shadow(color: .gray.opacity(0.7), radius: 20, x: 0, y: 20)
-            Text(discount.name!)
+            Text(discount.name ?? "")
                 .foregroundColor(.black)
                 .font(Font.appBoldFontOfSize(size: 23))
                 .lineLimit(1)

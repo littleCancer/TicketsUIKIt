@@ -14,4 +14,6 @@ extension Color {
     
     static var appGray: Color = Color("AppGray")
     
+    static var appBlue: Color = Color("AppBlue")
+    
 }

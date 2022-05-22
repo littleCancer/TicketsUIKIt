@@ -11,7 +11,7 @@ struct DiscountView<Data>: View
 where Data: RandomAccessCollection,
       Data.Element: DiscountEntity {
     
-    let discounts: Data
+    var discounts: Data
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

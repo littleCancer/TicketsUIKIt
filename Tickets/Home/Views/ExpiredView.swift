@@ -11,7 +11,7 @@ struct ExpiredView<Data>: View
 where Data: RandomAccessCollection,
       Data.Element: DiscountEntity {
     
-    let discounts: Data
+    @State var discounts: Data
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

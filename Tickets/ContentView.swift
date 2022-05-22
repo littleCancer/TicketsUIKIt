@@ -22,6 +22,11 @@ struct ContentView: View {
         
         
         ZStack {
+            
+//            if let event = CoreDataHelper.getTestEventEntity(id: 7), let discount = CoreDataHelper.getTestDicountEntity(id: 7) {
+//                let pair = EventDiscountPair(event: event, discount: discount)
+//                EditEventView(viewModel: EditEventViewModel(context: viewContext, eventDiscountPair: pair))
+//            }
             if (showSplash) {
                 SplashView()
                     .transition(.asymmetric(insertion: .identity, removal: .move(edge: .bottom)))

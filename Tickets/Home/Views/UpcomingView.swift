@@ -11,7 +11,7 @@ struct UpcomingView<Data>: View
 where Data: RandomAccessCollection,
       Data.Element: EventEntity {
     
-    let events: Data
+    var events: Data
     
     var body: some View {
         VStack(alignment: .center, spacing: 25) {

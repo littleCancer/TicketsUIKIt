@@ -12,7 +12,7 @@ enum CoreDataHelper {
     static let context = PersistenceController.shared.container.viewContext
     static let previewContext = PersistenceController.preview.container.viewContext
     
-    private static func clearDatabase() {
+    public static func clearDatabase() async {
         let entities = PersistenceController.shared.container.managedObjectModel.entities
         entities.compactMap(\.name).forEach(clearTable)
     }
@@ -66,6 +66,30 @@ extension CoreDataHelper {
         guard let results = try? previewContext.fetch(fetchRequest),
               !results.isEmpty else { return nil }
         return results
+    }
+    
+    static func getTestDicountEntity(id: Int64) -> DiscountEntity? {
+        let fetchRequest = DiscountEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(
+            format: "id == %@", argumentArray: [id]
+        )
+        fetchRequest.fetchLimit = 1
+        guard let results = try? previewContext.fetch(fetchRequest),
+              let first = results.first else { return nil }
+        
+        return first
+    }
+    
+    static func getTestEventEntity(id: Int64) -> EventEntity? {
+        let fetchRequest = EventEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(
+            format: "id == %@", argumentArray: [id]
+        )
+        fetchRequest.fetchLimit = 1
+        guard let results = try? previewContext.fetch(fetchRequest),
+              let first = results.first else { return nil }
+        
+        return first
     }
     
 }

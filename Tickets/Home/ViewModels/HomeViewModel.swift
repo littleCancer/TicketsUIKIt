@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 protocol EventsFetcher {
     func fetchEvents() async -> [EventContainer]
@@ -14,6 +15,9 @@ protocol EventsFetcher {
 
 protocol EventsStore {
     func convertAndSave(events: [EventContainer]) async throws
+    func loadEvents() -> [EventEntity]
+    func loadDiscounts() -> [DiscountEntity]
+    func loadExpired() -> [DiscountEntity]
 }
 
 @MainActor
@@ -24,6 +28,10 @@ final class HomeViewModel: ObservableObject {
     
     private let eventsFetcher: EventsFetcher
     private let eventsStore: EventsStore
+    
+    @Published var upcoming: [EventEntity] = []
+    @Published var discounts: [DiscountEntity] = []
+    @Published var expired: [DiscountEntity] = []
     
     init(
         isLoading: Bool = true,
@@ -46,5 +54,11 @@ final class HomeViewModel: ObservableObject {
         }
         
         isLoading = false
+    }
+    
+    func loadModel() {
+        self.upcoming = eventsStore.loadEvents()
+        self.discounts = eventsStore.loadDiscounts()
+        self.expired = eventsStore.loadExpired()
     }
 }

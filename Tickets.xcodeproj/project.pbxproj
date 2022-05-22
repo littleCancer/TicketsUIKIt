@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA25817A2838CD110014A3CC /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2581792838CD110014A3CC /* AdminView.swift */; };
+		EA25817C2838CD1E0014A3CC /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25817B2838CD1E0014A3CC /* AdminViewModel.swift */; };
+		EA25817E2838DD6D0014A3CC /* AdminEventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25817D2838DD6D0014A3CC /* AdminEventCard.swift */; };
+		EA2581802838F7350014A3CC /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25817F2838F7350014A3CC /* SegmentedControl.swift */; };
+		EA258185283901C60014A3CC /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA258184283901C60014A3CC /* EditEventView.swift */; };
+		EA258188283901F70014A3CC /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA258187283901F70014A3CC /* EditEventViewModel.swift */; };
+		EA258189283901F70014A3CC /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA258187283901F70014A3CC /* EditEventViewModel.swift */; };
+		EA25818B28392D020014A3CC /* RequirementText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25818A28392D020014A3CC /* RequirementText.swift */; };
 		EA3B080F28377B89005C2B85 /* DiscountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B080E28377B89005C2B85 /* DiscountItem.swift */; };
 		EA3B0811283793BF005C2B85 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0810283793BF005C2B85 /* ColorUtils.swift */; };
 		EA3B08132837AADD005C2B85 /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B08122837AADD005C2B85 /* DiscountView.swift */; };
@@ -81,6 +89,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA2581792838CD110014A3CC /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		EA25817B2838CD1E0014A3CC /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
+		EA25817D2838DD6D0014A3CC /* AdminEventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEventCard.swift; sourceTree = "<group>"; };
+		EA25817F2838F7350014A3CC /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		EA258184283901C60014A3CC /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
+		EA258187283901F70014A3CC /* EditEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewModel.swift; sourceTree = "<group>"; };
+		EA25818A28392D020014A3CC /* RequirementText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementText.swift; sourceTree = "<group>"; };
 		EA3B080E28377B89005C2B85 /* DiscountItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountItem.swift; sourceTree = "<group>"; };
 		EA3B0810283793BF005C2B85 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		EA3B08122837AADD005C2B85 /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
@@ -151,6 +166,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA2581762838CCBF0014A3CC /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				EA2581782838CCEA0014A3CC /* Views */,
+				EA2581772838CCC70014A3CC /* ViewModels */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		EA2581772838CCC70014A3CC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA25817B2838CD1E0014A3CC /* AdminViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EA2581782838CCEA0014A3CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA2581792838CD110014A3CC /* AdminView.swift */,
+				EA25817D2838DD6D0014A3CC /* AdminEventCard.swift */,
+				EA25817F2838F7350014A3CC /* SegmentedControl.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA258181283901710014A3CC /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				EA258183283901870014A3CC /* Views */,
+				EA2581822839017D0014A3CC /* ViewModels */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		EA2581822839017D0014A3CC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA258187283901F70014A3CC /* EditEventViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EA258183283901870014A3CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA258184283901C60014A3CC /* EditEventView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EA3B081C28381A1C005C2B85 /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +248,8 @@
 		EA3DC41428352EA100F6FD19 /* Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				EA258181283901710014A3CC /* Edit */,
+				EA2581762838CCBF0014A3CC /* Admin */,
 				EA3B081C28381A1C005C2B85 /* Details */,
 				EA4B30C2283642C40042540F /* Home */,
 				EA3DC469283548C700F6FD19 /* Core */,
@@ -206,6 +275,7 @@
 		EA3DC42F28352EA200F6FD19 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EA4AF0D1283A27D800919652 /* Core */,
 				EA3DC43028352EA200F6FD19 /* Tests_iOS.swift */,
 				EA3DC43228352EA200F6FD19 /* Tests_iOSLaunchTests.swift */,
 			);
@@ -343,6 +413,21 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		EA4AF0D1283A27D800919652 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AF0D2283A27E200919652 /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA4AF0D2283A27E200919652 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		EA4B30C2283642C40042540F /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +475,7 @@
 			children = (
 				EA4B30DC28368F200042540F /* RoundedTextView.swift */,
 				EA3B08142837BBEC005C2B85 /* EventView.swift */,
+				EA25818A28392D020014A3CC /* RequirementText.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -517,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA25818B28392D020014A3CC /* RequirementText.swift in Sources */,
 				EA4B30C62836435E0042540F /* HomeViewModel.swift in Sources */,
 				EA3DC497283580A700F6FD19 /* RequestManager.swift in Sources */,
 				EA3DC44028352EA200F6FD19 /* Tickets.xcdatamodeld in Sources */,
@@ -524,18 +611,23 @@
 				EA4B30CC28364A180042540F /* EventsStoreService.swift in Sources */,
 				EA3DC474283557B500F6FD19 /* Payload.swift in Sources */,
 				EA3B08172837DE5E005C2B85 /* UpcomingView.swift in Sources */,
+				EA25817E2838DD6D0014A3CC /* AdminEventCard.swift in Sources */,
+				EA258185283901C60014A3CC /* EditEventView.swift in Sources */,
 				EA3DC45B283532F900F6FD19 /* SplashView.swift in Sources */,
+				EA25817A2838CD110014A3CC /* AdminView.swift in Sources */,
 				EA4B30DD28368F200042540F /* RoundedTextView.swift in Sources */,
 				EA3DC44228352EA200F6FD19 /* TicketsApp.swift in Sources */,
 				EA3B081F28381A5F005C2B85 /* DetailsView.swift in Sources */,
 				EA4B30D92836880D0042540F /* CoreDataHelper.swift in Sources */,
 				EA4B30CA2836487F0042540F /* FetchEventsService.swift in Sources */,
 				EA3DC47028354D3C00F6FD19 /* Type.swift in Sources */,
+				EA2581802838F7350014A3CC /* SegmentedControl.swift in Sources */,
 				EA3DC48728356E4500F6FD19 /* RequestProtocol.swift in Sources */,
 				EA3DC47D28355B6900F6FD19 /* EventContainer.swift in Sources */,
 				EA3DC48A28356ED300F6FD19 /* ApiConstants.swift in Sources */,
 				EA4B30E82836CF0D0042540F /* FormatUtils.swift in Sources */,
 				EA3DC49228357BC300F6FD19 /* NetworkError.swift in Sources */,
+				EA258188283901F70014A3CC /* EditEventViewModel.swift in Sources */,
 				EA3B08132837AADD005C2B85 /* DiscountView.swift in Sources */,
 				EA3B081B2837F8A3005C2B85 /* ExpiredCard.swift in Sources */,
 				EA4B30D7283687300042540F /* DiscountCard.swift in Sources */,
@@ -552,6 +644,7 @@
 				EA3B0811283793BF005C2B85 /* ColorUtils.swift in Sources */,
 				EA3DC44428352EA200F6FD19 /* ContentView.swift in Sources */,
 				EA3DC48428356DEC00F6FD19 /* RequestType.swift in Sources */,
+				EA25817C2838CD1E0014A3CC /* AdminViewModel.swift in Sources */,
 				EA3DC48F2835794500F6FD19 /* DataParser.swift in Sources */,
 				EA4B30D2283667540042540F /* HomeView.swift in Sources */,
 				EA3DC48C2835781E00F6FD19 /* EventsRequest.swift in Sources */,
@@ -563,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA4B30E92836CF0D0042540F /* FormatUtils.swift in Sources */,
+				EA258189283901F70014A3CC /* EditEventViewModel.swift in Sources */,
 				EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */,
 				EA3DC49328357BD200F6FD19 /* NetworkError.swift in Sources */,
 				EA4B30D028364FBE0042540F /* MockEvents.swift in Sources */,

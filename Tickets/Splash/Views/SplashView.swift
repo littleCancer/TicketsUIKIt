@@ -10,6 +10,13 @@ import SwiftUI
 struct SplashView: View {
     
     private let requestManager = RequestManager()
+    @State private var isAnimating = false
+    @State private var angle: CGFloat = 200.0
+    
+    var animation: Animation {
+            Animation.easeOut(duration: 1.0)
+                .repeatForever(autoreverses: true)
+        }
     
     var body: some View {
         VStack {
@@ -19,6 +26,11 @@ struct SplashView: View {
                 .resizable()
                 .frame(width: 25, height: 30)
                 .foregroundColor(.indigo)
+                .rotationEffect(Angle.degrees(isAnimating ? angle : 0))
+                .animation(animation, value: isAnimating)
+                            .onAppear { self.isAnimating = true }
+                            .onDisappear { self.isAnimating = false }
+                            
             
         }
         .ignoresSafeArea()

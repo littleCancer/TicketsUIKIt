@@ -24,7 +24,7 @@ struct EventsStoreService {
 extension EventsStoreService: EventsStore {
     
     func convertAndSave(events: [EventContainer]) async throws {
-        
+                
         for eventContainer in events {
             if let payload = eventContainer.payload {
                 switch eventContainer.type {
@@ -42,6 +42,51 @@ extension EventsStoreService: EventsStore {
         }
         try context.save()
         
+    }
+    
+    func loadEvents() -> [EventEntity] {
+        let eventsRequest: NSFetchRequest<EventEntity>
+        eventsRequest = EventEntity.fetchRequest()
+        
+        eventsRequest.predicate = NSPredicate(
+            format: "date > %@", argumentArray: [NSDate.now]
+        )
+        
+        eventsRequest.sortDescriptors = [NSSortDescriptor(keyPath: \EventEntity.date, ascending: true)]
+        
+        guard let results = try? context.fetch(eventsRequest),
+           !results.isEmpty else { return [] }
+        return results
+    }
+    
+    func loadDiscounts() -> [DiscountEntity] {
+        let discountsRequest: NSFetchRequest<DiscountEntity>
+        discountsRequest = DiscountEntity.fetchRequest()
+        
+        discountsRequest.predicate = NSPredicate(
+            format: "date > %@", argumentArray: [NSDate.now]
+        )
+        
+        discountsRequest.sortDescriptors = [NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: true)]
+        
+        guard let results = try? context.fetch(discountsRequest),
+           !results.isEmpty else { return [] }
+        return results
+    }
+    
+    func loadExpired() -> [DiscountEntity] {
+        let discountsRequest: NSFetchRequest<DiscountEntity>
+        discountsRequest = DiscountEntity.fetchRequest()
+        
+        discountsRequest.predicate = NSPredicate(
+            format: "date < %@", argumentArray: [NSDate.now]
+        )
+        
+        discountsRequest.sortDescriptors = [NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: false)]
+        
+        guard let results = try? context.fetch(discountsRequest),
+           !results.isEmpty else { return [] }
+        return results
     }
     
 }

@@ -124,11 +124,11 @@ struct DetailsModel {
         self.quantity = String(discount.quantity)
         
         if let discount = discount.discount {
-            self.discount = FormatUtils.formatDiscount(discount: discount)
+            self.discount = FormatUtils.formatDiscountForDetail(discount: discount)
         }
         
         if let price = discount.price, let discount = discount.discount {
-            let finalPrice = (price as Decimal) * (discount as Decimal) / 100
+            let finalPrice = FormatUtils.caclulatePriceWithDiscount(price: price, discount: discount)
             self.finalPrice = FormatUtils.formatPrice(price: finalPrice as NSDecimalNumber)
         }
         

@@ -15,7 +15,14 @@ struct TicketsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .id(AppState.shared.appID)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+}
+
+class AppState: ObservableObject {
+    static let shared = AppState()
+
+    @Published var appID = UUID()
 }

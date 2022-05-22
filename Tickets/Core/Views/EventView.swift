@@ -11,15 +11,24 @@ import SDWebImageSwiftUI
 struct EventView: View {
         
     var event: EventViewModel
+    var showShadow: Bool = true
     
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Rectangle()
-                    .fill(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 35))
-                    .background(EmptyView())
-                    .shadow(color: .gray.opacity(0.7), radius: 20, x: 0, y: 20)
+                if (showShadow) {
+                    Rectangle()
+                        .fill(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 35))
+                        .background(EmptyView())
+                        .shadow(color: .gray.opacity(0.7), radius: 20, x: 0, y: 20)
+                } else {
+                    Rectangle()
+                        .fill(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 35))
+                        .background(EmptyView())
+                }
+               
                 
                 HStack {
                     VStack {
@@ -160,7 +169,8 @@ struct EventViewModel {
         }
         
         self.ticketsLeftText = FormatUtils.formatTicketsLeftMessage(quantity: discount.quantity)
-        self.priceText = FormatUtils.formatPrice(price: discount.price)
+        let priceWithDiscount = FormatUtils.caclulatePriceWithDiscount(price: discount.price ?? 0, discount: discount.discount ?? 0)
+        self.priceText = FormatUtils.formatPrice(price: priceWithDiscount)
     }
     
 }

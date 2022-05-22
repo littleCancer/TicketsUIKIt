@@ -16,7 +16,20 @@ enum FormatUtils {
         return formatter
     }()
     
+    static let decimalFormater:NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.generatesDecimalNumbers = true
+        return formatter
+    }()
+    
     static func formatDiscount(discount: NSDecimalNumber?) -> String {
+        if let discount = discount {
+            return "-\(discount)%"
+        }
+        return ""
+    }
+    
+    static func formatDiscountForDetail(discount: NSDecimalNumber?) -> String {
         if let discount = discount {
             return "-\(discount)%"
         }
@@ -69,6 +82,15 @@ enum FormatUtils {
     
     static func formatDate(date: Date) -> String {
         return fullDateFormatter.string(from: date)
+    }
+    
+    static func caclulatePriceWithDiscount(price: NSDecimalNumber, discount: NSDecimalNumber) -> NSDecimalNumber {
+        let finalPrice = (price as Decimal) * (discount as Decimal) / 100
+        return finalPrice as NSDecimalNumber
+    }
+    
+    static func decimal(with string: String) -> NSDecimalNumber {
+        return decimalFormater.number(from: string) as? NSDecimalNumber ?? 0
     }
     
 }
