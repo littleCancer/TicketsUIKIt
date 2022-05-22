@@ -7,14 +7,16 @@
 
 import XCTest
 @testable import Tickets
+import CoreData
 
 class TestEditViewModel: XCTestCase {
 
-    let testContext = PersistenceControllerTest.test.container.viewContext
+    var testContext : NSManagedObjectContext?
     
     @MainActor
     override func setUp() {
         super.setUp()
+        testContext = PersistenceControllerTest.createNewContainerWithData().viewContext
     }
 
     func getTestDiscountEntity(id: Int64) -> DiscountEntity? {
@@ -23,7 +25,7 @@ class TestEditViewModel: XCTestCase {
             format: "id == %@", argumentArray: [id]
         )
         fetchRequest.fetchLimit = 1
-        guard let results = try? testContext.fetch(fetchRequest),
+        guard let results = try? testContext!.fetch(fetchRequest),
               let first = results.first else { return nil }
         
         return first
@@ -35,7 +37,7 @@ class TestEditViewModel: XCTestCase {
             format: "id == %@", argumentArray: [id]
         )
         fetchRequest.fetchLimit = 1
-        guard let results = try? testContext.fetch(fetchRequest),
+        guard let results = try? testContext!.fetch(fetchRequest),
               let first = results.first else { return nil }
         
         return first
@@ -43,14 +45,14 @@ class TestEditViewModel: XCTestCase {
     
     func getTestEventEntities() -> [EventEntity]? {
         let fetchRequest = EventEntity.fetchRequest()
-        guard let results = try? testContext.fetch(fetchRequest),
+        guard let results = try? testContext!.fetch(fetchRequest),
               !results.isEmpty else { return nil }
         return results
     }
     
     func getTestDiscountEntities() -> [DiscountEntity]? {
         let fetchRequest = DiscountEntity.fetchRequest()
-        guard let results = try? testContext.fetch(fetchRequest),
+        guard let results = try? testContext!.fetch(fetchRequest),
               !results.isEmpty else { return nil }
         return results
     }
@@ -61,7 +63,7 @@ class TestEditViewModel: XCTestCase {
         let discount = getTestDiscountEntity(id: 4)
         let pair = EventDiscountPair(event: event!, discount: discount!)
         
-        let viewModel = EditEventViewModel(context: testContext, eventDiscountPair: pair)
+        let viewModel = EditEventViewModel(context: testContext!, eventDiscountPair: pair)
         viewModel.price = "500"
         viewModel.updateEntity(pair: pair)
         
@@ -76,7 +78,7 @@ class TestEditViewModel: XCTestCase {
         let discountsCount = getTestDiscountEntities()?.count
         
         
-        let viewModel = EditEventViewModel(context: testContext, eventDiscountPair: nil)
+        let viewModel = EditEventViewModel(context: testContext!, eventDiscountPair: nil)
         viewModel.discountOn = true
         viewModel.name = "Tiesto"
         viewModel.price = "500"

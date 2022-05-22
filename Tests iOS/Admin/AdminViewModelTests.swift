@@ -10,15 +10,14 @@ import XCTest
 
 class AdminViewModelTests: XCTestCase {
 
-    let testContext = PersistenceControllerTest.test.container.viewContext
     var viewModel: AdminViewModel!
     
     @MainActor
     override func setUp() {
         super.setUp()
+        let testContext = PersistenceControllerTest.createNewContainerWithData().viewContext
         viewModel = AdminViewModel(context: testContext)
     }
-
 
     @MainActor
     func testFetchingData() async {
@@ -43,7 +42,6 @@ class AdminViewModelTests: XCTestCase {
         
     }
     
-    
     @MainActor
     func testDeleteEventEntity() async {
         XCTAssertEqual(viewModel.eventDiscountPairs.count, 9)
@@ -62,5 +60,6 @@ class AdminViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.eventDiscountPairs.count, 9)
         XCTAssertNil(first.discount)
     }
+    
     
 }

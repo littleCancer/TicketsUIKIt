@@ -71,7 +71,6 @@
 		EA4AF0EB283A33BF00919652 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EA4AF0EA283A33BF00919652 /* Alamofire */; };
 		EA4AF0ED283A377D00919652 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA4AF0EC283A377D00919652 /* Concerts.json */; };
 		EA4AF0F8283A43F400919652 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0F7283A43F400919652 /* CoreDataTests.swift */; };
-		EA4AF0FB283A499B00919652 /* CoreDataTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0FA283A499B00919652 /* CoreDataTests2.swift */; };
 		EA4AF0FD283A4CD000919652 /* PersistenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0FC283A4CD000919652 /* PersistenceTest.swift */; };
 		EA4AF100283A517300919652 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0FF283A517300919652 /* HomeViewModelTests.swift */; };
 		EA4AF102283A52D900919652 /* TestEventFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF101283A52D900919652 /* TestEventFetcherMock.swift */; };
@@ -157,7 +156,6 @@
 		EA4AF0DC283A2A8900919652 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		EA4AF0EC283A377D00919652 /* Concerts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Concerts.json; path = "Tickets/Preview Content/Concerts.json"; sourceTree = SOURCE_ROOT; };
 		EA4AF0F7283A43F400919652 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
-		EA4AF0FA283A499B00919652 /* CoreDataTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests2.swift; sourceTree = "<group>"; };
 		EA4AF0FC283A4CD000919652 /* PersistenceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTest.swift; sourceTree = "<group>"; };
 		EA4AF0FF283A517300919652 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		EA4AF101283A52D900919652 /* TestEventFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEventFetcherMock.swift; sourceTree = "<group>"; };
@@ -509,7 +507,6 @@
 			isa = PBXGroup;
 			children = (
 				EA4AF0F7283A43F400919652 /* CoreDataTests.swift */,
-				EA4AF0FA283A499B00919652 /* CoreDataTests2.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -784,7 +781,6 @@
 				EA4AF0FD283A4CD000919652 /* PersistenceTest.swift in Sources */,
 				EA4B30C128363E4A0042540F /* Entity+ValueInit.swift in Sources */,
 				EA4AF0D8283A288100919652 /* ApiManagerMock.swift in Sources */,
-				EA4AF0FB283A499B00919652 /* CoreDataTests2.swift in Sources */,
 				EA3DC475283557B500F6FD19 /* Payload.swift in Sources */,
 				EA3DC47128354D3C00F6FD19 /* Type.swift in Sources */,
 				EA4AF0E7283A32E500919652 /* ApiUtils.swift in Sources */,
