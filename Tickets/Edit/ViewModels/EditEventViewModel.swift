@@ -155,7 +155,7 @@ class EditEventViewModel: ObservableObject {
         discount.quantity = Int16(self.discountQuantity) ?? 0
     }
     
-    private func updateEntity(pair: EventDiscountPair) {
+    func updateEntity(pair: EventDiscountPair) {
         setEventData(event: pair.event)
         
         if let discount = pair.discount {
@@ -175,7 +175,7 @@ class EditEventViewModel: ObservableObject {
         nc.post(name: Notification.Name("EntityChanged"), object: nil)
     }
     
-    private func createEntity() {
+    func createEntity() {
         
         let eventEntity = EventEntity(context: context)
         let id = getLastSavedId() + 1

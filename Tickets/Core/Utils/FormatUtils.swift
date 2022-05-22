@@ -85,8 +85,9 @@ enum FormatUtils {
     }
     
     static func caclulatePriceWithDiscount(price: NSDecimalNumber, discount: NSDecimalNumber) -> NSDecimalNumber {
-        let finalPrice = (price as Decimal) * (discount as Decimal) / 100
-        return finalPrice as NSDecimalNumber
+        let discountAmount = (price as Decimal) * (discount as Decimal) / 100
+        let finalPrice = (price as Decimal) - discountAmount
+        return  finalPrice as NSDecimalNumber
     }
     
     static func decimal(with string: String) -> NSDecimalNumber {

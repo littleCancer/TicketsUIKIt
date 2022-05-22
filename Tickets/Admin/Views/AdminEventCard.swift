@@ -32,7 +32,9 @@ struct AdminEventCard: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 35)
                         .fill(Color.appBlue)
+                        .padding(.horizontal, 10)
                         .shadow(color: .gray.opacity(0.7), radius: 20, x: 0, y: 20)
+                    
                     VStack {
                         Spacer()
                         HStack {
@@ -67,27 +69,28 @@ struct AdminEventCard: View {
                         .frame(height: 50)
                     }
                 }
+
                 .frame(height: 200)
+                
                 
                 if (selectedTab == .NonDiscount) {
                     EventView(event: EventViewModel(event: eventDiscountPair.event), showShadow: false)
+                        .padding(.horizontal, 10)
                         .frame(height: 200)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
                         .offset(y: -50)
                 } else if let discount = eventDiscountPair.discount {
                     EventView(event: EventViewModel(discount:discount), showShadow: false)
+                        .padding(.horizontal, 10)
                         .frame(height: 200)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
                         .offset(y: -50)
                 }
                 NavigationLink(destination: EditEventView(viewModel: EditEventViewModel(context: viewContext, eventDiscountPair: eventDiscountPair)), isActive: $showEditView) {
                     EmptyView()
                 }
             }
-            .padding()
+            .frame(width: geometry.size.width)
         }
+        
     }
 }
 

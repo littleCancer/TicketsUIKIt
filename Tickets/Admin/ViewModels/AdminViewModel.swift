@@ -11,6 +11,7 @@ import CoreData
 @MainActor
 class AdminViewModel : ObservableObject {
     
+    let eventStore:EventsStoreService
     let context:NSManagedObjectContext
     
     @Published var selectedTab = SelectedAdminTab.NonDiscount
@@ -19,8 +20,8 @@ class AdminViewModel : ObservableObject {
     
     init(context: NSManagedObjectContext) {
         self.context = context
+        self.eventStore = EventsStoreService(context: context)
         fetchData()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(fetchData), name: Notification.Name("EntityChanged"), object: nil)
     }
     
@@ -28,10 +29,10 @@ class AdminViewModel : ObservableObject {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc private func fetchData() {
+    @objc func fetchData() {
         
-        let events = getEvents()
-        let discounts = getDiscounts()
+        let events = eventStore.loadEvents()
+        let discounts = eventStore.loadDiscounts()
         
         
         self.eventDiscountPairs = events.map {
@@ -39,36 +40,6 @@ class AdminViewModel : ObservableObject {
         }
         self.scrollViewID = UUID()
 
-    }
-    
-    private func getDiscounts() -> [DiscountEntity] {
-        let discountsRequest: NSFetchRequest<DiscountEntity>
-        discountsRequest = DiscountEntity.fetchRequest()
-        
-        discountsRequest.predicate = NSPredicate(
-            format: "date > %@", argumentArray: [NSDate.now]
-        )
-        
-        discountsRequest.sortDescriptors = [NSSortDescriptor(keyPath: \DiscountEntity.date, ascending: true)]
-        
-        guard let results = try? context.fetch(discountsRequest),
-           !results.isEmpty else { return [] }
-        return results
-    }
-    
-    private func getEvents() -> [EventEntity] {
-        let eventsRequest: NSFetchRequest<EventEntity>
-        eventsRequest = EventEntity.fetchRequest()
-        
-        eventsRequest.predicate = NSPredicate(
-            format: "date > %@", argumentArray: [NSDate.now]
-        )
-        
-        eventsRequest.sortDescriptors = [NSSortDescriptor(keyPath: \EventEntity.date, ascending: true)]
-        
-        guard let results = try? context.fetch(eventsRequest),
-           !results.isEmpty else { return [] }
-        return results
     }
     
     private func findDicsountEntity(for id: Int64, discounts: [DiscountEntity]) -> DiscountEntity? {
@@ -108,7 +79,6 @@ class AdminViewModel : ObservableObject {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
         
-//        self.fetchData()
     }
     
     

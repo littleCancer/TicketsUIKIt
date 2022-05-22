@@ -21,11 +21,13 @@ struct EventView: View {
                         .fill(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         .background(EmptyView())
+                        .frame(width: geometry.size.width)
                         .shadow(color: .gray.opacity(0.7), radius: 20, x: 0, y: 20)
                 } else {
                     Rectangle()
                         .fill(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 35))
+                        .frame(width: geometry.size.width)
                         .background(EmptyView())
                 }
                
@@ -33,10 +35,11 @@ struct EventView: View {
                 HStack {
                     VStack {
                         Text(event.month)
-                            .font(Font.appFontOfSize(size: 20))
+                            .font(Font.appFontOfSize(size: 15))
                             .foregroundColor(.black)
                             .scaledToFit()
                             .minimumScaleFactor(0.01)
+                            .padding(.leading, 0)
                         Text(event.dayOfMonth)
                             .font(Font.appBoldFontOfSize(size: 50))
                             .foregroundColor(.black)
@@ -45,7 +48,8 @@ struct EventView: View {
                             .font(Font.appFontOfSize(size: 20))
                             .foregroundColor(.black)
                     }
-                    .frame(width: 100)
+                    .frame(width: 115)
+                    .offset(x: 18)
 
                     
                     ZStack {
@@ -98,7 +102,7 @@ struct EventView: View {
                             .padding(.top, 35)
                         }
                     }
-                    .padding(EdgeInsets(top: 15, leading: 0, bottom: 15, trailing: 10))
+                    .padding(EdgeInsets(top: 15, leading: 0, bottom: 15, trailing: 30))
                 }
             }
             .frame(width: geometry.size.width)

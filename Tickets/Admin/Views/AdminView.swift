@@ -30,11 +30,10 @@ struct AdminView: View {
                             pair.discount != nil) {
                             AdminEventCard(eventDiscountPair: pair, selectedTab: $viewModel.selectedTab, deleter: viewModel.deleteEntity)
                                 .frame(height: 200)
-                                .animation(.easeInOut, value: true)
                         }
                     }
                 }
-                .padding(.top, 35)
+                .padding(.top, 50)
                 .animation(.spring(), value: viewModel.eventDiscountPairs)
                 
                 HStack {

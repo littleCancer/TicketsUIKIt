@@ -15,6 +15,4 @@ struct EventsFetcherMock: EventsFetcher {
     }
     
     
-    
-    
 }

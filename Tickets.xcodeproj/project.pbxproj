@@ -36,7 +36,6 @@
 		EA3DC4622835388C00F6FD19 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC4612835388C00F6FD19 /* FontUtils.swift */; };
 		EA3DC464283539E300F6FD19 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC463283539E300F6FD19 /* Montserrat-Bold.ttf */; };
 		EA3DC4672835442400F6FD19 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC4662835442400F6FD19 /* Concerts.json */; };
-		EA3DC4682835442400F6FD19 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA3DC4662835442400F6FD19 /* Concerts.json */; };
 		EA3DC47028354D3C00F6FD19 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC46F28354D3C00F6FD19 /* Type.swift */; };
 		EA3DC47128354D3C00F6FD19 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC46F28354D3C00F6FD19 /* Type.swift */; };
 		EA3DC474283557B500F6FD19 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC473283557B500F6FD19 /* Payload.swift */; };
@@ -56,6 +55,28 @@
 		EA3DC49328357BD200F6FD19 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC49128357BC300F6FD19 /* NetworkError.swift */; };
 		EA3DC49528357CCE00F6FD19 /* ApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC49428357CCE00F6FD19 /* ApiManagerProtocol.swift */; };
 		EA3DC497283580A700F6FD19 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC496283580A700F6FD19 /* RequestManager.swift */; };
+		EA4AF0D8283A288100919652 /* ApiManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0D7283A288100919652 /* ApiManagerMock.swift */; };
+		EA4AF0D9283A28CE00919652 /* ApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC49428357CCE00F6FD19 /* ApiManagerProtocol.swift */; };
+		EA4AF0DB283A297F00919652 /* EventsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0DA283A297F00919652 /* EventsRequestMock.swift */; };
+		EA4AF0DD283A2A8900919652 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0DC283A2A8900919652 /* RequestManagerTests.swift */; };
+		EA4AF0DE283A2BB900919652 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC496283580A700F6FD19 /* RequestManager.swift */; };
+		EA4AF0E1283A313B00919652 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA4AF0E0283A313B00919652 /* SDWebImageSwiftUI */; };
+		EA4AF0E2283A31E100919652 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41928352EA100F6FD19 /* Persistence.swift */; };
+		EA4AF0E3283A328700919652 /* Tickets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC41528352EA100F6FD19 /* Tickets.xcdatamodeld */; };
+		EA4AF0E4283A32B500919652 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48E2835794500F6FD19 /* DataParser.swift */; };
+		EA4AF0E5283A32CB00919652 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DC48928356ED300F6FD19 /* ApiConstants.swift */; };
+		EA4AF0E6283A32DB00919652 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25817B2838CD1E0014A3CC /* AdminViewModel.swift */; };
+		EA4AF0E7283A32E500919652 /* ApiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30DF28369E5A0042540F /* ApiUtils.swift */; };
+		EA4AF0E9283A33BB00919652 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = EA4AF0E8283A33BB00919652 /* ObjectMapper */; };
+		EA4AF0EB283A33BF00919652 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EA4AF0EA283A33BF00919652 /* Alamofire */; };
+		EA4AF0ED283A377D00919652 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA4AF0EC283A377D00919652 /* Concerts.json */; };
+		EA4AF0F8283A43F400919652 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0F7283A43F400919652 /* CoreDataTests.swift */; };
+		EA4AF0FB283A499B00919652 /* CoreDataTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0FA283A499B00919652 /* CoreDataTests2.swift */; };
+		EA4AF0FD283A4CD000919652 /* PersistenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0FC283A4CD000919652 /* PersistenceTest.swift */; };
+		EA4AF100283A517300919652 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF0FF283A517300919652 /* HomeViewModelTests.swift */; };
+		EA4AF102283A52D900919652 /* TestEventFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF101283A52D900919652 /* TestEventFetcherMock.swift */; };
+		EA4AF105283A67C200919652 /* AdminViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF104283A67C200919652 /* AdminViewModelTests.swift */; };
+		EA4AF107283A70CF00919652 /* TestEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AF106283A70CF00919652 /* TestEditViewModel.swift */; };
 		EA4B30C028363E4A0042540F /* Entity+ValueInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30BF28363E4A0042540F /* Entity+ValueInit.swift */; };
 		EA4B30C128363E4A0042540F /* Entity+ValueInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30BF28363E4A0042540F /* Entity+ValueInit.swift */; };
 		EA4B30C62836435E0042540F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B30C52836435E0042540F /* HomeViewModel.swift */; };
@@ -131,6 +152,17 @@
 		EA3DC49128357BC300F6FD19 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		EA3DC49428357CCE00F6FD19 /* ApiManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerProtocol.swift; sourceTree = "<group>"; };
 		EA3DC496283580A700F6FD19 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		EA4AF0D7283A288100919652 /* ApiManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerMock.swift; sourceTree = "<group>"; };
+		EA4AF0DA283A297F00919652 /* EventsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRequestMock.swift; sourceTree = "<group>"; };
+		EA4AF0DC283A2A8900919652 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		EA4AF0EC283A377D00919652 /* Concerts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Concerts.json; path = "Tickets/Preview Content/Concerts.json"; sourceTree = SOURCE_ROOT; };
+		EA4AF0F7283A43F400919652 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		EA4AF0FA283A499B00919652 /* CoreDataTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests2.swift; sourceTree = "<group>"; };
+		EA4AF0FC283A4CD000919652 /* PersistenceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTest.swift; sourceTree = "<group>"; };
+		EA4AF0FF283A517300919652 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		EA4AF101283A52D900919652 /* TestEventFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEventFetcherMock.swift; sourceTree = "<group>"; };
+		EA4AF104283A67C200919652 /* AdminViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModelTests.swift; sourceTree = "<group>"; };
+		EA4AF106283A70CF00919652 /* TestEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEditViewModel.swift; sourceTree = "<group>"; };
 		EA4B30BF28363E4A0042540F /* Entity+ValueInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ValueInit.swift"; sourceTree = "<group>"; };
 		EA4B30C52836435E0042540F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EA4B30C92836487F0042540F /* FetchEventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEventsService.swift; sourceTree = "<group>"; };
@@ -160,6 +192,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4AF0EB283A33BF00919652 /* Alamofire in Frameworks */,
+				EA4AF0E9283A33BB00919652 /* ObjectMapper in Frameworks */,
+				EA4AF0E1283A313B00919652 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +277,7 @@
 				EA3DC41428352EA100F6FD19 /* Tickets */,
 				EA3DC42F28352EA200F6FD19 /* Tests iOS */,
 				EA3DC42028352EA200F6FD19 /* Products */,
+				EA4AF0DF283A313B00919652 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,6 +311,9 @@
 		EA3DC42F28352EA200F6FD19 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EA4AF108283A70DA00919652 /* Edit */,
+				EA4AF103283A67AA00919652 /* Admin */,
+				EA4AF0FE283A516000919652 /* Home */,
 				EA4AF0D1283A27D800919652 /* Core */,
 				EA3DC43028352EA200F6FD19 /* Tests_iOS.swift */,
 				EA3DC43228352EA200F6FD19 /* Tests_iOSLaunchTests.swift */,
@@ -424,8 +463,79 @@
 		EA4AF0D2283A27E200919652 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EA4AF0F6283A43DA00919652 /* CoreData */,
+				EA4AF0D4283A283400919652 /* Api */,
+				EA4AF0FC283A4CD000919652 /* PersistenceTest.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		EA4AF0D4283A283400919652 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AF0D6283A284400919652 /* Helpers */,
+				EA4AF0D5283A283D00919652 /* Mock */,
+				EA4AF0DC283A2A8900919652 /* RequestManagerTests.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		EA4AF0D5283A283D00919652 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AF0EC283A377D00919652 /* Concerts.json */,
+				EA4AF0D7283A288100919652 /* ApiManagerMock.swift */,
+				EA4AF0DA283A297F00919652 /* EventsRequestMock.swift */,
+				EA4AF101283A52D900919652 /* TestEventFetcherMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		EA4AF0D6283A284400919652 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA4AF0DF283A313B00919652 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA4AF0F6283A43DA00919652 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AF0F7283A43F400919652 /* CoreDataTests.swift */,
+				EA4AF0FA283A499B00919652 /* CoreDataTests2.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EA4AF0FE283A516000919652 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AF0FF283A517300919652 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EA4AF103283A67AA00919652 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AF104283A67C200919652 /* AdminViewModelTests.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		EA4AF108283A70DA00919652 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AF106283A70CF00919652 /* TestEditViewModel.swift */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		EA4B30C2283642C40042540F /* Home */ = {
@@ -529,6 +639,11 @@
 				EA3DC42E28352EA200F6FD19 /* PBXTargetDependency */,
 			);
 			name = "Tests iOS";
+			packageProductDependencies = (
+				EA4AF0E0283A313B00919652 /* SDWebImageSwiftUI */,
+				EA4AF0E8283A33BB00919652 /* ObjectMapper */,
+				EA4AF0EA283A33BF00919652 /* Alamofire */,
+			);
 			productName = "Tests iOS";
 			productReference = EA3DC42C28352EA200F6FD19 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -592,7 +707,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA3DC4682835442400F6FD19 /* Concerts.json in Resources */,
+				EA4AF0ED283A377D00919652 /* Concerts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,18 +772,36 @@
 			files = (
 				EA4B30E92836CF0D0042540F /* FormatUtils.swift in Sources */,
 				EA258189283901F70014A3CC /* EditEventViewModel.swift in Sources */,
+				EA4AF102283A52D900919652 /* TestEventFetcherMock.swift in Sources */,
+				EA4AF100283A517300919652 /* HomeViewModelTests.swift in Sources */,
+				EA4AF0E4283A32B500919652 /* DataParser.swift in Sources */,
 				EA3DC43328352EA200F6FD19 /* Tests_iOSLaunchTests.swift in Sources */,
 				EA3DC49328357BD200F6FD19 /* NetworkError.swift in Sources */,
 				EA4B30D028364FBE0042540F /* MockEvents.swift in Sources */,
 				EA3DC43128352EA200F6FD19 /* Tests_iOS.swift in Sources */,
 				EA4B30C72836435E0042540F /* HomeViewModel.swift in Sources */,
+				EA4AF0F8283A43F400919652 /* CoreDataTests.swift in Sources */,
+				EA4AF0FD283A4CD000919652 /* PersistenceTest.swift in Sources */,
 				EA4B30C128363E4A0042540F /* Entity+ValueInit.swift in Sources */,
+				EA4AF0D8283A288100919652 /* ApiManagerMock.swift in Sources */,
+				EA4AF0FB283A499B00919652 /* CoreDataTests2.swift in Sources */,
 				EA3DC475283557B500F6FD19 /* Payload.swift in Sources */,
 				EA3DC47128354D3C00F6FD19 /* Type.swift in Sources */,
+				EA4AF0E7283A32E500919652 /* ApiUtils.swift in Sources */,
+				EA4AF0E3283A328700919652 /* Tickets.xcdatamodeld in Sources */,
+				EA4AF0E2283A31E100919652 /* Persistence.swift in Sources */,
+				EA4AF107283A70CF00919652 /* TestEditViewModel.swift in Sources */,
+				EA4AF0DD283A2A8900919652 /* RequestManagerTests.swift in Sources */,
 				EA4B30CD28364A180042540F /* EventsStoreService.swift in Sources */,
+				EA4AF0E6283A32DB00919652 /* AdminViewModel.swift in Sources */,
+				EA4AF0DB283A297F00919652 /* EventsRequestMock.swift in Sources */,
+				EA4AF105283A67C200919652 /* AdminViewModelTests.swift in Sources */,
+				EA4AF0D9283A28CE00919652 /* ApiManagerProtocol.swift in Sources */,
 				EA3DC47E28355B6900F6FD19 /* EventContainer.swift in Sources */,
 				EA4B30DA2836880D0042540F /* CoreDataHelper.swift in Sources */,
 				EA4B30D5283668620042540F /* EventsFetcherMock.swift in Sources */,
+				EA4AF0DE283A2BB900919652 /* RequestManager.swift in Sources */,
+				EA4AF0E5283A32CB00919652 /* ApiConstants.swift in Sources */,
 				EA3DC48528356DEC00F6FD19 /* RequestType.swift in Sources */,
 				EA3DC48828356E4500F6FD19 /* RequestProtocol.swift in Sources */,
 			);
@@ -966,6 +1099,21 @@
 			productName = ObjectMapper;
 		};
 		EA3DC47A2835592500F6FD19 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3DC4792835592500F6FD19 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		EA4AF0E0283A313B00919652 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4B30E42836CAFB0042540F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		EA4AF0E8283A33BB00919652 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3DC476283558D500F6FD19 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		EA4AF0EA283A33BF00919652 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EA3DC4792835592500F6FD19 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
