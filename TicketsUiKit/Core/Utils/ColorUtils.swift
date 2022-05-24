@@ -8,12 +8,14 @@
 import Foundation
 import SwiftUI
 
-extension Color {
+extension UIColor {
     
-    static var appDividerGray: Color = Color(red: 0.8, green: 0.8, blue: 0.8, opacity: 1)
+    static var appDividerGray: UIColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
     
-    static var appGray: Color = Color("AppGray")
+    static var appGray: UIColor = UIColor(named: "AppGray")!
     
-    static var appBlue: Color = Color("AppBlue")
+    static var appBlue: UIColor = UIColor(named: "AppBlue")!
+    
+    
     
 }

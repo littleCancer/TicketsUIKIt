@@ -44,6 +44,7 @@ class RoundedText: UIView {
         self.addSubview(background)
         self.addSubview(label)
         
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

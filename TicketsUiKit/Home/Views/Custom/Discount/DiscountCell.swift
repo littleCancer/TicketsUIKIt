@@ -26,15 +26,14 @@ class DiscountCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        eventImage.layer.cornerRadius = 25
-        eventImage.layer.shadowColor = UIColor.gray.cgColor
-        eventImage.layer.shadowOpacity = 1
-        eventImage.layer.shadowOffset = CGSize(width: 0, height: 20)
-        eventImage.layer.shadowRadius = 10
-        eventImage.layer.masksToBounds = true
-        eventImage.contentMode = .scaleAspectFill
+        self.backgroundColor = UIColor.appGray
+        roundText.font = UIFont.appFontOfSize(size: 25)!
+        eventImage.setCornerRadiusAndShadow(cornerRadius: 30, shadowColor: UIColor.gray, shadowOffsetWidth: 10, shadowOffsetHeight: 70, shadowOpacity: 0.4, shadowRadius: 15)
         
-        bottomView.layer.cornerRadius = 25
-    }
+        eventImage.contentMode = .scaleAspectFill
+        bottomView.layer.cornerRadius = 30
+        
 
+    }
+    
 }

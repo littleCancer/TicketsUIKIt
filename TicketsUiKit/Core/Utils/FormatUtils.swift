@@ -36,7 +36,7 @@ enum FormatUtils {
         return ""
     }
     
-    static func formatAvailabilityMessage(amount: NSDecimalNumber?, quantity: Int16?) -> String {
+    static func formatAvailabilityMessage(amount: Int16?, quantity: Int16?) -> String {
         guard let amount = amount, let quantity = quantity else {
             return ""
         }
@@ -54,12 +54,13 @@ enum FormatUtils {
 
     }
     
-    static func formatPrice(price: NSDecimalNumber?) -> String {
+    static func formatPrice(price: Float?) -> String {
         guard let price = price else {
             return ""
         }
         
-        return "\(price)e"
+        let priceRounded = Int(price)
+        return "\(priceRounded)e"
     }
     
     static func monthFromDate(date: Date) -> String {
@@ -71,6 +72,12 @@ enum FormatUtils {
     static func yearFromDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy"
+        return dateFormatter.string(from: date)
+    }
+    
+    static func timeFromDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
         return dateFormatter.string(from: date)
     }
     

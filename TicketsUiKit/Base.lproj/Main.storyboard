@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TicketsUiKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LX7-gD-j9u">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LX7-gD-j9u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -24,22 +24,24 @@
                     <navigationItem key="navigationItem" id="BTY-fF-uJw"/>
                     <connections>
                         <outlet property="tableView" destination="LX7-gD-j9u" id="0Pr-AF-PLg"/>
+                        <segue destination="0NX-Tv-sni" kind="show" identifier="show-detail-segue" id="48h-kf-XIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="40.848214285714285"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="baW-3H-hXF">
             <objects>
-                <viewController id="0NX-Tv-sni" customClass="HomeViewController" customModule="TicketsUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0NX-Tv-sni" customClass="DetailViewController" customModule="TicketsUiKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gE5-1C-ZT9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="mzO-xW-IEW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Sop-pn-rHV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wk8-i4-W9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

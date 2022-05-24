@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA36DD7A283CBA190050D571 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD79283CBA190050D571 /* UIView+Shadow.swift */; };
+		EA36DD7C283CE8CB0050D571 /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD7B283CE8CB0050D571 /* InsetLabel.swift */; };
+		EA36DD81283CF0530050D571 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD80283CF0530050D571 /* EventView.swift */; };
+		EA36DD83283CF0690050D571 /* EventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA36DD82283CF0690050D571 /* EventView.xib */; };
+		EA36DD85283CFF610050D571 /* UpcomingEventViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD84283CFF610050D571 /* UpcomingEventViewTableViewCell.swift */; };
+		EA36DD90283D17760050D571 /* ExpiredListTableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD8F283D17760050D571 /* ExpiredListTableCellTableViewCell.swift */; };
+		EA36DD93283D236E0050D571 /* ExpiredEventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD91283D236E0050D571 /* ExpiredEventViewCell.swift */; };
+		EA36DD94283D236E0050D571 /* ExpiredEventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA36DD92283D236E0050D571 /* ExpiredEventViewCell.xib */; };
+		EA36DD98283D2C8E0050D571 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD96283D2C8E0050D571 /* ActionCell.swift */; };
+		EA36DD99283D2C8E0050D571 /* ActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA36DD97283D2C8E0050D571 /* ActionCell.xib */; };
+		EA36DD9E283D4B460050D571 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */; };
+		EA36DD9F283D4B460050D571 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */; };
+		EA36DDA1283D4C300050D571 /* EventPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA0283D4C300050D571 /* EventPresentationModel.swift */; };
+		EA36DDA2283D4C300050D571 /* EventPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA0283D4C300050D571 /* EventPresentationModel.swift */; };
+		EA36DDA4283D50970050D571 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA3283D50970050D571 /* DetailViewController.swift */; };
+		EA36DDA5283D50970050D571 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA3283D50970050D571 /* DetailViewController.swift */; };
 		EA46FBFC283BD13D00536502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFB283BD13D00536502 /* AppDelegate.swift */; };
 		EA46FBFE283BD13D00536502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFD283BD13D00536502 /* SceneDelegate.swift */; };
 		EA46FC00283BD13D00536502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFF283BD13D00536502 /* ViewController.swift */; };
@@ -73,8 +89,6 @@
 		EA46FC99283BE56800536502 /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FC97283BE56800536502 /* EditEventViewModel.swift */; };
 		EA46FC9F283BEA7F00536502 /* RoundedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FC9E283BEA7F00536502 /* RoundedText.swift */; };
 		EA46FCA2283BF35E00536502 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FCA1283BF35E00536502 /* HomeViewController.swift */; };
-		EA46FCA6283C0DEE00536502 /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FCA5283C0DEE00536502 /* DiscountView.swift */; };
-		EA46FCA8283C0E6000536502 /* DiscountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA46FCA7283C0E6000536502 /* DiscountView.xib */; };
 		EA46FCB1283C0F7800536502 /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FCAF283C0F7800536502 /* DiscountCell.swift */; };
 		EA46FCB2283C0F7800536502 /* DiscountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA46FCB0283C0F7800536502 /* DiscountCell.xib */; };
 		EA46FCB4283C1D4800536502 /* DiscountListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FCB3283C1D4800536502 /* DiscountListTableCell.swift */; };
@@ -98,6 +112,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA36DD79283CBA190050D571 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		EA36DD7B283CE8CB0050D571 /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
+		EA36DD80283CF0530050D571 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		EA36DD82283CF0690050D571 /* EventView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventView.xib; sourceTree = "<group>"; };
+		EA36DD84283CFF610050D571 /* UpcomingEventViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventViewTableViewCell.swift; sourceTree = "<group>"; };
+		EA36DD8F283D17760050D571 /* ExpiredListTableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiredListTableCellTableViewCell.swift; sourceTree = "<group>"; };
+		EA36DD91283D236E0050D571 /* ExpiredEventViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpiredEventViewCell.swift; sourceTree = "<group>"; };
+		EA36DD92283D236E0050D571 /* ExpiredEventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpiredEventViewCell.xib; sourceTree = "<group>"; };
+		EA36DD96283D2C8E0050D571 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		EA36DD97283D2C8E0050D571 /* ActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCell.xib; sourceTree = "<group>"; };
+		EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		EA36DDA0283D4C300050D571 /* EventPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresentationModel.swift; sourceTree = "<group>"; };
+		EA36DDA3283D50970050D571 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EA46FBF8283BD13D00536502 /* TicketsUiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketsUiKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA46FBFB283BD13D00536502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA46FBFD283BD13D00536502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,8 +168,6 @@
 		EA46FC97283BE56800536502 /* EditEventViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventViewModel.swift; sourceTree = "<group>"; };
 		EA46FC9E283BEA7F00536502 /* RoundedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedText.swift; sourceTree = "<group>"; };
 		EA46FCA1283BF35E00536502 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EA46FCA5283C0DEE00536502 /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
-		EA46FCA7283C0E6000536502 /* DiscountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountView.xib; sourceTree = "<group>"; };
 		EA46FCAF283C0F7800536502 /* DiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
 		EA46FCB0283C0F7800536502 /* DiscountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountCell.xib; sourceTree = "<group>"; };
 		EA46FCB3283C1D4800536502 /* DiscountListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountListTableCell.swift; sourceTree = "<group>"; };
@@ -176,6 +201,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA36DD7F283CF03E0050D571 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DD80283CF0530050D571 /* EventView.swift */,
+				EA36DD82283CF0690050D571 /* EventView.xib */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		EA36DD88283D13A30050D571 /* Discount */ = {
+			isa = PBXGroup;
+			children = (
+				EA46FCAF283C0F7800536502 /* DiscountCell.swift */,
+				EA46FCB0283C0F7800536502 /* DiscountCell.xib */,
+				EA46FCB3283C1D4800536502 /* DiscountListTableCell.swift */,
+			);
+			path = Discount;
+			sourceTree = "<group>";
+		};
+		EA36DD89283D13B40050D571 /* Expired */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DD91283D236E0050D571 /* ExpiredEventViewCell.swift */,
+				EA36DD92283D236E0050D571 /* ExpiredEventViewCell.xib */,
+				EA36DD8F283D17760050D571 /* ExpiredListTableCellTableViewCell.swift */,
+			);
+			path = Expired;
+			sourceTree = "<group>";
+		};
+		EA36DD8A283D13BE0050D571 /* Upcoming */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DD84283CFF610050D571 /* UpcomingEventViewTableViewCell.swift */,
+			);
+			path = Upcoming;
+			sourceTree = "<group>";
+		};
+		EA36DD95283D2C750050D571 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DD96283D2C8E0050D571 /* ActionCell.swift */,
+				EA36DD97283D2C8E0050D571 /* ActionCell.xib */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		EA36DD9A283D4A910050D571 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DD9C283D4ACE0050D571 /* Views */,
+				EA36DD9B283D4ABF0050D571 /* ViewModel */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		EA36DD9B283D4ABF0050D571 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA36DD9C283D4ACE0050D571 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DDA3283D50970050D571 /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EA46FBEF283BD13D00536502 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +295,7 @@
 		EA46FBFA283BD13D00536502 /* TicketsUiKit */ = {
 			isa = PBXGroup;
 			children = (
+				EA36DD9A283D4A910050D571 /* Details */,
 				EA46FC95283BE55700536502 /* Edit */,
 				EA46FC8D283BE4DF00536502 /* Admin */,
 				EA46FC7E283BE42100536502 /* Home */,
@@ -328,6 +425,7 @@
 				EA46FC68283BE39B00536502 /* Payload.swift */,
 				EA46FC6A283BE39B00536502 /* Type.swift */,
 				EA46FC92283BE52800536502 /* EventDiscountPair.swift */,
+				EA36DDA0283D4C300050D571 /* EventPresentationModel.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -404,17 +502,12 @@
 		EA46FC9A283BEA0000536502 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EA46FC9B283BEA3A00536502 /* New Group */,
+				EA36DD7F283CF03E0050D571 /* Event */,
 				EA46FC9E283BEA7F00536502 /* RoundedText.swift */,
+				EA36DD79283CBA190050D571 /* UIView+Shadow.swift */,
+				EA36DD7B283CE8CB0050D571 /* InsetLabel.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		EA46FC9B283BEA3A00536502 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		EA46FCA0283BF32C00536502 /* Views */ = {
@@ -429,11 +522,10 @@
 		EA46FCA4283C0D0000536502 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				EA46FCA5283C0DEE00536502 /* DiscountView.swift */,
-				EA46FCA7283C0E6000536502 /* DiscountView.xib */,
-				EA46FCAF283C0F7800536502 /* DiscountCell.swift */,
-				EA46FCB0283C0F7800536502 /* DiscountCell.xib */,
-				EA46FCB3283C1D4800536502 /* DiscountListTableCell.swift */,
+				EA36DD95283D2C750050D571 /* Action */,
+				EA36DD8A283D13BE0050D571 /* Upcoming */,
+				EA36DD89283D13B40050D571 /* Expired */,
+				EA36DD88283D13A30050D571 /* Discount */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -552,13 +644,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA36DD83283CF0690050D571 /* EventView.xib in Resources */,
 				EA46FC3D283BD34100536502 /* Montserrat-Bold.ttf in Resources */,
 				EA46FCB2283C0F7800536502 /* DiscountCell.xib in Resources */,
 				EA46FC0B283BD13D00536502 /* LaunchScreen.storyboard in Resources */,
 				EA46FC08283BD13D00536502 /* Assets.xcassets in Resources */,
 				EA46FC3E283BD34100536502 /* Montserrat-Regular.ttf in Resources */,
 				EA46FC03283BD13D00536502 /* Main.storyboard in Resources */,
-				EA46FCA8283C0E6000536502 /* DiscountView.xib in Resources */,
+				EA36DD94283D236E0050D571 /* ExpiredEventViewCell.xib in Resources */,
+				EA36DD99283D2C8E0050D571 /* ActionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,29 +678,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA46FC00283BD13D00536502 /* ViewController.swift in Sources */,
+				EA36DD98283D2C8E0050D571 /* ActionCell.swift in Sources */,
+				EA36DD90283D17760050D571 /* ExpiredListTableCellTableViewCell.swift in Sources */,
 				EA46FC93283BE52800536502 /* EventDiscountPair.swift in Sources */,
 				EA46FCA2283BF35E00536502 /* HomeViewController.swift in Sources */,
 				EA46FBFC283BD13D00536502 /* AppDelegate.swift in Sources */,
+				EA36DD85283CFF610050D571 /* UpcomingEventViewTableViewCell.swift in Sources */,
 				EA46FC5B283BE32C00536502 /* ApiManagerProtocol.swift in Sources */,
 				EA46FC49283BE2B900536502 /* CoreDataHelper.swift in Sources */,
 				EA46FC8B283BE49200536502 /* EventsStoreService.swift in Sources */,
 				EA46FC3C283BD34100536502 /* FontUtils.swift in Sources */,
 				EA46FC47283BE2B900536502 /* Entity+ValueInit.swift in Sources */,
+				EA36DD81283CF0530050D571 /* EventView.swift in Sources */,
 				EA46FC78283BE3CD00536502 /* FormatUtils.swift in Sources */,
+				EA36DD7A283CBA190050D571 /* UIView+Shadow.swift in Sources */,
 				EA46FC7C283BE3CD00536502 /* ApiUtils.swift in Sources */,
 				EA46FC9F283BEA7F00536502 /* RoundedText.swift in Sources */,
+				EA36DD7C283CE8CB0050D571 /* InsetLabel.swift in Sources */,
 				EA46FC6E283BE39B00536502 /* EventContainer.swift in Sources */,
 				EA46FC61283BE32C00536502 /* EventsRequest.swift in Sources */,
 				EA46FC65283BE32C00536502 /* RequestType.swift in Sources */,
+				EA36DD9E283D4B460050D571 /* DetailsViewModel.swift in Sources */,
 				EA46FC59283BE32C00536502 /* RequestManager.swift in Sources */,
 				EA46FC72283BE39B00536502 /* MockEvents.swift in Sources */,
-				EA46FCA6283C0DEE00536502 /* DiscountView.swift in Sources */,
+				EA36DDA4283D50970050D571 /* DetailViewController.swift in Sources */,
 				EA46FC57283BE32C00536502 /* ApiConstants.swift in Sources */,
 				EA46FCB4283C1D4800536502 /* DiscountListTableCell.swift in Sources */,
 				EA46FC63283BE32C00536502 /* RequestProtocol.swift in Sources */,
 				EA46FC89283BE49200536502 /* FetchEventsService.swift in Sources */,
 				EA46FC70283BE39B00536502 /* Type.swift in Sources */,
 				EA46FC6C283BE39B00536502 /* Payload.swift in Sources */,
+				EA36DDA1283D4C300050D571 /* EventPresentationModel.swift in Sources */,
 				EA46FC43283BE23E00536502 /* Persistence.swift in Sources */,
 				EA46FC5D283BE32C00536502 /* NetworkError.swift in Sources */,
 				EA46FCB1283C0F7800536502 /* DiscountCell.swift in Sources */,
@@ -614,6 +716,7 @@
 				EA46FC85283BE49200536502 /* HomeViewModel.swift in Sources */,
 				EA46FC5F283BE32C00536502 /* DataParser.swift in Sources */,
 				EA46FC98283BE56800536502 /* EditEventViewModel.swift in Sources */,
+				EA36DD93283D236E0050D571 /* ExpiredEventViewCell.swift in Sources */,
 				EA46FC7A283BE3CD00536502 /* ColorUtils.swift in Sources */,
 				EA46FC06283BD13D00536502 /* Tickets.xcdatamodeld in Sources */,
 				EA46FBFE283BD13D00536502 /* SceneDelegate.swift in Sources */,
@@ -630,6 +733,7 @@
 				EA46FC99283BE56800536502 /* EditEventViewModel.swift in Sources */,
 				EA46FC48283BE2B900536502 /* Entity+ValueInit.swift in Sources */,
 				EA46FC6D283BE39B00536502 /* Payload.swift in Sources */,
+				EA36DDA2283D4C300050D571 /* EventPresentationModel.swift in Sources */,
 				EA46FC86283BE49200536502 /* HomeViewModel.swift in Sources */,
 				EA46FC7D283BE3CD00536502 /* ApiUtils.swift in Sources */,
 				EA46FC5E283BE32C00536502 /* NetworkError.swift in Sources */,
@@ -637,10 +741,12 @@
 				EA46FC91283BE4F800536502 /* AdminViewModel.swift in Sources */,
 				EA46FC71283BE39B00536502 /* Type.swift in Sources */,
 				EA46FC16283BD13E00536502 /* TicketsUiKitTests.swift in Sources */,
+				EA36DDA5283D50970050D571 /* DetailViewController.swift in Sources */,
 				EA46FC58283BE32C00536502 /* ApiConstants.swift in Sources */,
 				EA46FC5C283BE32C00536502 /* ApiManagerProtocol.swift in Sources */,
 				EA46FC7B283BE3CD00536502 /* ColorUtils.swift in Sources */,
 				EA46FC64283BE32C00536502 /* RequestProtocol.swift in Sources */,
+				EA36DD9F283D4B460050D571 /* DetailsViewModel.swift in Sources */,
 				EA46FC8A283BE49200536502 /* FetchEventsService.swift in Sources */,
 				EA46FC79283BE3CD00536502 /* FormatUtils.swift in Sources */,
 				EA46FC73283BE39B00536502 /* MockEvents.swift in Sources */,

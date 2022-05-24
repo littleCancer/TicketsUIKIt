@@ -22,12 +22,12 @@ enum AppFonts {
     }
 }
 
-extension Font {
-    static func appFontOfSize(size: CGFloat) -> Font {
-        return Font.custom(AppFonts.Montserrat.name(), size: size)
+extension UIFont {
+    static func appFontOfSize(size: CGFloat) -> UIFont? {
+        return UIFont(name: AppFonts.Montserrat.name(), size: size)
     }
     
-    static func appBoldFontOfSize(size: CGFloat) -> Font {
-        return Font.custom(AppFonts.MontserratBold.name(), size: size)
+    static func appBoldFontOfSize(size: CGFloat) -> UIFont? {
+        return UIFont(name: AppFonts.MontserratBold.name(), size: size)
     }
 }
