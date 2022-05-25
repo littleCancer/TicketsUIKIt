@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 import Combine
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate , DiscountDetailsPresenter {
+
     
     let discountsDataSourceAndDelegate = DiscountsCollectionDataSourceAndDelegate()
     let expiredEventsSourceAndDelegate = ExpiredEventsCollectionDataSourceAndDelegate()
@@ -24,12 +24,38 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        styleSubviews()
+        funcSetUpObserving()
+        
+        registerCells()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadView), name: Notification.Name("EntityChanged"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Task {
+            if (!UserDefaults.standard.bool(forKey: "hasDataStored")) {
+                await viewModel.fetchEvents()
+            }
+            viewModel.loadModel()
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func styleSubviews() {
         self.view.backgroundColor = UIColor.appGray
         let titleLabel = UILabel()
         titleLabel.text = "Concert Tickets"
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.appBoldFontOfSize(size: 22)
         self.navigationItem.titleView = titleLabel
+        
+        discountsDataSourceAndDelegate.discountPresenter = self
+        expiredEventsSourceAndDelegate.eventPresenter = self
         
         
         let separator = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 3))
@@ -41,41 +67,39 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         separator.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         separator.widthAnchor.constraint(equalToConstant: 300).isActive = true
         separator.heightAnchor.constraint(equalToConstant: 3).isActive = true
-        
-        viewModel.$isLoading.sink(receiveValue: { [weak self] loading in
-        }).store(in: &cancellableSet)
-        
+        self.tableView.separatorStyle = .none
+    }
+    
+    private func funcSetUpObserving() {
         viewModel.$upcoming.sink { [weak self] upcoming in
-//            self?.tableView.reloadData()
-            self?.tableView.reloadSections(IndexSet(integer: 1), with: .automatic)
+            self?.tableView.reloadData()
+//            self?.tableView.reloadSections(IndexSet(integer: 1), with: .automatic)
         }.store(in: &cancellableSet)
         
         viewModel.$discounts.sink { [weak self] discounts in
             self?.discountsDataSourceAndDelegate.discounts = discounts
-//            self?.tableView.reloadData()
-            self?.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+            self?.tableView.reloadData()
         }.store(in: &cancellableSet)
         
         viewModel.$expired.sink { [weak self] expired in
             self?.expiredEventsSourceAndDelegate.expiredEvents = expired
-//            self?.tableView.reloadData()
-            self?.tableView.reloadSections(IndexSet(integer: 2), with: .automatic)
+            self?.tableView.reloadData()
         }.store(in: &cancellableSet)
         
-        Task {
-            if (!UserDefaults.standard.bool(forKey: "hasDataStored")) {
-                await viewModel.fetchEvents()
-            }
-            viewModel.loadModel()
-        }
+        viewModel.$isLoading.sink(receiveValue: { [weak self] loading in
+        }).store(in: &cancellableSet)
+    }
+    
+    private func registerCells() {
         tableView.register(DiscountListTableCell.self, forCellReuseIdentifier: "DiscountCell")
         tableView.register(UpcomingEventViewTableViewCell.self, forCellReuseIdentifier: "UpcomingCell")
         tableView.register(ExpiredListTableCellTableViewCell.self, forCellReuseIdentifier: "ExpiredCell")
         tableView.register(UINib(nibName: "ActionCell", bundle: nil), forCellReuseIdentifier: "ActionCell")
-        
-        self.tableView.separatorStyle = .none
     }
     
+    @objc func reloadView() {
+        self.tableView.reloadData()
+    }
     
     // MARK: UITableView data source
     
@@ -88,7 +112,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case Section.forYou.getSectionIndex():
             return 1
         case Section.upcoming.getSectionIndex():
-            return viewModel.upcoming.count
+            return viewModel.upcoming.count > 0 ? 1 : 0
         case Section.expired.getSectionIndex():
             return 1
         case Section.action.getSectionIndex():
@@ -147,8 +171,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 return cell
             case Section.action.getSectionIndex():
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell", for: indexPath) as? ActionCell ?? ActionCell()
-
-
+                cell.adminButton.addTarget(self, action: #selector(presentAdminViewController), for: .touchUpInside)
                 return cell
             
         
@@ -158,8 +181,42 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    // MARK: UITableViewController delegate methods
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = viewModel.upcoming[indexPath.row]
+        presentDetailViewController(for: event)
+    }
+    
+    private func presentDetailViewController(for entity: EventEntity) {
+        let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "detail-vs") as! DetailViewController
+        let viewModel = DetailsViewModel(eventEntity: entity)
+        detailsVC.viewModel = viewModel
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
+
+    private func presentDetailViewController(for discount: DiscountEntity) {
+        let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "detail-vs") as! DetailViewController
+        let viewModel = DetailsViewModel(discountEntity: discount)
+        detailsVC.viewModel = viewModel
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
+    func showViewControllerFor(discount: DiscountEntity) {
+        self.presentDetailViewController(for: discount)
+    }
+    
+    @objc private func presentAdminViewController() {
+        let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "admin-vc")
+        as! AdminViewController
+        self.navigationController?.pushViewController(adminVC, animated: true)
+    }
+    
 }
 
+protocol DiscountDetailsPresenter: AnyObject {
+    func showViewControllerFor(discount: DiscountEntity)
+}
 
 enum Section: CaseIterable {
     case forYou
@@ -196,7 +253,7 @@ enum Section: CaseIterable {
 
 class DiscountsCollectionDataSourceAndDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
+    weak var discountPresenter: DiscountDetailsPresenter?
     var discounts: [DiscountEntity] = []
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -218,10 +275,18 @@ class DiscountsCollectionDataSourceAndDelegate: NSObject, UICollectionViewDelega
         return cell
     }
     
+    // MARK UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let discount = self.discounts[indexPath.row]
+        self.discountPresenter?.showViewControllerFor(discount: discount)
+    }
+    
 }
 
 class ExpiredEventsCollectionDataSourceAndDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    weak var eventPresenter: DiscountDetailsPresenter?
     var expiredEvents: [DiscountEntity] = []
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -239,6 +304,13 @@ class ExpiredEventsCollectionDataSourceAndDelegate: NSObject, UICollectionViewDe
         cell.locationLabel.text = expired.place
         
         return cell
+    }
+    
+    // MARK UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let event = self.expiredEvents[indexPath.row]
+        self.eventPresenter?.showViewControllerFor(discount: event)
     }
     
 }

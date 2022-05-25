@@ -50,7 +50,7 @@ struct EventPresentationModel {
         let discountValue = discount.discount
         let date = discount.date ?? Date.now
     
-        let result = EventPresentationModel(id: id, name: name, location: location, imageUrl: imageUrl, description: description, price: price, quantity: nil, discount: discountValue, discountQuantity: quantity, date: date)
+        let result = EventPresentationModel(id: id, name: name, location: location, imageUrl: imageUrl, description: description, price: price, quantity: quantity, discount: discountValue, discountQuantity: quantity, date: date)
         return result
     }
     

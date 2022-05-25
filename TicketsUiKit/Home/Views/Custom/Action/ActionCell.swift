@@ -12,16 +12,19 @@ class ActionCell: UITableViewCell {
     @IBOutlet weak var adminButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.backgroundColor = UIColor.appGray
-        let image = UIImage(systemName: "pencil.circle.fill") as UIImage?
-        adminButton.setBackgroundImage(image, for: .normal)
+        styleSubviews()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func styleSubviews() {
+        self.backgroundColor = UIColor.appGray
+        let image = UIImage(systemName: "pencil.circle.fill")
+        adminButton.setBackgroundImage(image, for: .normal)
     }
     
 }

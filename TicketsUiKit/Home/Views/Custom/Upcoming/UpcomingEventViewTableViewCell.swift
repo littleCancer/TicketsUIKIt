@@ -37,11 +37,13 @@ class UpcomingEventViewTableViewCell: UITableViewCell {
             eventView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
             eventView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
             eventView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+
+
             eventView.eventImage.layer.cornerRadius = 30
             eventView.eventImage.layer.masksToBounds = true
             eventView.priceView.font = UIFont.appFontOfSize(size: 25)!
             
-            eventView.backgroundView.setCornerRadiusAndShadow(cornerRadius: 30, shadowColor: UIColor.gray, shadowOffsetWidth: 0, shadowOffsetHeight: 8, shadowOpacity: 0.6, shadowRadius: 15)
+            eventView.backgroundView.setCornerRadiusAndShadow(cornerRadius: 30, shadowColor: UIColor.gray, shadowOffsetWidth: 0, shadowOffsetHeight: 8, shadowOpacity: 0.3, shadowRadius: 15)
         }
     }
     

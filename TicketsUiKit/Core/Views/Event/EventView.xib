@@ -19,15 +19,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventView" customModule="TicketsUiKit" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="h7f-Je-x0H" id="XC9-JL-kvw"/>
+                <outlet property="bottomConstraint" destination="T3V-vJ-7xe" id="502-TJ-I6B"/>
                 <outlet property="dayLabel" destination="plQ-3t-ePV" id="dem-1M-zxP"/>
                 <outlet property="discountView" destination="bPI-1D-iQR" id="OHj-cr-e9D"/>
                 <outlet property="eventImage" destination="FvQ-ny-CTt" id="hhH-nj-S5I"/>
+                <outlet property="leadingConstraint" destination="EYH-tp-0xD" id="gru-X0-SN2"/>
                 <outlet property="locationLabel" destination="13a-Ub-6b2" id="Fpc-lI-Jz3"/>
                 <outlet property="monthLabel" destination="d7A-IM-aIP" id="0WY-tN-gxU"/>
                 <outlet property="nameView" destination="6e1-bl-bNM" id="8qa-Jb-14F"/>
                 <outlet property="priceView" destination="nqE-Ao-z8X" id="MJo-HX-9hq"/>
-                <outlet property="ticketsLeftLabel" destination="VIQ-RF-3k6" id="Z35-Y0-5t9"/>
+                <outlet property="ticketsLeftLabel" destination="VIQ-RF-3k6" id="ze4-Dt-d8u"/>
                 <outlet property="timeLabel" destination="1DE-XH-qJo" id="FSI-V7-Vc4"/>
+                <outlet property="topConstraint" destination="c3o-Ml-9Uj" id="zRC-Vd-dHQ"/>
+                <outlet property="trailingConstraint" destination="mbE-Kg-JtZ" id="gWs-Or-ccd"/>
                 <outlet property="yearLabel" destination="B84-oc-iOC" id="OVv-nm-qk0"/>
             </connections>
         </placeholder>

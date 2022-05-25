@@ -42,5 +42,28 @@ extension UIView
         subView.layer.shadowOpacity = shadowOpacity
         subView.layer.shadowOffset = CGSize(width: shadowOffsetWidth, height: shadowOffsetHeight)
         subView.layer.shadowRadius = shadowRadius
+        
+        
+    }
+    
+    
+    func setCornerRadiousAndBottomShadow(cornerRadius: CGFloat, shadowColor: UIColor,       shadowSize: CGFloat, shadowOpacity: Float, shadowRadius: CGFloat) {
+     
+        self.layer.cornerRadius = cornerRadius
+        self.layer.masksToBounds = true
+        
+        let subView = UIView()
+        
+        self.superview?.insertSubview(subView, belowSubview: self)
+        subView.frame = self.frame
+
+        let contactRect = CGRect(x: -shadowSize, y: subView.bounds.size.height - (shadowSize * 0.2), width: subView.bounds.size.width + shadowSize * 2, height: shadowSize)
+        subView.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
+        subView.layer.shadowRadius = shadowRadius
+        subView.layer.shadowOpacity = shadowOpacity
+        subView.layer.shadowColor = shadowColor.cgColor
+        
+        subView.layer.shouldRasterize = true
+        subView.layer.rasterizationScale = UIScreen.main.scale
     }
 }

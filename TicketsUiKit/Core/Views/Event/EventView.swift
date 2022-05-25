@@ -9,7 +9,10 @@ import UIKit
 
 class EventView: UIView {
 
-
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var nameView: RoundedText!
     @IBOutlet weak var discountView: RoundedText!
@@ -58,6 +61,14 @@ class EventView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.frame = bounds
         addSubview(contentView)
+    }
+    
+    func updateConstraintsToFillParent() {
+        bottomConstraint.constant = 0
+        topConstraint.constant = 0
+        leadingConstraint.constant = 0
+        trailingConstraint.constant = 0
+        layoutIfNeeded()
     }
     
 }

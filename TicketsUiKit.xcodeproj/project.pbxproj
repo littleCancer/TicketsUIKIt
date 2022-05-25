@@ -23,6 +23,16 @@
 		EA36DDA2283D4C300050D571 /* EventPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA0283D4C300050D571 /* EventPresentationModel.swift */; };
 		EA36DDA4283D50970050D571 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA3283D50970050D571 /* DetailViewController.swift */; };
 		EA36DDA5283D50970050D571 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA3283D50970050D571 /* DetailViewController.swift */; };
+		EA36DDA8283D65980050D571 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA7283D65980050D571 /* TitleCell.swift */; };
+		EA36DDAA283D65AC0050D571 /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA9283D65AC0050D571 /* EventDescriptionCell.swift */; };
+		EA36DDAC283D65D50050D571 /* EventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDAB283D65D50050D571 /* EventDetailCell.swift */; };
+		EA3EB3EA283DFF6D004D0890 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3E9283DFF6D004D0890 /* AdminViewController.swift */; };
+		EA3EB3ED283E0AC8004D0890 /* AdminEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3EC283E0AC8004D0890 /* AdminEventCell.swift */; };
+		EA3EB3EF283E0ADB004D0890 /* ActionButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3EE283E0ADB004D0890 /* ActionButtonsCell.swift */; };
+		EA3EB3F1283E0B12004D0890 /* FilterByCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F0283E0B12004D0890 /* FilterByCell.swift */; };
+		EA3EB3F3283E1577004D0890 /* AdminCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F2283E1577004D0890 /* AdminCellType.swift */; };
+		EA3EB3F5283E4980004D0890 /* UIController+CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F4283E4980004D0890 /* UIController+CustomBackButton.swift */; };
+		EA3EB3F8283E5F41004D0890 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F7283E5F41004D0890 /* EditEventViewController.swift */; };
 		EA46FBFC283BD13D00536502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFB283BD13D00536502 /* AppDelegate.swift */; };
 		EA46FBFE283BD13D00536502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFD283BD13D00536502 /* SceneDelegate.swift */; };
 		EA46FC00283BD13D00536502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFF283BD13D00536502 /* ViewController.swift */; };
@@ -125,6 +135,16 @@
 		EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		EA36DDA0283D4C300050D571 /* EventPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresentationModel.swift; sourceTree = "<group>"; };
 		EA36DDA3283D50970050D571 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EA36DDA7283D65980050D571 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		EA36DDA9283D65AC0050D571 /* EventDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescriptionCell.swift; sourceTree = "<group>"; };
+		EA36DDAB283D65D50050D571 /* EventDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCell.swift; sourceTree = "<group>"; };
+		EA3EB3E9283DFF6D004D0890 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		EA3EB3EC283E0AC8004D0890 /* AdminEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEventCell.swift; sourceTree = "<group>"; };
+		EA3EB3EE283E0ADB004D0890 /* ActionButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonsCell.swift; sourceTree = "<group>"; };
+		EA3EB3F0283E0B12004D0890 /* FilterByCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterByCell.swift; sourceTree = "<group>"; };
+		EA3EB3F2283E1577004D0890 /* AdminCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCellType.swift; sourceTree = "<group>"; };
+		EA3EB3F4283E4980004D0890 /* UIController+CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIController+CustomBackButton.swift"; sourceTree = "<group>"; };
+		EA3EB3F7283E5F41004D0890 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
 		EA46FBF8283BD13D00536502 /* TicketsUiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketsUiKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA46FBFB283BD13D00536502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA46FBFD283BD13D00536502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,7 +287,45 @@
 		EA36DD9C283D4ACE0050D571 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA36DDA6283D65620050D571 /* Cells */,
 				EA36DDA3283D50970050D571 /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA36DDA6283D65620050D571 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EA36DDA7283D65980050D571 /* TitleCell.swift */,
+				EA36DDA9283D65AC0050D571 /* EventDescriptionCell.swift */,
+				EA36DDAB283D65D50050D571 /* EventDetailCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EA3EB3E8283DFF45004D0890 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA3EB3EB283DFFED004D0890 /* Cells */,
+				EA3EB3E9283DFF6D004D0890 /* AdminViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA3EB3EB283DFFED004D0890 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EA3EB3EC283E0AC8004D0890 /* AdminEventCell.swift */,
+				EA3EB3EE283E0ADB004D0890 /* ActionButtonsCell.swift */,
+				EA3EB3F0283E0B12004D0890 /* FilterByCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EA3EB3F6283E5F18004D0890 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA3EB3F7283E5F41004D0890 /* EditEventViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -470,6 +528,7 @@
 		EA46FC8D283BE4DF00536502 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				EA3EB3E8283DFF45004D0890 /* Views */,
 				EA46FC8E283BE4F800536502 /* ViewModels */,
 			);
 			path = Admin;
@@ -479,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				EA46FC8F283BE4F800536502 /* AdminViewModel.swift */,
+				EA3EB3F2283E1577004D0890 /* AdminCellType.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -486,6 +546,7 @@
 		EA46FC95283BE55700536502 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				EA3EB3F6283E5F18004D0890 /* Views */,
 				EA46FC96283BE56800536502 /* ViewModels */,
 			);
 			path = Edit;
@@ -506,6 +567,7 @@
 				EA46FC9E283BEA7F00536502 /* RoundedText.swift */,
 				EA36DD79283CBA190050D571 /* UIView+Shadow.swift */,
 				EA36DD7B283CE8CB0050D571 /* InsetLabel.swift */,
+				EA3EB3F4283E4980004D0890 /* UIController+CustomBackButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -677,32 +739,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3EB3F1283E0B12004D0890 /* FilterByCell.swift in Sources */,
 				EA46FC00283BD13D00536502 /* ViewController.swift in Sources */,
 				EA36DD98283D2C8E0050D571 /* ActionCell.swift in Sources */,
+				EA3EB3EF283E0ADB004D0890 /* ActionButtonsCell.swift in Sources */,
 				EA36DD90283D17760050D571 /* ExpiredListTableCellTableViewCell.swift in Sources */,
+				EA36DDAC283D65D50050D571 /* EventDetailCell.swift in Sources */,
 				EA46FC93283BE52800536502 /* EventDiscountPair.swift in Sources */,
+				EA3EB3F5283E4980004D0890 /* UIController+CustomBackButton.swift in Sources */,
 				EA46FCA2283BF35E00536502 /* HomeViewController.swift in Sources */,
 				EA46FBFC283BD13D00536502 /* AppDelegate.swift in Sources */,
 				EA36DD85283CFF610050D571 /* UpcomingEventViewTableViewCell.swift in Sources */,
+				EA3EB3F3283E1577004D0890 /* AdminCellType.swift in Sources */,
 				EA46FC5B283BE32C00536502 /* ApiManagerProtocol.swift in Sources */,
 				EA46FC49283BE2B900536502 /* CoreDataHelper.swift in Sources */,
 				EA46FC8B283BE49200536502 /* EventsStoreService.swift in Sources */,
 				EA46FC3C283BD34100536502 /* FontUtils.swift in Sources */,
 				EA46FC47283BE2B900536502 /* Entity+ValueInit.swift in Sources */,
+				EA36DDA8283D65980050D571 /* TitleCell.swift in Sources */,
 				EA36DD81283CF0530050D571 /* EventView.swift in Sources */,
 				EA46FC78283BE3CD00536502 /* FormatUtils.swift in Sources */,
 				EA36DD7A283CBA190050D571 /* UIView+Shadow.swift in Sources */,
 				EA46FC7C283BE3CD00536502 /* ApiUtils.swift in Sources */,
 				EA46FC9F283BEA7F00536502 /* RoundedText.swift in Sources */,
 				EA36DD7C283CE8CB0050D571 /* InsetLabel.swift in Sources */,
+				EA3EB3F8283E5F41004D0890 /* EditEventViewController.swift in Sources */,
 				EA46FC6E283BE39B00536502 /* EventContainer.swift in Sources */,
 				EA46FC61283BE32C00536502 /* EventsRequest.swift in Sources */,
 				EA46FC65283BE32C00536502 /* RequestType.swift in Sources */,
 				EA36DD9E283D4B460050D571 /* DetailsViewModel.swift in Sources */,
 				EA46FC59283BE32C00536502 /* RequestManager.swift in Sources */,
 				EA46FC72283BE39B00536502 /* MockEvents.swift in Sources */,
+				EA3EB3ED283E0AC8004D0890 /* AdminEventCell.swift in Sources */,
 				EA36DDA4283D50970050D571 /* DetailViewController.swift in Sources */,
 				EA46FC57283BE32C00536502 /* ApiConstants.swift in Sources */,
+				EA3EB3EA283DFF6D004D0890 /* AdminViewController.swift in Sources */,
 				EA46FCB4283C1D4800536502 /* DiscountListTableCell.swift in Sources */,
 				EA46FC63283BE32C00536502 /* RequestProtocol.swift in Sources */,
 				EA46FC89283BE49200536502 /* FetchEventsService.swift in Sources */,
@@ -720,6 +791,7 @@
 				EA46FC7A283BE3CD00536502 /* ColorUtils.swift in Sources */,
 				EA46FC06283BD13D00536502 /* Tickets.xcdatamodeld in Sources */,
 				EA46FBFE283BD13D00536502 /* SceneDelegate.swift in Sources */,
+				EA36DDAA283D65AC0050D571 /* EventDescriptionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

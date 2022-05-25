@@ -63,6 +63,14 @@ enum FormatUtils {
         return "\(priceRounded)e"
     }
     
+    static func formatPriceDecimal(price: Float?) -> String {
+        guard let price = price else {
+            return ""
+        }
+        
+        return String(format: "%.2f€", price)
+    }
+    
     static func monthFromDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "LLLL"
@@ -91,10 +99,10 @@ enum FormatUtils {
         return fullDateFormatter.string(from: date)
     }
     
-    static func caclulatePriceWithDiscount(price: NSDecimalNumber, discount: NSDecimalNumber) -> NSDecimalNumber {
-        let discountAmount = (price as Decimal) * (discount as Decimal) / 100
-        let finalPrice = (price as Decimal) - discountAmount
-        return  finalPrice as NSDecimalNumber
+    static func caclulatePriceWithDiscount(price: Float, discount: Int16) -> Float {
+        let discountAmount = price * Float(discount) / 100
+        let finalPrice = price - discountAmount
+        return finalPrice
     }
     
     static func decimal(with string: String) -> NSDecimalNumber {
