@@ -174,17 +174,16 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     // MARK: handling events
     
     @objc private func discountsButtonTapped(sender: UIButton) {
-        print("discounts")
         self.viewModel?.selectedTab = .Discount
     }
     
     @objc private func nonDiscountsButtonTapped(sender: UIButton) {
-        print(" non discounts")
         self.viewModel?.selectedTab = .NonDiscount
     }
     
     @objc private func editEventButtonTapped(sender: UIButton) {
-        print("edit event")
+        let pair = self.pairsToPresent[sender.tag]
+        self.showEditView(pair: pair)
     }
     
     @objc private func deleteEventButtonTapped(sender: UIButton) {
@@ -192,7 +191,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @objc private func addEventButtonTapped(sender: UIButton) {
-        print("add event")
+        self.showEditView(pair: nil)
     }
     
     @objc private func restoreStateButtonTapped(sender: UIButton) {
@@ -200,7 +199,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
-    func showDeleteEventAlert(sender: UIButton) {
+    private func showDeleteEventAlert(sender: UIButton) {
         
         let toDelete = self.viewModel?.selectedTab == .NonDiscount ? "Event" : "Discount"
         let alert = UIAlertController(title: "Delete \(toDelete) ", message: nil, preferredStyle: .actionSheet)
@@ -217,7 +216,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
-    func showResetAppAlert(sender: UIButton) {
+    private func showResetAppAlert(sender: UIButton) {
         
         let alert = UIAlertController(title: "Reset App?", message: nil, preferredStyle: .actionSheet)
 
@@ -235,6 +234,13 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showEditView(pair: EventDiscountPair?) {
+        let editVC = self.storyboard?.instantiateViewController(withIdentifier: "edit-vc") as! EditEventViewController
+        let editEventViewModel = EditEventViewModel(context: PersistenceController.shared.container.newBackgroundContext(), eventDiscountPair: pair)
+        editVC.viewModel = editEventViewModel
+        self.navigationController?.pushViewController(editVC, animated: true)
     }
     
 }
