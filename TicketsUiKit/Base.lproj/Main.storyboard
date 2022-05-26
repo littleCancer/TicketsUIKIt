@@ -564,7 +564,7 @@
                                             <action selector="priceValueChanged:" destination="4DJ-OI-EPq" eventType="editingChanged" id="DxE-3a-Rcw"/>
                                         </connections>
                                     </textField>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity is required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDp-v2-z3Y">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valid quantity is required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDp-v2-z3Y">
                                         <rect key="frame" x="30" y="942" width="354" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="yf6-jV-uG0"/>
@@ -667,7 +667,7 @@
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <connections>
-                                                    <action selector="discQValueChanged:" destination="4DJ-OI-EPq" eventType="editingChanged" id="SuP-Bq-uFZ"/>
+                                                    <action selector="discQValueChangedWith_a:" destination="4DJ-OI-EPq" eventType="editingChanged" id="ayb-Ej-98u"/>
                                                 </connections>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter valid quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt7-mp-5mq">
@@ -711,7 +711,7 @@
                                         </constraints>
                                         <color key="tintColor" name="AppBlue"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                        <buttonConfiguration key="configuration" style="filled" title="Edit">
                                             <color key="baseBackgroundColor" name="AppBlue"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -841,50 +841,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHJ-5y-ice" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3231.884057971015" y="179.46428571428569"/>
-        </scene>
-        <!--edit-cv-->
-        <scene sceneID="i6z-Ls-qhz">
-            <objects>
-                <viewController storyboardIdentifier="edit-cv" title="edit-cv" id="LXV-xE-x2a" customClass="EditEventViewController" customModule="TicketsUiKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dsk-nz-sWE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZG-iq-ZsF">
-                                <rect key="frame" x="63" y="140" width="280" height="722"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bs-4k-GSU">
-                                        <rect key="frame" x="119" y="682" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="3bs-4k-GSU" secondAttribute="trailing" constant="119" id="4iC-b2-Sgg"/>
-                                    <constraint firstItem="3bs-4k-GSU" firstAttribute="centerX" secondItem="7ZG-iq-ZsF" secondAttribute="centerX" id="6o1-mb-KKP"/>
-                                    <constraint firstAttribute="height" constant="722" id="Bc0-Dz-Kcd"/>
-                                    <constraint firstItem="3bs-4k-GSU" firstAttribute="top" secondItem="2sX-2h-Dif" secondAttribute="top" constant="682" id="Gg4-dH-Phm"/>
-                                    <constraint firstAttribute="width" constant="280" id="bul-Si-1Qt"/>
-                                    <constraint firstAttribute="bottom" secondItem="3bs-4k-GSU" secondAttribute="bottom" constant="19" id="rM1-xJ-1Tl"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="MdY-hb-9yi"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="2sX-2h-Dif"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="y8o-QV-29D"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="7ZG-iq-ZsF" firstAttribute="bottom" secondItem="y8o-QV-29D" secondAttribute="bottom" id="GRh-oN-Ccm"/>
-                            <constraint firstItem="y8o-QV-29D" firstAttribute="trailing" secondItem="7ZG-iq-ZsF" secondAttribute="trailing" constant="71" id="YyK-iD-j4p"/>
-                            <constraint firstItem="7ZG-iq-ZsF" firstAttribute="top" secondItem="y8o-QV-29D" secondAttribute="top" constant="96" id="q7o-cW-5Q0"/>
-                            <constraint firstItem="7ZG-iq-ZsF" firstAttribute="leading" secondItem="y8o-QV-29D" secondAttribute="leading" constant="63" id="zKn-oG-ye5"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ybc-Pc-1bc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3992.753623188406" y="20.089285714285712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GZm-vY-ucm">

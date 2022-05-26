@@ -168,12 +168,9 @@ class EditEventViewModel: ObservableObject {
         } else if self.discountOn {
             let discountEntity = DiscountEntity(context: context)
             discountEntity.id = pair.event.id
-            discountEntity.photo = "/images/Concert.jpg"
+            discountEntity.photo = pair.event.photo
             setDiscountData(discount: discountEntity)
         }
-        
-        let nc = NotificationCenter.default
-        nc.post(name: Notification.Name("EntityChanged"), object: nil)
     }
     
     func createEntity() {
@@ -190,9 +187,6 @@ class EditEventViewModel: ObservableObject {
             discountEntity.photo = "/images/Concert.jpg"
             setDiscountData(discount: discountEntity)
         }
-        
-        let nc = NotificationCenter.default
-        nc.post(name: Notification.Name("EntityChanged"), object: nil)
     }
     
     private func getLastSavedId() -> Int64 {
@@ -221,6 +215,8 @@ class EditEventViewModel: ObservableObject {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+        let nc = NotificationCenter.default
+        nc.post(name: Notification.Name("EntityChanged"), object: nil)
     }
     
 }

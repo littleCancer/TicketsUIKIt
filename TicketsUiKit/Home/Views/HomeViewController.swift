@@ -17,9 +17,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet var tableView: UITableView!
     
-    let viewModel: HomeViewModel = HomeViewModel(eventsFetcher: FetchEventsService(requestManager: RequestManager()), eventsStore: EventsStoreService(context: PersistenceController.shared.container.newBackgroundContext()))
+    let viewModel: HomeViewModel = HomeViewModel(eventsFetcher: FetchEventsService(requestManager: RequestManager()), eventsStore: EventsStoreService(context: PersistenceController.shared.container.viewContext))
     
     private var cancellableSet: Set<AnyCancellable> = []
+    
+    var dataNotLoaded:Bool {
+        return viewModel.upcoming.isEmpty && viewModel.discounts.isEmpty
+            && viewModel.expired.isEmpty
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +42,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         Task {
             if (!UserDefaults.standard.bool(forKey: "hasDataStored")) {
                 await viewModel.fetchEvents()
+                
             }
-            viewModel.loadModel()
+            if (self.dataNotLoaded) {
+                viewModel.loadModel()
+            }
         }
     }
     
@@ -98,6 +106,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @objc func reloadView() {
+        viewModel.loadModel()
         self.tableView.reloadData()
     }
     
@@ -268,7 +277,9 @@ class DiscountsCollectionDataSourceAndDelegate: NSObject, UICollectionViewDelega
         cell.eventImage.sd_setImage(with: URL(string: ApiUtils.getImageUrl(imagePath: disount.photo ?? "")))
         cell.name.text = disount.name
         cell.date.text = FormatUtils.formatDate(date: disount.date ?? Date.now)
-        cell.promoText.text = FormatUtils.formatAvailabilityMessage(amount: disount.quantity, quantity: disount.quantity)
+        
+        let price = FormatUtils.caclulatePriceWithDiscount(price: disount.price, discount: disount.discount)
+        cell.promoText.text = FormatUtils.formatAvailabilityMessage(amount: price, quantity: disount.quantity)
         cell.roundText.text = FormatUtils.formatDiscount(discount: disount.discount)
         cell.location.text = disount.place
         

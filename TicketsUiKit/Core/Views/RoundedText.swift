@@ -46,6 +46,7 @@ class RoundedText: UIView {
         
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.adjustsFontSizeToFitWidth = true
         
         NSLayoutConstraint.activate([
             self.leadingAnchor.constraint(equalTo: label.leadingAnchor),

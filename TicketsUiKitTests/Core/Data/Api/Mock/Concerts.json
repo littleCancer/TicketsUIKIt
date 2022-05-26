@@ -1,0 +1,361 @@
+[
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 1,
+            "name": "Hans Zimmer",
+            "photo": "/images/HansZimmer.jpg",
+            "description": "Hans Florian Zimmer is a German film score composer and record producer. He is the recipient of four Grammy Awards, three Classical BRIT Awards, three Golden Globes, one BAFTA, two Academy Awards, and was named on the list of Top 100 Living Geniuses, published by The Daily Telegraph.",
+            "price": 50.0,
+            "quantity": 10,
+            "discount": 30,
+            "date": "27.07.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 2,
+            "name": "Coldplay",
+            "place": "London",
+            "photo": "/images/Coldplay.jpg",
+            "description": "Multi platinum-selling and hugely popular guitar pop quartet",
+            "price": 150.0,
+            "quantity": 10,
+            "discount": 30,
+            "date": "12.08.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 3,
+            "name": "Dua Lipa",
+            "place": "London",
+            "photo": "/images/DuaLipa.jpg",
+            "description": "Hear tracks from the pop star's sophomore album live when she tours the UK",
+            "price": 250.0,
+            "quantity": 20,
+            "date": "15.04.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 4,
+            "name": "Ed Sheeran",
+            "place": "Lisbon",
+            "photo": "/images/EdSheeran.jpg",
+            "description": "",
+            "price": 125.0,
+            "quantity": 90,
+            "discount": 40,
+            "date": "26.05.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 5,
+            "name": "Celine Dion",
+            "place": "Rome",
+            "photo": "/images/CelineDion.jpg",
+            "description": "Celine Dion will return to the IT this year to perform songs from her new album Courage alongside some of her biggest hits.",
+            "price": 132.0,
+            "quantity": 40,
+            "date": "30.07.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 4,
+            "name": "Ed Sheeran",
+            "place": "Lisbon",
+            "photo": "/images/EdSheeran.jpg",
+            "description": "",
+            "price": 125.0,
+            "quantity": 30,
+            "date": "26.05.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 6,
+            "name": "André Rieu",
+            "place": "Belgrade",
+            "photo": "/images/AndreRieu.jpg",
+            "description": "André Léon Marie Nicolas Rieu is a Dutch violinist and conductor best known for creating the waltz-playing Johann Strauss Orchestra. Rieu and his orchestra have turned classical and waltz music into a worldwide concert touring act, as successful as some of the biggest global pop and rock music acts.",
+            "price": 128.0,
+            "quantity": 232,
+            "date": "24.11.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 7,
+            "name": "LADY GAGA",
+            "place": "Dusseldorf",
+            "photo": "/images/LadyGaga.jpg",
+            "description": "Stefani Joanne Angelina Germanotta, known professionally as Lady Gaga, is an American singer, songwriter, and actress. She is known for her image reinventions and musical versatility.",
+            "price": 225.0,
+            "quantity": 132,
+            "date": "10.09.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 7,
+            "name": "LADY GAGA",
+            "place": "Dusseldorf",
+            "photo": "/images/LadyGaga.jpg",
+            "description": "Stefani Joanne Angelina Germanotta, known professionally as Lady Gaga, is an American singer, songwriter, and actress. She is known for her image reinventions and musical versatility.",
+            "price": 225.0,
+            "quantity": 132,
+            "discount": 32,
+            "date": "10.09.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 8,
+            "name": "Rammstein",
+            "place": "Prague",
+            "photo": "/images/Rammstein.jpg",
+            "description": "Rammstein is a German Neue Deutsche Härte band formed in Berlin in 1994.",
+            "price": 225.0,
+            "quantity": 132,
+            "discount": 32,
+            "date": "04.10.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 8,
+            "name": "Rammstein",
+            "place": "Prague",
+            "photo": "/images/Rammstein.jpg",
+            "description": "Rammstein is a German Neue Deutsche Härte band formed in Berlin in 1994.",
+            "price": 225.0,
+            "quantity": 132,
+            "date": "04.10.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 9,
+            "name": "Andrea Bocelli",
+            "place": "Milano",
+            "photo": "/images/AndreaBocelli.jpg",
+            "description": "Andrea Bocelli OMRI OMDSM is an Italian operatic tenor and multi-instrumentalist. He was diagnosed with congenital glaucoma at 5 months old, and became completely blind at age 12, following a football accident.",
+            "price": 225.0,
+            "quantity": 132,
+            "date": "19.10.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 9,
+            "name": "Andrea Bocelli",
+            "place": "Milano",
+            "photo": "/images/AndreaBocelli.jpg",
+            "description": "Andrea Bocelli OMRI OMDSM is an Italian operatic tenor and multi-instrumentalist. He was diagnosed with congenital glaucoma at 5 months old, and became completely blind at age 12, following a football accident.",
+            "price": 225.0,
+            "quantity": 162,
+            "discount": 22,
+            "date": "19.10.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 1,
+            "name": "Hans Zimmer",
+            "photo": "/images/HansZimmer.jpg",
+            "description": "Hans Florian Zimmer is a German film score composer and record producer. He is the recipient of four Grammy Awards, three Classical BRIT Awards, three Golden Globes, one BAFTA, two Academy Awards, and was named on the list of Top 100 Living Geniuses, published by The Daily Telegraph.",
+            "price": 50.0,
+            "quantity": 10,
+            "date": "27.07.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 10,
+            "name": "Korn",
+            "photo": "/images/Korn.jpg",
+            "description": "Korn is an American nu metal band from Bakersfield, California, formed in 1993.",
+            "price": 50.0,
+            "quantity": 10,
+            "date": "16.08.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 10,
+            "name": "Korn",
+            "photo": "/images/Korn.jpg",
+            "description": "Korn is an American nu metal band from Bakersfield, California, formed in 1993.",
+            "price": 50.0,
+            "quantity": 10,
+            "discount": 26,
+            "date": "16.08.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 11,
+            "name": "James Blake",
+            "place": "Madrid",
+            "photo": "/images/JamesBlake.jpg",
+            "description": "James Blake Litherland is an English singer, songwriter, multi-instrumentalist, and record producer. He first received recognition for a series of 2010 EPs including CMYK and Klavierwerke, and he released his self-titled debut album in 2011 to critical praise.",
+            "price": 176.0,
+            "quantity": 132,
+            "discount": 30,
+            "date": "01.09.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 12,
+            "name": "Eagles",
+            "place": "Oslo",
+            "photo": "/images/Eagles.jpg",
+            "description": "The Eagles are an American rock band formed in Los Angeles in 1971. With five number-one singles and six number-one albums, six Grammy Awards and five American Music Awards, the Eagles were one of the most successful musical acts of the 1970s in North America.",
+            "price": 166.0,
+            "quantity": 132,
+            "discount": 30,
+            "date": "01.05.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 13,
+            "name": "Deep Purple",
+            "place": "London",
+            "photo": "/images/DeepPurple.jpg",
+            "description": "Deep Purple are an English rock band formed in London in 1968. They are considered to be among the pioneers of heavy metal and modern hard rock, but their musical approach has changed over the years.",
+            "price": 111.0,
+            "quantity": 132,
+            "date": "03.05.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 14,
+            "name": "Joe Banamassa",
+            "place": "Podgorica",
+            "photo": "/images/JoeBanamassa.jpg",
+            "description": "Joseph Leonard Bonamassa is an American blues rock guitarist, singer and songwriter. He started his career at age 12, when he opened for B.B. King. Since 2000, Bonamassa has put out 15 solo albums through his independent record label J&R Adventures, of which 11 have reached number 1 on the Billboard Blues chart. ",
+            "price": 121.0,
+            "quantity": 112,
+            "date": "02.05.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 15,
+            "name": "Spoon",
+            "place": "Sofia",
+            "photo": "/images/Spoon.jpg",
+            "description": "Joseph Leonard Bonamassa is an American blues rock guitarist, singer and songwriter. He started his career at age 12, when he opened for B.B. King. Since 2000, Bonamassa has put out 15 solo albums through his independent record label J&R Adventures, of which 11 have reached number 1 on the Billboard Blues chart. ",
+            "price": 81.0,
+            "quantity": 182,
+            "date": "02.02.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 15,
+            "name": "Spoon",
+            "place": "Sofia",
+            "photo": "/images/Spoon.jpg",
+            "description": "Spoon is an American rock band from Austin, Texas, consisting of members Britt Daniel, Jim Eno, Alex Fischel, Gerardo Larios and Ben Trokan. The band was formed in Austin in October 1993 by Daniel and Eno.",
+            "price": 81.0,
+            "quantity": 92,
+            "discount": 30,
+            "date": "02.02.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 16,
+            "name": "H.E.R.",
+            "place": "Berlin",
+            "photo": "/images/Her.jpg",
+            "description": "Gabriella Sarmiento Wilson, known professionally as H.E.R., is an American R&B singer. After initial music appearances and singles under her real name, Wilson re-emerged in 2016 as H.E.R., releasing her debut EP H.E.R. Volume 1 under RCA, followed by four subsequent EPs.",
+            "price": 71.0,
+            "quantity": 122,
+            "date": "02.05.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 16,
+            "name": "H.E.R.",
+            "place": "Berlin",
+            "photo": "/images/Her.jpg",
+            "description": "Gabriella Sarmiento Wilson, known professionally as H.E.R., is an American R&B singer. After initial music appearances and singles under her real name, Wilson re-emerged in 2016 as H.E.R., releasing her debut EP H.E.R. Volume 1 under RCA, followed by four subsequent EPs.",
+            "price": 71.0,
+            "quantity": 12,
+            "discount": 40,
+            "date": "02.05.2022"
+        }
+    },
+    {
+        "type": "DISCOUNT",
+        "payload": {
+            "id": 17,
+            "name": "Bon Jovi",
+            "place": "Dubai",
+            "photo": "/images/BonJovi.jpg",
+            "description": "Bon Jovi is an American rock band formed in 1983 in Sayreville, New Jersey. It consists of singer Jon Bon Jovi, keyboardist David Bryan, drummer Tico Torres, guitarist Phil X, and bassist Hugh McDonald.",
+            "price": 171.0,
+            "quantity": 212,
+            "discount": 50,
+            "date": "02.07.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 18,
+            "name": "Lorde",
+            "place": "Krakow",
+            "photo": "/images/Lorde.jpg",
+            "description": "Ella Marija Lani Yelich-O'Connor, known professionally as Lorde, is a New Zealand singer-songwriter. Taking inspiration from aristocracy for her stage name, she is known for her unconventional musical styles and introspective songwriting.",
+            "price": 131.0,
+            "quantity": 112,
+            "date": "22.08.2022"
+        }
+    },
+    {
+        "type": "EVENT",
+        "payload": {
+            "id": 18,
+            "name": "Rihanna",
+            "place": "Krakow",
+            "photo": "/images/Rihanna.jpg",
+            "description": "Robyn Rihanna Fenty NH is a Barbadian singer, actress, fashion designer, and businesswoman. Born in Saint Michael and raised in Bridgetown, Barbados, Rihanna was discovered by American record producer Evan Rogers who invited her to the United States to record demo tapes.",
+            "price": 121.0,
+            "quantity": 152,
+            "date": "22.05.2022"
+        }
+    }
+]

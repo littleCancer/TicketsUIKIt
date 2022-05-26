@@ -15,19 +15,17 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     var viewModel: AdminViewModel?
     var pairsToPresent: [EventDiscountPair] = []
     private var cancellableSet: Set<AnyCancellable> = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.viewModel = AdminViewModel(context: PersistenceController.shared.container.newBackgroundContext())
+        self.viewModel = AdminViewModel(context: PersistenceController.shared.container.viewContext)
         setUpObserving()
         styleSubviews()
     }
     
     private func styleSubviews() {
-        self.view.backgroundColor = UIColor.appGray
-        
         self.view.backgroundColor = UIColor.appGray
         let titleLabel = UILabel()
         titleLabel.text = "Admin"
@@ -215,6 +213,8 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
             Task {
                 await CoreDataHelper.clearDatabase()
                 UserDefaults.standard.set(false, forKey: "hasDataStored")
+                let nc = NotificationCenter.default
+                nc.post(name: Notification.Name("EntityChanged"), object: nil)
                 self.navigationController?.popViewController(animated: true)
             }
             
@@ -228,7 +228,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     private func showEditView(pair: EventDiscountPair?) {
         let editVC = self.storyboard?.instantiateViewController(withIdentifier: "edit-vc") as! EditEventViewController
-        let editEventViewModel = EditEventViewModel(context: PersistenceController.shared.container.newBackgroundContext(), eventDiscountPair: pair)
+        let editEventViewModel = EditEventViewModel(context: PersistenceController.shared.container.viewContext, eventDiscountPair: pair)
         editVC.viewModel = editEventViewModel
         self.navigationController?.pushViewController(editVC, animated: true)
     }

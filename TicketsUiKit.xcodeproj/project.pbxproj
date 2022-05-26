@@ -33,6 +33,30 @@
 		EA3EB3F3283E1577004D0890 /* AdminCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F2283E1577004D0890 /* AdminCellType.swift */; };
 		EA3EB3F5283E4980004D0890 /* UIController+CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F4283E4980004D0890 /* UIController+CustomBackButton.swift */; };
 		EA3EB3F8283E5F41004D0890 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F7283E5F41004D0890 /* EditEventViewController.swift */; };
+		EA4021DE283F5C7200FEAF55 /* Date+Tomorrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4021DD283F5C7200FEAF55 /* Date+Tomorrow.swift */; };
+		EA4021EB283F7DD900FEAF55 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4021E3283F7DD900FEAF55 /* CoreDataTests.swift */; };
+		EA4021EC283F7DD900FEAF55 /* PersistenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4021E4283F7DD900FEAF55 /* PersistenceTest.swift */; };
+		EA4021ED283F7DD900FEAF55 /* EventsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4021E7283F7DD900FEAF55 /* EventsRequestMock.swift */; };
+		EA4021EE283F7DD900FEAF55 /* TestEventFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4021E8283F7DD900FEAF55 /* TestEventFetcherMock.swift */; };
+		EA4021EF283F7DD900FEAF55 /* ApiManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4021E9283F7DD900FEAF55 /* ApiManagerMock.swift */; };
+		EA4021F0283F7DD900FEAF55 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4021EA283F7DD900FEAF55 /* RequestManagerTests.swift */; };
+		EA4021F1283F7E4C00FEAF55 /* Tickets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA46FC04283BD13D00536502 /* Tickets.xcdatamodeld */; };
+		EA4021F2283F7E4E00FEAF55 /* Tickets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA46FC04283BD13D00536502 /* Tickets.xcdatamodeld */; };
+		EA4021F3283F7E9000FEAF55 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FC38283BD34100536502 /* FontUtils.swift */; };
+		EA4021F4283F7E9100FEAF55 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FC38283BD34100536502 /* FontUtils.swift */; };
+		EA4021F5283F7E9C00FEAF55 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA7283D65980050D571 /* TitleCell.swift */; };
+		EA4021F6283F7E9C00FEAF55 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA7283D65980050D571 /* TitleCell.swift */; };
+		EA4021F7283F7EA500FEAF55 /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA9283D65AC0050D571 /* EventDescriptionCell.swift */; };
+		EA4021F8283F7EA600FEAF55 /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDA9283D65AC0050D571 /* EventDescriptionCell.swift */; };
+		EA4021F9283F7EAD00FEAF55 /* EventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDAB283D65D50050D571 /* EventDetailCell.swift */; };
+		EA4021FA283F7EAE00FEAF55 /* EventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DDAB283D65D50050D571 /* EventDetailCell.swift */; };
+		EA4021FB283F7ED100FEAF55 /* UIController+CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F4283E4980004D0890 /* UIController+CustomBackButton.swift */; };
+		EA4021FC283F7ED100FEAF55 /* UIController+CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB3F4283E4980004D0890 /* UIController+CustomBackButton.swift */; };
+		EA4021FE283F7F7700FEAF55 /* Concerts.json in Resources */ = {isa = PBXBuildFile; fileRef = EA4021FD283F7F7700FEAF55 /* Concerts.json */; };
+		EA402201283F7FE600FEAF55 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA402200283F7FE600FEAF55 /* HomeViewModelTests.swift */; };
+		EA402204283F802400FEAF55 /* AdminViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA402203283F802400FEAF55 /* AdminViewModelTests.swift */; };
+		EA402205283F861C00FEAF55 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD79283CBA190050D571 /* UIView+Shadow.swift */; };
+		EA40220B283F883A00FEAF55 /* TestEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA40220A283F883A00FEAF55 /* TestEditViewModel.swift */; };
 		EA46FBFC283BD13D00536502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFB283BD13D00536502 /* AppDelegate.swift */; };
 		EA46FBFE283BD13D00536502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFD283BD13D00536502 /* SceneDelegate.swift */; };
 		EA46FC00283BD13D00536502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FBFF283BD13D00536502 /* ViewController.swift */; };
@@ -145,6 +169,17 @@
 		EA3EB3F2283E1577004D0890 /* AdminCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCellType.swift; sourceTree = "<group>"; };
 		EA3EB3F4283E4980004D0890 /* UIController+CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIController+CustomBackButton.swift"; sourceTree = "<group>"; };
 		EA3EB3F7283E5F41004D0890 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
+		EA4021DD283F5C7200FEAF55 /* Date+Tomorrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Tomorrow.swift"; sourceTree = "<group>"; };
+		EA4021E3283F7DD900FEAF55 /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		EA4021E4283F7DD900FEAF55 /* PersistenceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceTest.swift; sourceTree = "<group>"; };
+		EA4021E7283F7DD900FEAF55 /* EventsRequestMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsRequestMock.swift; sourceTree = "<group>"; };
+		EA4021E8283F7DD900FEAF55 /* TestEventFetcherMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEventFetcherMock.swift; sourceTree = "<group>"; };
+		EA4021E9283F7DD900FEAF55 /* ApiManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManagerMock.swift; sourceTree = "<group>"; };
+		EA4021EA283F7DD900FEAF55 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		EA4021FD283F7F7700FEAF55 /* Concerts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Concerts.json; sourceTree = "<group>"; };
+		EA402200283F7FE600FEAF55 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		EA402203283F802400FEAF55 /* AdminViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewModelTests.swift; sourceTree = "<group>"; };
+		EA40220A283F883A00FEAF55 /* TestEditViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEditViewModel.swift; sourceTree = "<group>"; };
 		EA46FBF8283BD13D00536502 /* TicketsUiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketsUiKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA46FBFB283BD13D00536502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA46FBFD283BD13D00536502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -330,6 +365,84 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EA4021DF283F7DD900FEAF55 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA4021E0283F7DD900FEAF55 /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA4021E0283F7DD900FEAF55 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA4021E1283F7DD900FEAF55 /* CoreData */,
+				EA4021E4283F7DD900FEAF55 /* PersistenceTest.swift */,
+				EA4021E5283F7DD900FEAF55 /* Api */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EA4021E1283F7DD900FEAF55 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA4021E2283F7DD900FEAF55 /* Helpers */,
+				EA4021E3283F7DD900FEAF55 /* CoreDataTests.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EA4021E2283F7DD900FEAF55 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA4021E5283F7DD900FEAF55 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				EA4021E6283F7DD900FEAF55 /* Mock */,
+				EA4021EA283F7DD900FEAF55 /* RequestManagerTests.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		EA4021E6283F7DD900FEAF55 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				EA4021FD283F7F7700FEAF55 /* Concerts.json */,
+				EA4021E7283F7DD900FEAF55 /* EventsRequestMock.swift */,
+				EA4021E8283F7DD900FEAF55 /* TestEventFetcherMock.swift */,
+				EA4021E9283F7DD900FEAF55 /* ApiManagerMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		EA4021FF283F7FE600FEAF55 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EA402200283F7FE600FEAF55 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EA402202283F802400FEAF55 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				EA402203283F802400FEAF55 /* AdminViewModelTests.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		EA402209283F883A00FEAF55 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				EA40220A283F883A00FEAF55 /* TestEditViewModel.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
 		EA46FBEF283BD13D00536502 = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +486,10 @@
 		EA46FC14283BD13E00536502 /* TicketsUiKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA402209283F883A00FEAF55 /* Edit */,
+				EA402202283F802400FEAF55 /* Admin */,
+				EA4021FF283F7FE600FEAF55 /* Home */,
+				EA4021DF283F7DD900FEAF55 /* Core */,
 				EA46FC15283BD13E00536502 /* TicketsUiKitTests.swift */,
 			);
 			path = TicketsUiKitTests;
@@ -494,6 +611,7 @@
 				EA46FC75283BE3CD00536502 /* FormatUtils.swift */,
 				EA46FC76283BE3CD00536502 /* ColorUtils.swift */,
 				EA46FC77283BE3CD00536502 /* ApiUtils.swift */,
+				EA4021DD283F5C7200FEAF55 /* Date+Tomorrow.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -722,6 +840,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4021FE283F7F7700FEAF55 /* Concerts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +901,7 @@
 				EA36DDA1283D4C300050D571 /* EventPresentationModel.swift in Sources */,
 				EA46FC43283BE23E00536502 /* Persistence.swift in Sources */,
 				EA46FC5D283BE32C00536502 /* NetworkError.swift in Sources */,
+				EA4021DE283F5C7200FEAF55 /* Date+Tomorrow.swift in Sources */,
 				EA46FCB1283C0F7800536502 /* DiscountCell.swift in Sources */,
 				EA46FC90283BE4F800536502 /* AdminViewModel.swift in Sources */,
 				EA46FC85283BE49200536502 /* HomeViewModel.swift in Sources */,
@@ -800,7 +920,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA46FC8C283BE49200536502 /* EventsStoreService.swift in Sources */,
+				EA402201283F7FE600FEAF55 /* HomeViewModelTests.swift in Sources */,
 				EA46FC94283BE52800536502 /* EventDiscountPair.swift in Sources */,
+				EA4021EE283F7DD900FEAF55 /* TestEventFetcherMock.swift in Sources */,
 				EA46FC62283BE32C00536502 /* EventsRequest.swift in Sources */,
 				EA46FC99283BE56800536502 /* EditEventViewModel.swift in Sources */,
 				EA46FC48283BE2B900536502 /* Entity+ValueInit.swift in Sources */,
@@ -808,7 +930,10 @@
 				EA36DDA2283D4C300050D571 /* EventPresentationModel.swift in Sources */,
 				EA46FC86283BE49200536502 /* HomeViewModel.swift in Sources */,
 				EA46FC7D283BE3CD00536502 /* ApiUtils.swift in Sources */,
+				EA402205283F861C00FEAF55 /* UIView+Shadow.swift in Sources */,
 				EA46FC5E283BE32C00536502 /* NetworkError.swift in Sources */,
+				EA4021F7283F7EA500FEAF55 /* EventDescriptionCell.swift in Sources */,
+				EA4021F5283F7E9C00FEAF55 /* TitleCell.swift in Sources */,
 				EA46FC6F283BE39B00536502 /* EventContainer.swift in Sources */,
 				EA46FC91283BE4F800536502 /* AdminViewModel.swift in Sources */,
 				EA46FC71283BE39B00536502 /* Type.swift in Sources */,
@@ -817,16 +942,27 @@
 				EA46FC58283BE32C00536502 /* ApiConstants.swift in Sources */,
 				EA46FC5C283BE32C00536502 /* ApiManagerProtocol.swift in Sources */,
 				EA46FC7B283BE3CD00536502 /* ColorUtils.swift in Sources */,
+				EA4021EF283F7DD900FEAF55 /* ApiManagerMock.swift in Sources */,
 				EA46FC64283BE32C00536502 /* RequestProtocol.swift in Sources */,
+				EA4021F0283F7DD900FEAF55 /* RequestManagerTests.swift in Sources */,
+				EA4021F3283F7E9000FEAF55 /* FontUtils.swift in Sources */,
 				EA36DD9F283D4B460050D571 /* DetailsViewModel.swift in Sources */,
+				EA40220B283F883A00FEAF55 /* TestEditViewModel.swift in Sources */,
 				EA46FC8A283BE49200536502 /* FetchEventsService.swift in Sources */,
+				EA4021FB283F7ED100FEAF55 /* UIController+CustomBackButton.swift in Sources */,
 				EA46FC79283BE3CD00536502 /* FormatUtils.swift in Sources */,
+				EA402204283F802400FEAF55 /* AdminViewModelTests.swift in Sources */,
 				EA46FC73283BE39B00536502 /* MockEvents.swift in Sources */,
+				EA4021F9283F7EAD00FEAF55 /* EventDetailCell.swift in Sources */,
+				EA4021EB283F7DD900FEAF55 /* CoreDataTests.swift in Sources */,
+				EA4021F1283F7E4C00FEAF55 /* Tickets.xcdatamodeld in Sources */,
 				EA46FC5A283BE32C00536502 /* RequestManager.swift in Sources */,
+				EA4021ED283F7DD900FEAF55 /* EventsRequestMock.swift in Sources */,
 				EA46FC4A283BE2B900536502 /* CoreDataHelper.swift in Sources */,
 				EA46FC44283BE23E00536502 /* Persistence.swift in Sources */,
 				EA46FC60283BE32C00536502 /* DataParser.swift in Sources */,
 				EA46FC66283BE32C00536502 /* RequestType.swift in Sources */,
+				EA4021EC283F7DD900FEAF55 /* PersistenceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +971,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA46FC20283BD13E00536502 /* TicketsUiKitUITests.swift in Sources */,
+				EA4021FA283F7EAE00FEAF55 /* EventDetailCell.swift in Sources */,
 				EA46FC22283BD13E00536502 /* TicketsUiKitUITestsLaunchTests.swift in Sources */,
+				EA4021FC283F7ED100FEAF55 /* UIController+CustomBackButton.swift in Sources */,
+				EA4021F6283F7E9C00FEAF55 /* TitleCell.swift in Sources */,
+				EA4021F4283F7E9100FEAF55 /* FontUtils.swift in Sources */,
+				EA4021F2283F7E4E00FEAF55 /* Tickets.xcdatamodeld in Sources */,
+				EA4021F8283F7EA600FEAF55 /* EventDescriptionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

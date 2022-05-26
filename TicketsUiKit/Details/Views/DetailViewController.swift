@@ -33,7 +33,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let tableBackground = UIView(frame: eventDetailsTable.bounds)
         self.eventDetailsTable.backgroundColor = UIColor.clear
         tableBackground.backgroundColor = UIColor.white
-        tableBackground.setCornerRadiusAndShadow(cornerRadius: 25, shadowColor: UIColor.green, shadowOffsetWidth: -1, shadowOffsetHeight: 20, shadowOpacity: 0.8, shadowRadius: 30)
+        tableBackground.setCornerRadiusAndShadow(cornerRadius: 25, shadowColor: UIColor.gray, shadowOffsetWidth: -1, shadowOffsetHeight: 20, shadowOpacity: 0.8, shadowRadius: 30)
         self.eventDetailsTable.backgroundView = tableBackground
         self.eventDetailsTable.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 5, right: 0)
         

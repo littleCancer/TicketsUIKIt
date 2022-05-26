@@ -23,6 +23,7 @@ struct EventsStoreService {
 
 extension EventsStoreService: EventsStore {
     
+    
     func convertAndSave(events: [EventContainer]) async throws {
                 
         for eventContainer in events {

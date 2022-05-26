@@ -36,12 +36,13 @@ enum FormatUtils {
         return ""
     }
     
-    static func formatAvailabilityMessage(amount: Int16?, quantity: Int16?) -> String {
-        guard let amount = amount, let quantity = quantity else {
+    static func formatAvailabilityMessage(amount: Float, quantity: Int16?) -> String {
+        guard let quantity = quantity else {
             return ""
         }
         
-        return "Only \(quantity) tickets for \(amount)€"
+        let price = FormatUtils.formatPrice(price: amount)
+        return "Only \(quantity) tickets for \(price)"
 
     }
     
@@ -60,7 +61,7 @@ enum FormatUtils {
         }
         
         let priceRounded = Int(price)
-        return "\(priceRounded)e"
+        return "\(priceRounded)€"
     }
     
     static func formatPriceDecimal(price: Float?) -> String {

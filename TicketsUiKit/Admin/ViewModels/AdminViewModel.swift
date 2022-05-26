@@ -34,10 +34,10 @@ class AdminViewModel : ObservableObject {
         let events = eventStore.loadEvents()
         let discounts = eventStore.loadDiscounts()
         
-        
         self.eventDiscountPairs = events.map {
-            EventDiscountPair(event: $0, discount: findDicsountEntity(for: $0.id, discounts: discounts))
+            return EventDiscountPair(event: $0, discount: findDicsountEntity(for: $0.id, discounts: discounts))
         }
+        
         self.scrollViewID = UUID()
 
     }

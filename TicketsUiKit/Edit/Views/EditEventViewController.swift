@@ -35,6 +35,13 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var dateTextField: UITextField!
     private var cancellableSet: Set<AnyCancellable> = []
     
+    var enableUpdateButton: Bool {
+        return priceValidationMessageLabel.isHidden && dateValidationMessageLabel.isHidden && placeNavigationMessageLabel.isHidden && placeNavigationMessageLabel.isHidden && nameValidationMessageLabel.isHidden
+            && quantityValidationLabel.isHidden
+            && (discountContainer.isHidden || discountValidationLabel.isHidden)
+            && (discountContainer.isHidden || discountQuantityValidationLabel.isHidden)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +54,16 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
     }
     
     private func styleSubviews() {
+    
+        self.view.backgroundColor = UIColor.appGray
+        let titleLabel = UILabel()
+        titleLabel.text = viewModel?.eventDiscountPair != nil ? "Edit" : "Create"
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.appBoldFontOfSize(size: 22)
+        self.navigationItem.titleView = titleLabel
+        
+        setCustomBack()
+    
         self.eventImage.contentMode = .scaleAspectFill
         self.eventImage.sd_setImage(with: URL(string: viewModel!.imageURL))
         
@@ -74,8 +91,9 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
         datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
         datePickerView.minimumDate = Date.now
         
+        let buttonTitle = self.viewModel?.eventDiscountPair != nil ? "Edit" : "Create"
+        self.editButton.setTitle(buttonTitle, for: .normal)
         
-        self.editButton.titleLabel?.text = self.viewModel?.eventDiscountPair != nil ? "Edit" : "Create"
     }
     
     private func populateSubviews() {
@@ -152,28 +170,11 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
     
     
     @IBAction func discountSwitchValueChanged(_ sender: UISwitch) {
+        self.viewModel?.discountOn = sender.isOn
         if !sender.isOn && !self.discountContainer.isHidden {
-            UIView.transition(with: scrollView,
-                              duration: 0.35,
-                              options: .transitionCrossDissolve,
-                              animations: {
-                self.discountContainerHeightConstraint.constant = 0
-                self.editButtonYConstraint.constant = 1060
-                self.scrollView.layoutIfNeeded()
-            }) { _ in
-                self.discountContainer.isHidden = true
-            }
-            
+            hideDiscountsAnimated()
         } else if sender.isOn && self.discountContainer.isHidden {
-            self.discountContainer.isHidden = false
-            UIView.transition(with: scrollView,
-                              duration: 0.35,
-                              options: .transitionCrossDissolve,
-                              animations: {
-                self.discountContainerHeightConstraint.constant = 250
-                self.editButtonYConstraint.constant = 1310
-                self.scrollView.layoutIfNeeded()
-            })
+            showDiscountsAnimated()
         }
     }
     
@@ -185,20 +186,21 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
     }
     
     private func updateEditButtonState() {
-        self.editButton.isEnabled = !(self.viewModel?.disableForm ?? false)
+        self.editButton.isEnabled = self.enableUpdateButton
     }
     
     @IBAction func discountValueChanged(_ sender: UITextField) {
         viewModel?.discount = sender.text!
     }
     
-    @IBAction func discQValueChanged(_ sender: UITextField) {
+    @IBAction func discQValueChanged(_a sender: UITextField) {
         viewModel?.discountQuantity = sender.text!
     }
     
     @IBAction func editButtonTapped(_ sender: Any) {
         
-        print("tapped")
+        viewModel?.saveChanges()
+        self.navigationController?.popViewController(animated: true)
         
     }
     
@@ -212,6 +214,35 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         viewModel?.eventDescription = textView.text
+    }
+    
+    // MARK: Animatiomn
+    
+    private func hideDiscountsAnimated() {
+        UIView.transition(with: scrollView,
+                          duration: 0.35,
+                          options: .transitionCrossDissolve,
+                          animations: {
+            self.discountContainerHeightConstraint.constant = 0
+            self.editButtonYConstraint.constant = 1060
+            self.scrollView.layoutIfNeeded()
+        }) { _ in
+            self.discountContainer.isHidden = true
+            self.updateEditButtonState()
+        }
+    }
+    
+    private func showDiscountsAnimated() {
+        self.discountContainer.isHidden = false
+        UIView.transition(with: scrollView,
+                          duration: 0.35,
+                          options: .transitionCrossDissolve,
+                          animations: {
+            self.discountContainerHeightConstraint.constant = 250
+            self.editButtonYConstraint.constant = 1310
+            self.scrollView.layoutIfNeeded()
+        })
+        self.updateEditButtonState()
     }
     
 }
