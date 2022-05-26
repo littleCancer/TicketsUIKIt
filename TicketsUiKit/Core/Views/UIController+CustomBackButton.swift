@@ -15,7 +15,7 @@ extension UIViewController {
         //Back buttion
         let btnLeftMenu: UIButton = UIButton()
         btnLeftMenu.setImage(UIImage(systemName: "chevron.left")?.withRenderingMode(.alwaysOriginal), for: UIControl.State())
-        btnLeftMenu.addTarget(self, action: #selector(DetailViewController.onClickBack), for: UIControl.Event.touchUpInside)
+        btnLeftMenu.addTarget(self, action: #selector(DetailViewController.onClickBack), for: UIControl.Event.primaryActionTriggered)
         btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 33/2, height: 27/2)
         let barButton = UIBarButtonItem(customView: btnLeftMenu)
         self.navigationItem.leftBarButtonItem = barButton

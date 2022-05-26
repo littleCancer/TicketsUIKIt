@@ -12,7 +12,7 @@ enum FormatUtils {
     
     static let fullDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
         return formatter
     }()
     
@@ -109,4 +109,9 @@ enum FormatUtils {
         return decimalFormater.number(from: string) as? NSDecimalNumber ?? 0
     }
     
+    static func date(from value:String) -> Date {
+        return fullDateFormatter.date(from: value) ?? Date.now
+    }
+    
 }
+

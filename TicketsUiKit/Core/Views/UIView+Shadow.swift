@@ -66,4 +66,17 @@ extension UIView
         subView.layer.shouldRasterize = true
         subView.layer.rasterizationScale = UIScreen.main.scale
     }
+    
+    func makeRoundedWithGrayBorder() {
+        self.layer.cornerRadius = 15.0
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.appGray.cgColor
+        self.layer.masksToBounds = true
+    }
+    
+    func makeRounded() {
+        self.layer.cornerRadius = 15.0
+        self.layer.masksToBounds = true
+    }
+    
 }

@@ -66,16 +66,6 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
                           animations: { self.adminTable.reloadData() })
 
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: UITableViewDataSource methods
     
@@ -109,8 +99,8 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         switch indexPath.section {
         case AdminSection.filter.getSectionIndex():
             let filterCell = tableView.dequeueReusableCell(withIdentifier: "filter-cell", for: indexPath) as? FilterByCell ?? FilterByCell()
-            filterCell.nonDiscountsButton.addTarget(self, action: #selector(nonDiscountsButtonTapped(sender:)), for: .touchUpInside)
-            filterCell.discountsButton.addTarget(self, action: #selector(discountsButtonTapped(sender:)), for: .touchUpInside)
+            filterCell.nonDiscountsButton.addTarget(self, action: #selector(nonDiscountsButtonTapped(sender:)), for: .primaryActionTriggered)
+            filterCell.discountsButton.addTarget(self, action: #selector(discountsButtonTapped(sender:)), for: .primaryActionTriggered)
             
             let highlightedFont = UIFont.appBoldFontOfSize(size: 18)
             let normalFont = UIFont.appFontOfSize(size: 18)
@@ -125,8 +115,8 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
             return eventCell
         case AdminSection.action.getSectionIndex():
             let actionCell = tableView.dequeueReusableCell(withIdentifier: "action-cell", for: indexPath) as? ActionButtonsCell ?? ActionButtonsCell()
-            actionCell.addEventButton.addTarget(self, action: #selector(addEventButtonTapped(sender:)), for: .touchUpInside)
-            actionCell.resetStateButton.addTarget(self, action: #selector(restoreStateButtonTapped(sender:)), for: .touchUpInside)
+            actionCell.addEventButton.addTarget(self, action: #selector(addEventButtonTapped(sender:)), for: .primaryActionTriggered)
+            actionCell.resetStateButton.addTarget(self, action: #selector(restoreStateButtonTapped(sender:)), for: .primaryActionTriggered)
             
             return actionCell
         default:
@@ -143,8 +133,8 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         eventCell.editButton.tag = indexPath.row
         eventCell.deleteButton.tag = indexPath.row
         
-        eventCell.editButton.addTarget(self, action: #selector(editEventButtonTapped(sender:)), for: .touchUpInside)
-        eventCell.deleteButton.addTarget(self, action: #selector(deleteEventButtonTapped(sender:)), for: .touchUpInside)
+        eventCell.editButton.addTarget(self, action: #selector(editEventButtonTapped(sender:)), for: .primaryActionTriggered)
+        eventCell.deleteButton.addTarget(self, action: #selector(deleteEventButtonTapped(sender:)), for: .primaryActionTriggered)
         
         eventCell.eventView.eventImage.sd_setImage(with: URL(string: model.imageUrl))
         eventCell.eventView.monthLabel.text = FormatUtils.monthFromDate(date: model.date)

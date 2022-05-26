@@ -171,7 +171,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 return cell
             case Section.action.getSectionIndex():
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell", for: indexPath) as? ActionCell ?? ActionCell()
-                cell.adminButton.addTarget(self, action: #selector(presentAdminViewController), for: .touchUpInside)
+                cell.adminButton.addTarget(self, action: #selector(presentAdminViewController), for: .primaryActionTriggered)
                 return cell
             
         

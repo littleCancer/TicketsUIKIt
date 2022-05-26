@@ -34,8 +34,9 @@ class EditEventViewModel: ObservableObject {
     @Published var isDiscountValid = false
     
     var disableForm: Bool {
-        !isNameValid || !isPriceValid || !isPlaceValid || !isQuantityValid
+        let invalid = !isNameValid || !isPriceValid || !isPlaceValid || !isQuantityValid
         || (discountOn && !isDiscountValid) || (discountOn && !isDiscountQuantityValid)
+        return invalid
     }
     
     @Published var discountOn = false
@@ -58,7 +59,7 @@ class EditEventViewModel: ObservableObject {
             self.eventDescription = pair.event.eventDescription ?? ""
             self.place = pair.event.place ?? ""
             self.date = pair.event.date ?? Date()
-            self.price = "\(pair.event.price ?? 0)"
+            self.price = String(format: "%.2f", pair.event.price)
             self.quantity = String(pair.event.quantity)
             
             if let discount = pair.discount?.discount {
@@ -102,7 +103,7 @@ class EditEventViewModel: ObservableObject {
         $price
             .receive(on: RunLoop.main)
             .map { price in
-                return price.count > 0 && Int(price) != nil
+                return price.count > 0 && Float(price) != nil
             }
             .assign(to: \.isPriceValid, on: self)
             .store(in: &cancellableSet)
