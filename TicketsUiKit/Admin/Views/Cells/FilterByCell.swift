@@ -29,6 +29,8 @@ class FilterByCell: UITableViewCell {
         
         self.buttonsContainer.layer.cornerRadius = buttonsContainer.bounds.self.height / 2
         self.buttonsContainer.layer.masksToBounds = true
+        self.nonDiscountsButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.discountsButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
 
 }

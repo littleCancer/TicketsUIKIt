@@ -20,7 +20,7 @@ class EditEventViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var eventDescription = ""
     @Published var place = ""
-    @Published var date = Date()
+    @Published var date = Date.now
     @Published var price = ""
     @Published var quantity = ""
     @Published var discount = ""
@@ -78,6 +78,8 @@ class EditEventViewModel: ObservableObject {
             isPriceValid = self.price.count > 0
             isQuantityValid = self.quantity.count > 0
             
+        } else {
+            self.discountOn = false
         }
         setUpValidation()
     }
@@ -178,12 +180,15 @@ class EditEventViewModel: ObservableObject {
         let eventEntity = EventEntity(context: context)
         let id = getLastSavedId() + 1
         eventEntity.id = id
+        eventEntity.eventId =  Int16(id)
         setEventData(event: eventEntity)
         eventEntity.photo = "/images/Concert.jpg"
+        
         
         if self.discountOn {
             let discountEntity = DiscountEntity(context: context)
             discountEntity.id = id
+            discountEntity.eventId = Int16(id)
             discountEntity.photo = "/images/Concert.jpg"
             setDiscountData(discount: discountEntity)
         }
@@ -210,13 +215,18 @@ class EditEventViewModel: ObservableObject {
         }
         
         do {
-            try context.save()
+            if (context.hasChanges) {
+                try context.save()
+            }
+
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+        
         let nc = NotificationCenter.default
         nc.post(name: Notification.Name("EntityChanged"), object: nil)
     }
+    
     
 }

@@ -15,7 +15,6 @@
 		EA36DD90283D17760050D571 /* ExpiredListTableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD8F283D17760050D571 /* ExpiredListTableCellTableViewCell.swift */; };
 		EA36DD93283D236E0050D571 /* ExpiredEventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD91283D236E0050D571 /* ExpiredEventViewCell.swift */; };
 		EA36DD94283D236E0050D571 /* ExpiredEventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA36DD92283D236E0050D571 /* ExpiredEventViewCell.xib */; };
-		EA36DD98283D2C8E0050D571 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD96283D2C8E0050D571 /* ActionCell.swift */; };
 		EA36DD99283D2C8E0050D571 /* ActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA36DD97283D2C8E0050D571 /* ActionCell.xib */; };
 		EA36DD9E283D4B460050D571 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */; };
 		EA36DD9F283D4B460050D571 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */; };
@@ -126,6 +125,7 @@
 		EA46FCB1283C0F7800536502 /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FCAF283C0F7800536502 /* DiscountCell.swift */; };
 		EA46FCB2283C0F7800536502 /* DiscountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA46FCB0283C0F7800536502 /* DiscountCell.xib */; };
 		EA46FCB4283C1D4800536502 /* DiscountListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46FCB3283C1D4800536502 /* DiscountListTableCell.swift */; };
+		EA7F2268283FF81A00618E14 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7F2267283FF81A00618E14 /* ActionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +154,6 @@
 		EA36DD8F283D17760050D571 /* ExpiredListTableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiredListTableCellTableViewCell.swift; sourceTree = "<group>"; };
 		EA36DD91283D236E0050D571 /* ExpiredEventViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpiredEventViewCell.swift; sourceTree = "<group>"; };
 		EA36DD92283D236E0050D571 /* ExpiredEventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpiredEventViewCell.xib; sourceTree = "<group>"; };
-		EA36DD96283D2C8E0050D571 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
 		EA36DD97283D2C8E0050D571 /* ActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCell.xib; sourceTree = "<group>"; };
 		EA36DD9D283D4B460050D571 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		EA36DDA0283D4C300050D571 /* EventPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresentationModel.swift; sourceTree = "<group>"; };
@@ -226,6 +225,7 @@
 		EA46FCAF283C0F7800536502 /* DiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
 		EA46FCB0283C0F7800536502 /* DiscountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountCell.xib; sourceTree = "<group>"; };
 		EA46FCB3283C1D4800536502 /* DiscountListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountListTableCell.swift; sourceTree = "<group>"; };
+		EA7F2267283FF81A00618E14 /* ActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionCell.swift; path = ../../../../../../../../../.Trash/ActionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +296,7 @@
 		EA36DD95283D2C750050D571 /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				EA36DD96283D2C8E0050D571 /* ActionCell.swift */,
+				EA7F2267283FF81A00618E14 /* ActionCell.swift */,
 				EA36DD97283D2C8E0050D571 /* ActionCell.xib */,
 			);
 			path = Action;
@@ -860,7 +860,6 @@
 			files = (
 				EA3EB3F1283E0B12004D0890 /* FilterByCell.swift in Sources */,
 				EA46FC00283BD13D00536502 /* ViewController.swift in Sources */,
-				EA36DD98283D2C8E0050D571 /* ActionCell.swift in Sources */,
 				EA3EB3EF283E0ADB004D0890 /* ActionButtonsCell.swift in Sources */,
 				EA36DD90283D17760050D571 /* ExpiredListTableCellTableViewCell.swift in Sources */,
 				EA36DDAC283D65D50050D571 /* EventDetailCell.swift in Sources */,
@@ -910,6 +909,7 @@
 				EA36DD93283D236E0050D571 /* ExpiredEventViewCell.swift in Sources */,
 				EA46FC7A283BE3CD00536502 /* ColorUtils.swift in Sources */,
 				EA46FC06283BD13D00536502 /* Tickets.xcdatamodeld in Sources */,
+				EA7F2268283FF81A00618E14 /* ActionCell.swift in Sources */,
 				EA46FBFE283BD13D00536502 /* SceneDelegate.swift in Sources */,
 				EA36DDAA283D65AC0050D571 /* EventDescriptionCell.swift in Sources */,
 			);

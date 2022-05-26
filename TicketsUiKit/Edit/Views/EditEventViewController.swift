@@ -49,7 +49,6 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
         if viewModel?.eventDiscountPair != nil {
             populateSubviews()
         }
-        
         setupObservers()
     }
     
@@ -93,6 +92,7 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
         
         let buttonTitle = self.viewModel?.eventDiscountPair != nil ? "Edit" : "Create"
         self.editButton.setTitle(buttonTitle, for: .normal)
+        self.scrollView.keyboardDismissMode = .onDrag
         
     }
     
@@ -107,11 +107,17 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
         if viewModel!.discountOn {
             self.discountTextField.text = viewModel?.discount
             self.discountQuantityTextField.text = viewModel?.discountQuantity
-        } else {
+        }
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (!viewModel!.discountOn) {
             self.discountSwitch.isOn = false
             hideDiscountViewOnLoad()
         }
-        
     }
     
     private func setupObservers() {
@@ -146,6 +152,23 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
             self?.updateEditButtonState()
         }.store(in: &cancellableSet)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 
     @IBAction func nameValueChanged(_ sender: UITextField) {
@@ -206,8 +229,9 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
     
     @objc func handleDatePicker(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy HH:mm"
+        dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
         dateTextField.text = dateFormatter.string(from: sender.date)
+        viewModel?.date = FormatUtils.date(from: dateTextField.text!)
     }
     
     // MARK: TextView delegate method
@@ -246,3 +270,4 @@ class EditEventViewController: UIViewController, UITextViewDelegate {
     }
     
 }
+

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let discountsDataSourceAndDelegate = DiscountsCollectionDataSourceAndDelegate()
     let expiredEventsSourceAndDelegate = ExpiredEventsCollectionDataSourceAndDelegate()
+    var progressView: UIActivityIndicatorView?
     
     @IBOutlet var tableView: UITableView!
     
@@ -76,12 +77,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         separator.widthAnchor.constraint(equalToConstant: 300).isActive = true
         separator.heightAnchor.constraint(equalToConstant: 3).isActive = true
         self.tableView.separatorStyle = .none
+        
+        progressView = UIActivityIndicatorView()
+        self.view.insertSubview(progressView!, aboveSubview: tableView)
+        progressView?.translatesAutoresizingMaskIntoConstraints = false
+        progressView?.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        progressView?.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        progressView?.style = .large
+        progressView?.hidesWhenStopped = true
+        progressView?.stopAnimating()
+        
     }
     
     private func funcSetUpObserving() {
         viewModel.$upcoming.sink { [weak self] upcoming in
             self?.tableView.reloadData()
-//            self?.tableView.reloadSections(IndexSet(integer: 1), with: .automatic)
         }.store(in: &cancellableSet)
         
         viewModel.$discounts.sink { [weak self] discounts in
@@ -95,6 +105,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }.store(in: &cancellableSet)
         
         viewModel.$isLoading.sink(receiveValue: { [weak self] loading in
+            if loading {
+                self?.progressView?.startAnimating()
+            } else {
+                self?.progressView?.stopAnimating()
+            }
+                
         }).store(in: &cancellableSet)
     }
     
@@ -113,6 +129,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: UITableView data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        if viewModel.isLoading {
+            return 0
+        }
         return Section.allCases.count
     }
     
@@ -121,7 +140,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case Section.forYou.getSectionIndex():
             return 1
         case Section.upcoming.getSectionIndex():
-            return viewModel.upcoming.count > 0 ? 1 : 0
+            return viewModel.upcoming.count
         case Section.expired.getSectionIndex():
             return 1
         case Section.action.getSectionIndex():

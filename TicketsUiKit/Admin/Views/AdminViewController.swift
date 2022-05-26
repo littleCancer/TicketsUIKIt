@@ -65,6 +65,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     }
     
+    
     // MARK: UITableViewDataSource methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -100,8 +101,8 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
             filterCell.nonDiscountsButton.addTarget(self, action: #selector(nonDiscountsButtonTapped(sender:)), for: .primaryActionTriggered)
             filterCell.discountsButton.addTarget(self, action: #selector(discountsButtonTapped(sender:)), for: .primaryActionTriggered)
             
-            let highlightedFont = UIFont.appBoldFontOfSize(size: 18)
-            let normalFont = UIFont.appFontOfSize(size: 18)
+            let highlightedFont = UIFont.appBoldFontOfSize(size: 17)
+            let normalFont = UIFont.appFontOfSize(size: 17)
             
             filterCell.nonDiscountsButton.titleLabel?.font = viewModel?.selectedTab == .NonDiscount ? highlightedFont : normalFont
             filterCell.discountsButton.titleLabel?.font = viewModel?.selectedTab == .NonDiscount ? normalFont : highlightedFont

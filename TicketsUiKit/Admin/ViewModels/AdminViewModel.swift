@@ -81,7 +81,6 @@ class AdminViewModel : ObservableObject {
         
     }
     
-    
 }
 
 enum SelectedAdminTab {
